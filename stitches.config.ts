@@ -6,17 +6,21 @@ export const { styled, css, getCssText, globalCss } = createStitches({
     l: '(min-width: 960px)',
   },
   utils: {
-    paddingX: (value) => ({
+    paddingX: (value: string | number) => ({
       paddingLeft: value,
       paddingRight: value,
     }),
-    paddingY: (value) => ({
+    paddingY: (value: string | number) => ({
       paddingTop: value,
       paddingBottom: value,
     }),
-    marginX: (value) => ({
+    marginX: (value: string | number) => ({
       marginLeft: value,
       marginRight: value,
+    }),
+    marginY: (value: string | number) => ({
+      marginTop: value,
+      marginBottom: value,
     }),
   },
   theme: {
@@ -26,6 +30,7 @@ export const { styled, css, getCssText, globalCss } = createStitches({
     colors: {
       hiContrast: 'hsl(206,10%,5%)',
       white: 'white',
+      coral: '#FA7268',
       red: '#DFA49F',
       green: '#A3BCA9',
       greenLight: '#D6E1D8',
@@ -46,9 +51,31 @@ export const { styled, css, getCssText, globalCss } = createStitches({
     space: {
       xs: '8px',
       s: '16px',
+      m: '24px',
+      l: '32px',
+      xl: '48px',
+      xxl: '64px',
+      '3xl': '96px',
+      'xs-resp': 'min(0.83vw, 8px)',
+      's-resp': 'min(1.67vw, 16px)',
+      'm-resp': 'min(2.5vw, 24px)',
+      'l-resp': 'min(3.33vw, 32px)',
+      'xl-resp': 'min(5vw, 48px)',
+      '3xl-resp': 'min(10vw, 96px)',
     },
     radii: {
       xs: '8px',
+      s: '16px',
+      m: '32px',
+      'xs-resp': '0.83vw',
+      's-resp': '1.67vw',
+      'm-resp': '2.5vw',
+    },
+    shadows: {
+      focus: 'inset 0 0 0 2px coral',
+    },
+    borderStyles: {
+      focus: '2px dashed $coral',
     },
   },
 });
