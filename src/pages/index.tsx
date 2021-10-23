@@ -1,33 +1,31 @@
 import React from 'react';
 import { styled, globalCss } from '../../stitches.config';
-import NavBar from '../components/navBar';
+import Hero from '../components/hero';
+import Layout from '../components/layout';
 
 const global = globalCss({
   '*': {
     fontFamily: '$default',
     fontSize: '$body',
   },
+  body: {
+    backgroundColor: '$background',
+    color: '$text',
+  },
 });
 
 const Heading = styled('h1', {
-  fontSize: '$xxl',
+  fontSize: 'min(6.25vw, 48px)',
   textAlign: 'center',
+  marginTop: '$xl',
 });
-
-const navBarItems: string[] = [
-  'Individuele Lessen',
-  'Groepslessen',
-  'Voor bedrijven',
-  'Voor scholen',
-  'Over mij',
-];
 
 export default function Home() {
   global();
   return (
-    <>
-      <NavBar navItems={navBarItems} />
-      <Heading>This is it!</Heading>
-    </>
+    <Layout>
+      <Hero />
+      <Heading>Wat is Hatha Yoga?</Heading>
+    </Layout>
   );
 }
