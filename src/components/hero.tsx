@@ -34,8 +34,8 @@ const DahliaContainer = styled('div', {
 const HeroGrid = styled('div', {
   display: 'grid',
   gridTemplateColumns: 'min-content max-content',
+  marginTop: 'calc(62px + $xl-resp)',
   alignItems: 'center',
-  marginTop: '$3xl-resp',
   marginLeft: '$s-resp',
 });
 
