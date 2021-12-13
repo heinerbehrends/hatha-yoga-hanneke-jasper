@@ -16,7 +16,12 @@ const NavContainer = styled('nav', {
 });
 
 const NavBarContainer = styled('div', {
+  overflow: 'hidden',
+  position: 'fixed',
+  top: 0,
+  width: '100%',
   backgroundColor: '$blueDark',
+  zIndex: '3',
 });
 
 export default function NavBar() {
@@ -26,7 +31,7 @@ export default function NavBar() {
         <NavItem label="Home" slug="/" />
         <NavLessen />
         <NavItem label="Over mij" slug="over-mij" />
-        <Button to="/contact/" color="white">
+        <Button to="/contact/" color="zacht">
           Contact
         </Button>
       </NavContainer>
