@@ -1,27 +1,28 @@
 import React from 'react';
-import * as DropdownPrimitives from '@radix-ui/react-dropdown-menu';
+import { Root, Trigger, Content, Item } from '@radix-ui/react-dropdown-menu';
 import { ChevronDownIcon } from '@modulz/radix-icons';
 import { Link } from 'gatsby';
 import slugify from 'slugify';
 import { navBarItemStyles } from './navItem';
+import { styled } from '../../stitches.config';
 
 type DropdownMenuItems = { items: string[] };
 
+const TriggerStyled = styled(Trigger, navBarItemStyles);
+
 export default function DropdownMenu({ items }: DropdownMenuItems) {
   return (
-    <DropdownPrimitives.Root>
-      <DropdownPrimitives.Trigger className={navBarItemStyles()}>
+    <Root>
+      <TriggerStyled hideAtLarge={true}>
         Lessen <ChevronDownIcon />
-      </DropdownPrimitives.Trigger>
-      <DropdownPrimitives.Content>
+      </TriggerStyled>
+      <Content>
         {items.map((item, index) => (
           <Link to={slugify(item)} key={index}>
-            <DropdownPrimitives.Item className={navBarItemStyles()}>
-              {item}
-            </DropdownPrimitives.Item>
+            <Item className={navBarItemStyles()}>{item}</Item>
           </Link>
         ))}
-      </DropdownPrimitives.Content>
-    </DropdownPrimitives.Root>
+      </Content>
+    </Root>
   );
 }
