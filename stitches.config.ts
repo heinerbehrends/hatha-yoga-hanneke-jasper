@@ -35,7 +35,7 @@ export const { styled, css, getCssText, globalCss } = createStitches({
       green: '#A3BCA9',
       greenLight: '#D6E1D8',
       blue: '#A0C7CF',
-      blueDark: '#7FABB8',
+      blueDark: '#538696',
       text: '#848484',
       textDark: '#504B4B',
       background: '#F7F6F6',
@@ -49,6 +49,7 @@ export const { styled, css, getCssText, globalCss } = createStitches({
       xxl: '48px',
     },
     space: {
+      xxs: '4px',
       xs: '8px',
       s: '16px',
       m: '24px',
