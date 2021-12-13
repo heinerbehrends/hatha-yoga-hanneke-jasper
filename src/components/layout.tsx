@@ -12,12 +12,14 @@ const PageContainer = styled('main', {
 
 type LayoutProps = {
   children: React.ReactNode;
+  slot?: React.ReactNode;
 };
 
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({ children, slot }: LayoutProps) {
   return (
     <>
       <NavBar />
+      {slot}
       <PageContainer>{children}</PageContainer>
     </>
   );
