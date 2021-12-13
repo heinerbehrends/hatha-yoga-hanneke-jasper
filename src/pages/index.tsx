@@ -1,7 +1,8 @@
 import React from 'react';
 import { styled, globalCss } from '../../stitches.config';
-import Hero from '../components/hero';
 import Layout from '../components/layout';
+import Hero from '../components/hero';
+import ImageCard from '../components/ImageCard';
 
 const global = globalCss({
   '*': {
@@ -20,12 +21,18 @@ const Heading = styled('h1', {
   marginTop: '$xl',
 });
 
+const infoCardText1 = `Saswitha yoga is een vorm van hatha yoga die uitgaat van de eenheid 
+van lichaam en bewustzijn, waarbij de adem de verbinding vormt. De adem wordt gebruikt als 
+middel om in jezelf die verbinding te ervaren. De adem is de dragende kracht in elke beweging. 
+Door concentratie op de adem ontstaat een meditatieve aandacht die leidt tot verstilling.`;
+
 export default function Home() {
   global();
   return (
-    <Layout>
-      <Hero />
+    <Layout slot={<Hero />}>
+      {/* <Hero /> */}
       <Heading>Wat is Hatha Yoga?</Heading>
+      <ImageCard text={infoCardText1} title="Rustgevend" />
     </Layout>
   );
 }
