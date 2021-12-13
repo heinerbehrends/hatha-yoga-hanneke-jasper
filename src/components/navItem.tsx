@@ -14,24 +14,30 @@ export const navBarItemStyles = css({
   cursor: 'pointer',
   border: '2px solid transparent',
   // borderRadius: '$xs',
-  marginY: '2px',
+  // marginY: '2px',
   '&:focus': {
     // boxShadow: '$focus',
     border: '2px dotted $coral',
   },
   '&:hover': {
     color: '$blueDark',
-    backgroundColor: '$white',
+    backgroundColor: '$background',
   },
   '&:active': {
     color: '$blueDark',
-    backgroundColor: '$background',
+    backgroundColor: '$white',
   },
   variants: {
     hideUnderLarge: {
       true: {
         display: 'none',
         '@l': { display: 'inherit' },
+      },
+    },
+    hideAtLarge: {
+      true: {
+        display: 'inherit',
+        '@l': { display: 'none' },
       },
     },
     isLogo: {
