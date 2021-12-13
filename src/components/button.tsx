@@ -2,8 +2,9 @@ import { Link } from 'gatsby';
 import { styled } from '../../stitches.config';
 
 const Button = styled(Link, {
+  fontSize: '$body',
   paddingX: '$s',
-  paddingY: '$xs',
+  paddingY: '$xxs',
   borderRadius: '$xs',
   cursor: 'pointer',
   '&:focus': {
@@ -23,6 +24,10 @@ const Button = styled(Link, {
         backgroundColor: '$white',
         color: '$text',
         border: '2px solid $green',
+      },
+      zacht: {
+        backgroundColor: '$background',
+        color: '$text',
       },
     },
   },
