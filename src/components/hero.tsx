@@ -17,37 +17,65 @@ const DahliaContainer = styled('div', {
   justifyContent: 'center',
   variants: {
     size: {
-      bigScreen: {
-        height: 'min(40vw, 400px)',
-        width: 'min(40vw, 400px)',
-        borderRadius: 'min(40vw, 400px)',
+      mobile: {
+        width: '70vw',
+        height: '50vw',
+        paddingX: '15vw',
+        boxSizing: 'content-box',
       },
       smallScreen: {
         height: 'min(50vw, 400px)',
         width: 'min(50vw, 400px)',
+        paddingX: 0,
+        boxSizing: 'border-box',
         borderRadius: 'min(50vw, 400px)',
+      },
+      bigScreen: {
+        height: 'min(40vw, 400px)',
+        width: 'min(40vw, 400px)',
+        borderRadius: 'min(40vw, 400px)',
       },
     },
   },
 });
 
 const HeroGrid = styled('div', {
-  display: 'grid',
-  gridTemplateColumns: 'min-content max-content',
-  marginTop: 'calc(62px + $xl-resp)',
+  display: 'flex',
+  // gridTemplateColumns: 'min-content max-content',
   alignItems: 'center',
-  marginLeft: '$s-resp',
+  marginX: 'auto',
+  variants: {
+    size: {
+      mobile: {
+        width: 'fit-content',
+        flexDirection: 'column-reverse',
+        marginTop: 0,
+      },
+      bigger: {
+        flexDirection: 'row',
+        marginTop: 'calc(60px + $s-resp)',
+      },
+    },
+  },
 });
 
 const TextLogo = styled('span', {
   backgroundColor: '$white',
   color: '$coral',
   fontFamily: 'Ostrich Sans',
-  width: 'fit-content',
   variants: {
     size: {
+      mobile: {
+        fontSize: '16vw',
+        lineHeight: '16vw',
+        textAlign: 'center',
+        width: '100vw',
+        paddingY: '$xl-resp',
+      },
       smallScreen: {
-        fontSize: '8.33vw',
+        fontSize: '8vw',
+        lineHeight: '8vw',
+        width: 'fit-content',
         paddingX: '4.17vw',
         paddingY: '3.13vw',
         borderRadius: '3.13vw',
@@ -64,21 +92,35 @@ const TextLogo = styled('span', {
   },
 });
 
+const Break = styled('br', {
+  variants: {
+    display: {
+      hide: {
+        display: 'none',
+      },
+      show: {
+        display: 'initial',
+      },
+    },
+  },
+});
+
 export default function Hero() {
   const dahliaRef = useRef<HTMLDivElement | null>(null);
   const heroRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const dahliaWidth = dahliaRef.current?.clientWidth!;
-    if (getWindowWidth()! < 640) {
+    const windowWidth = getWindowWidth();
+    if (windowWidth! < 640 && windowWidth! > 480) {
       heroRef.current!.style.marginLeft = `${(dahliaWidth / 2) * -1}px`;
     }
   });
   return (
-    <HeroGrid ref={heroRef}>
+    <HeroGrid ref={heroRef} size={{ '@initial': 'mobile', '@s': 'bigger' }}>
       <DahliaContainer
         ref={dahliaRef}
-        size={{ '@initial': 'smallScreen', '@md': 'bigScreen' }}
+        size={{ '@initial': 'mobile', '@s': 'smallScreen', '@md': 'bigScreen' }}
       >
         <StaticImage
           alt="picture of a dahlia"
@@ -86,8 +128,11 @@ export default function Hero() {
           placeholder="none"
         />
       </DahliaContainer>
-      <TextLogo size={{ '@initial': 'smallScreen', '@md': 'bigScreen' }}>
-        Hatha Yoga Hanneke Jasper
+      <TextLogo
+        size={{ '@initial': 'mobile', '@s': 'smallScreen', '@md': 'bigScreen' }}
+      >
+        Hatha Yoga <Break display={{ '@initial': 'show', '@s': 'hide' }} />{' '}
+        Hanneke Jasper
       </TextLogo>
     </HeroGrid>
   );
