@@ -13,10 +13,7 @@ export const navBarItemStyles = css({
   paddingX: '$s',
   cursor: 'pointer',
   border: '2px solid transparent',
-  // borderRadius: '$xs',
-  // marginY: '2px',
   '&:focus': {
-    // boxShadow: '$focus',
     border: '2px dotted $coral',
   },
   '&:hover': {
@@ -31,12 +28,12 @@ export const navBarItemStyles = css({
     hideUnderLarge: {
       true: {
         display: 'none',
-        '@l': { display: 'inherit' },
+        '@l': { display: 'initial' },
       },
     },
     hideAtLarge: {
       true: {
-        display: 'inherit',
+        display: 'initial',
         '@l': { display: 'none' },
       },
     },
@@ -51,15 +48,17 @@ export const navBarItemStyles = css({
 export const NavItemStyled = styled(Link, navBarItemStyles);
 
 type NavItemProps = {
-  label: string;
-  slug: string;
+  slug?: string;
   hideUnderLarge?: boolean;
+  hideAtLarge?: boolean;
+  children: React.ReactNode;
 };
 
 export default function NavItem({
-  label,
-  slug,
+  slug = '',
   hideUnderLarge = false,
+  hideAtLarge = false,
+  children,
 }: NavItemProps) {
   return (
     <NavItemStyled
@@ -68,8 +67,9 @@ export default function NavItem({
         fontWeight: 'bold',
       }}
       hideUnderLarge={hideUnderLarge}
+      hideAtLarge={hideAtLarge}
     >
-      {label}
+      {children}
     </NavItemStyled>
   );
 }

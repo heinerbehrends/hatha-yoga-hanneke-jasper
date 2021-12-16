@@ -15,10 +15,11 @@ export default function NavLessen() {
       {navItems.map((item, index) => (
         <NavItem
           hideUnderLarge={true}
-          label={item}
           slug={slugify(item, { lower: true })}
           key={index}
-        />
+        >
+          {item}
+        </NavItem>
       ))}
       <DropdownMenu items={navItems} />
     </>
