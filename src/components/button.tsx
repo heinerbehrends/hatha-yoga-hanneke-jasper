@@ -2,8 +2,6 @@ import { Link } from 'gatsby';
 import { styled } from '../../stitches.config';
 
 const Button = styled(Link, {
-  fontSize: '$body',
-  paddingX: '$s',
   paddingY: '$xxs',
   borderRadius: '$xs',
   cursor: 'pointer',
@@ -11,6 +9,16 @@ const Button = styled(Link, {
     border: '2px dotted $coral',
   },
   variants: {
+    size: {
+      small: {
+        fontSize: '$s',
+        paddingX: '$xs',
+      },
+      big: {
+        fontSize: '$body',
+        paddingX: '$s',
+      },
+    },
     color: {
       green: {
         backgroundColor: '$green',
