@@ -2,7 +2,8 @@ import { createStitches } from '@stitches/react';
 
 export const { styled, css, getCssText, globalCss } = createStitches({
   media: {
-    md: '(min-width: 640px)',
+    s: '(min-width: 480px)',
+    m: '(min-width: 640px)',
     l: '(min-width: 960px)',
   },
   utils: {
@@ -38,7 +39,8 @@ export const { styled, css, getCssText, globalCss } = createStitches({
       blueDark: '#538696',
       text: '#848484',
       textDark: '#504B4B',
-      background: '#F7F6F6',
+      background: '#EAE9EA',
+      backgroundLight: '#F7F6F6',
     },
     fontSizes: {
       xs: '12px',
@@ -47,6 +49,7 @@ export const { styled, css, getCssText, globalCss } = createStitches({
       l: '20px',
       xl: '24px',
       xxl: '48px',
+      '3xl': '56px',
     },
     space: {
       xxs: '4px',
@@ -61,6 +64,7 @@ export const { styled, css, getCssText, globalCss } = createStitches({
       's-resp': 'min(1.67vw, 16px)',
       'm-resp': 'min(2.5vw, 24px)',
       'l-resp': 'min(3.33vw, 32px)',
+      'xxl-resp': 'min(6.66vw, 64px)',
       'xl-resp': 'min(5vw, 48px)',
       '3xl-resp': 'min(10vw, 96px)',
     },
