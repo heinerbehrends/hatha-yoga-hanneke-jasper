@@ -32,6 +32,7 @@ textarea {
   white-space: revert;
 }
 body {
+  margin-top: 60px;
   font-family: 'Asap';
   line-height: 1.5;
   font-size: 18px;
