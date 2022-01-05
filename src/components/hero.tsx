@@ -29,7 +29,7 @@ const ImageContainer = styled('div', {
 const PaddingContainer = styled('div', {
   display: 'flex',
   paddingY: '6%',
-  '@md': {
+  '@m': {
     paddingY: '8%',
     paddingLeft: '5%',
   },
@@ -47,7 +47,7 @@ const TextLogo = styled('h1', {
 const LogoContainer = styled('div', {
   width: '100%',
   backgroundColor: '$white',
-  '@md': {
+  '@m': {
     display: 'none',
   },
 });
@@ -56,7 +56,7 @@ const imageStyles = css({
   width: 'clamp(128px, 33%, 300px)',
   height: 'clamp(128px, 33%, 300px)',
   marginX: 'auto',
-  '@md': {
+  '@m': {
     height: '33%',
     width: '33%',
   },
@@ -66,7 +66,7 @@ const imageStyles = css({
 const svgStyles = css({
   display: 'none',
   transform: 'translateX(-50px)',
-  '@md': {
+  '@m': {
     display: 'initial',
   },
 });
@@ -84,7 +84,7 @@ export default function Hero() {
       </LogoContainer>
       <HeroContainer
         ref={dahliaRef}
-        size={{ '@initial': 'mobile', '@md': 'bigScreen' }}
+        size={{ '@initial': 'mobile', '@m': 'bigScreen' }}
       >
         <ImageContainer>
           <PaddingContainer>
