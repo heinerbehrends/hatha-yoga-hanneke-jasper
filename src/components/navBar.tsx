@@ -6,6 +6,7 @@ import Button from './button';
 
 const NavContainer = styled('nav', {
   display: 'flex',
+  height: '60px',
   alignItems: 'center',
   justifyContent: 'space-around',
   '@l': {
@@ -17,13 +18,13 @@ const NavContainer = styled('nav', {
 
 const NavBarContainer = styled('div', {
   overflow: 'hidden',
-  position: 'sticky',
+  position: 'fixed',
   top: 0,
   left: 0,
   margin: 'auto',
   width: '100%',
   backgroundColor: '$blueDark',
-  zIndex: '3',
+  zIndex: '2',
 });
 
 export default function NavBar() {
@@ -32,8 +33,14 @@ export default function NavBar() {
       <NavContainer>
         <NavItem slug="/">Home</NavItem>
         <NavLessen />
-        <NavItem slug="over-mij">Over mij</NavItem>
-        <Button to="/contact/" color="zacht">
+        <NavItem hideUnderMedium slug="over-mij">
+          Over mij
+        </NavItem>
+        <Button
+          to="/contact/"
+          color="zacht"
+          size={{ '@initial': 'small', '@md': 'big' }}
+        >
           Contact
         </Button>
       </NavContainer>
