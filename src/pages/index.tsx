@@ -2,7 +2,9 @@ import React from 'react';
 import { styled, globalCss } from '../../stitches.config';
 import Layout from '../components/layout';
 import Hero from '../components/hero';
-import ImageCard from '../components/ImageCard';
+import InfoCards from '../components/InfoCard';
+import LessenCards from '../components/LessenCard';
+import { infoCards, lessenCards } from '../data';
 
 const global = globalCss({
   '*': {
@@ -16,23 +18,27 @@ const global = globalCss({
 });
 
 const Heading = styled('h1', {
-  fontSize: 'min(6.25vw, 48px)',
+  fontSize: 'clamp(30px, 5vw, 48px)',
+  lineHeight: '33px',
   textAlign: 'center',
-  marginTop: '$xl',
+  marginTop: '$xl-resp',
+  paddingX: '$s',
 });
-
-const infoCardText1 = `Saswitha yoga is een vorm van hatha yoga die uitgaat van de eenheid 
-van lichaam en bewustzijn, waarbij de adem de verbinding vormt. De adem wordt gebruikt als 
-middel om in jezelf die verbinding te ervaren. De adem is de dragende kracht in elke beweging. 
-Door concentratie op de adem ontstaat een meditatieve aandacht die leidt tot verstilling.`;
 
 export default function Home() {
   global();
   return (
     <Layout slot={<Hero />}>
-      {/* <Hero /> */}
-      <Heading>Wat is Hatha Yoga?</Heading>
-      <ImageCard text={infoCardText1} title="Rustgevend" />
+      <Heading>Wat kan Hatha Yoga voor je doen?</Heading>
+      {infoCards.map((infoCard) => (
+        <InfoCards
+          key={infoCard.title}
+          text={infoCard.text}
+          title={infoCard.title}
+          color={infoCard.color}
+        />
+      ))}
+      {/* <LessenCards lessenCards={lessenCards} /> */}
     </Layout>
   );
 }
