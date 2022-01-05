@@ -8,6 +8,10 @@ const PageContainer = styled('main', {
   display: 'flex',
   flexDirection: 'column',
   alignContent: 'center',
+  backgroundColor: 'white',
+  '@m': {
+    backgroundColor: 'inherit',
+  },
 });
 
 type LayoutProps = {
