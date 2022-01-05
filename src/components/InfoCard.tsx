@@ -2,25 +2,26 @@ import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { styled } from '../../stitches.config';
 
-type InfoCardProps = {
+export type InfoCardProps = {
   title: string;
   text: string;
+  color: 'red' | 'blue' | 'green';
 };
 
-const ImageCardContainer = styled('section', {
-  display: 'grid',
+export const ImageCardContainer = styled('section', {
+  display: 'flex',
   gridTemplateColumns: '300px 1fr',
   alignItems: 'center',
+  justifyContent: 'center',
   borderRadius: '$s-resp',
-  height: '300px',
+  // height: '300px',
   variants: {
     size: {
       bigScreen: {
         marginTop: '$3xl-resp',
-        marginX: '$xl-resp',
       },
       smallScreen: {
-        marginLeft: '$3xl-resp',
+        marginTop: '$xxl-resp',
       },
     },
   },
@@ -31,16 +32,39 @@ const ImageContainer = styled('div', {
   display: 'flex',
   alignContent: 'center',
   justifyContent: 'center',
-  borderRadius: '50%',
+  marginTop: '$l',
   zIndex: '1',
   variants: {
+    color: {
+      blue: {
+        backgroundColor: '$blue',
+      },
+      red: {
+        backgroundColor: '$red',
+      },
+      green: {
+        backgroundColor: '$green',
+      },
+    },
     size: {
       bigScreen: {
         height: 'min(31.25vw, 300px)',
         width: 'min(31.25vw, 300px)',
+        borderRadius: '50%',
+        marginTop: '$l',
       },
       smallScreen: {
-        width: '160px',
+        flexDirection: 'column',
+        float: 'none',
+        width: '100%',
+        borderRadius: '16px',
+        alignItems: 'center',
+        margin: 0,
+        marginTop: '$xl',
+      },
+      mobile: {
+        margin: 0,
+        width: '100%',
       },
     },
     hideUnderLarge: {
@@ -53,23 +77,30 @@ const ImageContainer = styled('div', {
       true: {
         float: 'left',
         shapeOutside: 'circle(42.58% at 5.13rem 10.38rem)',
-        marginRight: '$xl-resp',
-        marginTop: '$3xl-resp',
         display: 'inherit',
+        marginTop: '$m',
+        borderRadius: '$s',
         '@l': { display: 'none' },
       },
     },
   },
 });
 
-const TextContainer = styled('article', {
+const ArticleContainer = styled('article', {
+  display: 'flex',
+  alignItems: 'center',
+  flexDirection: 'column-reverse',
   width: '640px',
-  paddingLeft: '$3xl-resp',
-  paddingRight: '$xl-resp',
+  // paddingLeft: '$s-resp',
+  // paddingRight: '$xl-resp',
   paddingY: '$xl-resp',
   backgroundColor: '$white',
-  borderRadius: '$m-resp',
-  marginLeft: '-60px',
+  marginX: 'auto',
+  '@s': {
+    borderRadius: '$m-resp',
+    marginLeft: '-60px',
+    paddingX: '$3xl',
+  },
 });
 
 const Shape = styled('div', {
@@ -87,17 +118,27 @@ const Shape = styled('div', {
   },
 });
 
-const SmallerHeading = styled('h2', {
+export const SmallerHeading = styled('h2', {
   fontSize: '$xl',
   fontWeight: 500,
 });
 
-export default function ImageCard({ title, text }: InfoCardProps) {
+const Paragraph = styled('p', {
+  fontSize: '$s',
+  marginTop: '$xs',
+});
+
+const TextContainer = styled('div', {
+  paddingX: '$s',
+});
+
+export default function InfoCards({ title, text, color }: InfoCardProps) {
   return (
     <ImageCardContainer size={{ '@initial': 'smallScreen', '@l': 'bigScreen' }}>
       <ImageContainer
+        color={color}
         hideUnderLarge={true}
-        size={{ '@initial': 'smallScreen', '@l': 'bigScreen' }}
+        size={{ '@m': 'smallScreen', '@l': 'bigScreen' }}
       >
         <StaticImage
           alt="Een foto van een yoga houding"
@@ -109,10 +150,15 @@ export default function ImageCard({ title, text }: InfoCardProps) {
         />
       </ImageContainer>
 
-      <TextContainer>
+      <ArticleContainer>
         <ImageContainer
           hideAtLarge={true}
-          size={{ '@initial': 'smallScreen', '@l': 'bigScreen' }}
+          size={{
+            '@initial': 'mobile',
+            '@m': 'smallScreen',
+            '@l': 'bigScreen',
+          }}
+          color={color}
         >
           <StaticImage
             alt="Een foto van een yoga houding"
@@ -123,10 +169,12 @@ export default function ImageCard({ title, text }: InfoCardProps) {
             placeholder="none"
           />
         </ImageContainer>
-        <SmallerHeading>{title}</SmallerHeading>
-        <Shape hideUnderLarge={true} />
-        <p> {text}</p>
-      </TextContainer>
+        <TextContainer>
+          <SmallerHeading>{title}</SmallerHeading>
+          <Shape hideUnderLarge />
+          <Paragraph> {text}</Paragraph>
+        </TextContainer>
+      </ArticleContainer>
     </ImageCardContainer>
   );
 }
