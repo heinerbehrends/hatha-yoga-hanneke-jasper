@@ -1,139 +1,104 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import { styled } from '../../stitches.config';
+import { css, styled } from '../../stitches.config';
+import HYHJ from '../images/HYHJ.svg';
 
-function getWindowWidth() {
-  if (typeof window === 'undefined') return;
-  return Math.max(
-    document.documentElement.clientWidth || 0,
-    window.innerWidth || 0
-  );
-}
-
-const DahliaContainer = styled('div', {
+const HeroContainer = styled('div', {
   backgroundColor: '$green',
   display: 'flex',
-  alignContent: 'center',
+  alignItems: 'center',
   justifyContent: 'center',
   variants: {
     size: {
       mobile: {
-        width: '70vw',
-        height: '50vw',
-        paddingX: '15vw',
         boxSizing: 'content-box',
       },
-      smallScreen: {
-        height: 'min(50vw, 400px)',
-        width: 'min(50vw, 400px)',
-        paddingX: 0,
+      bigScreen: {
+        width: '100%',
         boxSizing: 'border-box',
-        borderRadius: 'min(50vw, 400px)',
-      },
-      bigScreen: {
-        height: 'min(40vw, 400px)',
-        width: 'min(40vw, 400px)',
-        borderRadius: 'min(40vw, 400px)',
       },
     },
   },
 });
 
-const HeroGrid = styled('div', {
+const ImageContainer = styled('div', {
+  width: '100%',
+  maxWidth: '960px',
+});
+
+const PaddingContainer = styled('div', {
   display: 'flex',
-  // gridTemplateColumns: 'min-content max-content',
-  alignItems: 'center',
-  marginX: 'auto',
-  variants: {
-    size: {
-      mobile: {
-        width: 'fit-content',
-        flexDirection: 'column-reverse',
-        marginTop: 0,
-      },
-      bigger: {
-        flexDirection: 'row',
-        marginTop: 'calc(60px + $s-resp)',
-      },
-    },
+  paddingY: '6%',
+  '@md': {
+    paddingY: '8%',
+    paddingLeft: '5%',
   },
 });
 
-const TextLogo = styled('span', {
-  backgroundColor: '$white',
-  color: '$coral',
+const TextLogo = styled('h1', {
+  textAlign: 'center',
   fontFamily: 'Ostrich Sans',
-  variants: {
-    size: {
-      mobile: {
-        fontSize: '16vw',
-        lineHeight: '16vw',
-        textAlign: 'center',
-        width: '100vw',
-        paddingY: '$xl-resp',
-      },
-      smallScreen: {
-        fontSize: '8vw',
-        lineHeight: '8vw',
-        width: 'fit-content',
-        paddingX: '4.17vw',
-        paddingY: '3.13vw',
-        borderRadius: '3.13vw',
-        marginLeft: '-6.25vw',
-      },
-      bigScreen: {
-        fontSize: 'min(6.67vw, 64px)',
-        paddingX: '$l-resp',
-        paddingY: '$m-resp',
-        marginLeft: '-$xl-resp',
-        borderRadius: '$m-resp',
-      },
-    },
+  color: '$coral',
+  fontSize: '$3xl',
+  lineHeight: '56px',
+  paddingY: '$m',
+});
+
+const LogoContainer = styled('div', {
+  width: '100%',
+  backgroundColor: '$white',
+  '@md': {
+    display: 'none',
   },
 });
 
-const Break = styled('br', {
-  variants: {
-    display: {
-      hide: {
-        display: 'none',
-      },
-      show: {
-        display: 'initial',
-      },
-    },
+const imageStyles = css({
+  width: 'clamp(128px, 33%, 300px)',
+  height: 'clamp(128px, 33%, 300px)',
+  marginX: 'auto',
+  '@md': {
+    height: '33%',
+    width: '33%',
+  },
+  zIndex: 1,
+});
+
+const svgStyles = css({
+  display: 'none',
+  transform: 'translateX(-50px)',
+  '@md': {
+    display: 'initial',
   },
 });
+
+const translateLeftStyle = {} as const;
 
 export default function Hero() {
   const dahliaRef = useRef<HTMLDivElement | null>(null);
-  const heroRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const dahliaWidth = dahliaRef.current?.clientWidth!;
-    const windowWidth = getWindowWidth();
-    if (windowWidth! < 640 && windowWidth! > 480) {
-      heroRef.current!.style.marginLeft = `${(dahliaWidth / 2) * -1}px`;
-    }
-  });
   return (
-    <HeroGrid ref={heroRef} size={{ '@initial': 'mobile', '@s': 'bigger' }}>
-      <DahliaContainer
+    <>
+      <LogoContainer>
+        <TextLogo>
+          hatha yoga <br /> hanneke jasper
+        </TextLogo>
+      </LogoContainer>
+      <HeroContainer
         ref={dahliaRef}
-        size={{ '@initial': 'mobile', '@s': 'smallScreen', '@md': 'bigScreen' }}
+        size={{ '@initial': 'mobile', '@md': 'bigScreen' }}
       >
-        <StaticImage
-          alt="picture of a dahlia"
-          src="../images/dahlia.png"
-          placeholder="none"
-        />
-      </DahliaContainer>
-      <TextLogo
-        size={{ '@initial': 'mobile', '@s': 'smallScreen', '@md': 'bigScreen' }}
-      >
-        Hatha Yoga <Break display={{ '@initial': 'show', '@s': 'hide' }} />{' '}
-        Hanneke Jasper
-      </TextLogo>
-    </HeroGrid>
+        <ImageContainer>
+          <PaddingContainer>
+            <StaticImage
+              className={imageStyles()}
+              alt="picture of a dahlia"
+              src="../images/dahlia.png"
+              placeholder="none"
+              width={400}
+            />
+            <HYHJ className={svgStyles()} />
+          </PaddingContainer>
+        </ImageContainer>
+      </HeroContainer>
+    </>
   );
 }
