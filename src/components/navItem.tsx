@@ -8,9 +8,7 @@ export const navBarItemStyles = css({
   paddingY: '$s',
   color: '$white',
   backgroundColor: '$blueDark',
-  fontSize: '$body',
   textAlign: 'center',
-  paddingX: '$s',
   cursor: 'pointer',
   border: '2px solid transparent',
   '&:focus': {
@@ -31,15 +29,26 @@ export const navBarItemStyles = css({
         '@l': { display: 'initial' },
       },
     },
+    hideUnderMedium: {
+      true: {
+        display: 'none',
+        '@m': { display: 'initial' },
+      },
+    },
     hideAtLarge: {
       true: {
         display: 'initial',
-        '@l': { display: 'none' },
+        '@m': { display: 'none' },
       },
     },
-    isLogo: {
-      true: {
-        fontFamily: 'Ostrich Sans',
+    size: {
+      small: {
+        paddingX: '$xxs',
+        fontSize: '$s',
+      },
+      big: {
+        paddingX: '$s',
+        fontSize: '$body',
       },
     },
   },
@@ -50,22 +59,29 @@ export const NavItemStyled = styled(Link, navBarItemStyles);
 type NavItemProps = {
   slug?: string;
   hideUnderLarge?: boolean;
+  hideUnderMedium?: boolean;
   hideAtLarge?: boolean;
   children: React.ReactNode;
+  className?: string;
 };
 
 export default function NavItem({
   slug = '',
   hideUnderLarge = false,
+  hideUnderMedium = false,
   hideAtLarge = false,
   children,
+  className,
 }: NavItemProps) {
   return (
     <NavItemStyled
+      className={className}
       to={slug}
       activeStyle={{
         fontWeight: 'bold',
       }}
+      size={{ '@initial': 'small', '@md': 'big' }}
+      hideUnderMedium={hideUnderMedium}
       hideUnderLarge={hideUnderLarge}
       hideAtLarge={hideAtLarge}
     >
