@@ -1,11 +1,13 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import { styled } from '../../stitches.config';
+import Button from './button';
 import { SmallerHeading } from './InfoCard';
 
 type LessenCard = {
   title: string;
   text: string;
+  cta: string;
   link: string;
 };
 
@@ -38,7 +40,6 @@ const LessenContainer = styled('div', {
 
 const LeesMeerLink = styled(Link, {
   color: '$coral',
-  display: 'inline',
 });
 
 export default function LessenCards({ lessenCards }: LessenCardProps) {
@@ -47,8 +48,13 @@ export default function LessenCards({ lessenCards }: LessenCardProps) {
       {lessenCards.map((lessenCard) => (
         <LessenContainer key={lessenCard.title}>
           <SmallerHeading>{lessenCard.title}</SmallerHeading>
-          <p>{lessenCard.text}</p>
-          <LeesMeerLink to={lessenCard.link}>Lees meer</LeesMeerLink>
+          <p>
+            {lessenCard.text}{' '}
+            <LeesMeerLink to={lessenCard.link}>Lees meer</LeesMeerLink>
+          </p>
+          <Button size="big" color="greenTint" to="/contact">
+            {lessenCard.cta}
+          </Button>
         </LessenContainer>
       ))}
     </LessenCardsContainer>
