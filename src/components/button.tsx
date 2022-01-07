@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import { styled } from '../../stitches.config';
 
 const Button = styled(Link, {
+  display: 'inline-block',
   paddingY: '$xxs',
   borderRadius: '$xs',
   cursor: 'pointer',
@@ -16,7 +17,9 @@ const Button = styled(Link, {
       },
       big: {
         fontSize: '$body',
-        paddingX: '$s',
+        paddingX: '$l',
+        paddingY: '$xs',
+        marginTop: '$s',
       },
     },
     color: {
@@ -24,18 +27,18 @@ const Button = styled(Link, {
         backgroundColor: '$green',
         color: '$white',
       },
-      greenLight: {
-        backgroundColor: '$greenLight',
-        color: '$textDark',
+      greenTint: {
+        backgroundColor: '$greenTint',
+        color: '$text',
+        border: '2px solid $green',
       },
       white: {
         backgroundColor: '$white',
         color: '$text',
-        border: '2px solid $green',
       },
       zacht: {
         backgroundColor: '$background',
-        color: '$text',
+        color: '$textDark',
       },
     },
   },
