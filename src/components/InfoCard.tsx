@@ -21,7 +21,7 @@ export const ImageCardContainer = styled('section', {
         marginTop: '$3xl-resp',
       },
       smallScreen: {
-        marginTop: '$xxl-resp',
+        // marginTop: '$m-resp',
       },
     },
   },
@@ -63,8 +63,10 @@ const ImageContainer = styled('div', {
         marginTop: '$xl',
       },
       mobile: {
-        margin: 0,
+        marginX: 0,
+        marginTop: '$l',
         width: '100%',
+        borderRadius: 0,
       },
     },
     hideUnderLarge: {
@@ -93,7 +95,7 @@ const ArticleContainer = styled('article', {
   width: '640px',
   // paddingLeft: '$s-resp',
   // paddingRight: '$xl-resp',
-  paddingY: '$xl-resp',
+  paddingTop: '$xl-resp',
   backgroundColor: '$white',
   marginX: 'auto',
   '@s': {
@@ -126,6 +128,9 @@ export const SmallerHeading = styled('h2', {
 const Paragraph = styled('p', {
   fontSize: '$s',
   marginTop: '$xs',
+  '@s': {
+    fontSize: '$body',
+  },
 });
 
 const TextContainer = styled('div', {
