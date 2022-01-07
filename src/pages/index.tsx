@@ -38,7 +38,7 @@ export default function Home() {
           color={infoCard.color}
         />
       ))}
-      {/* <LessenCards lessenCards={lessenCards} /> */}
+      <LessenCards lessenCards={lessenCards} />
     </Layout>
   );
 }
