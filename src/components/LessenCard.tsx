@@ -13,7 +13,7 @@ type LessenCard = {
 
 type LessenCardProps = { lessenCards: LessenCard[] };
 
-const LessenCardsContainer = styled('article', {
+export const LessenCardsContainer = styled('article', {
   display: 'grid',
   gridGap: '16px',
   gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
@@ -23,6 +23,9 @@ const LessenCardsContainer = styled('article', {
 });
 
 const LessenContainer = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
   backgroundColor: '$white',
   padding: '$s',
   fontSize: '$s',
@@ -40,6 +43,7 @@ const LessenContainer = styled('div', {
 
 const LeesMeerLink = styled(Link, {
   color: '$coral',
+  display: 'block',
 });
 
 export default function LessenCards({ lessenCards }: LessenCardProps) {
@@ -47,11 +51,13 @@ export default function LessenCards({ lessenCards }: LessenCardProps) {
     <LessenCardsContainer>
       {lessenCards.map((lessenCard) => (
         <LessenContainer key={lessenCard.title}>
-          <SmallerHeading>{lessenCard.title}</SmallerHeading>
-          <p>
-            {lessenCard.text}{' '}
-            <LeesMeerLink to={lessenCard.link}>Lees meer</LeesMeerLink>
-          </p>
+          <div>
+            <SmallerHeading>{lessenCard.title}</SmallerHeading>
+            <p>
+              {lessenCard.text}{' '}
+              <LeesMeerLink to={lessenCard.link}>Lees meer</LeesMeerLink>
+            </p>
+          </div>
           <Button size="big" color="greenTint" to="/contact">
             {lessenCard.cta}
           </Button>
