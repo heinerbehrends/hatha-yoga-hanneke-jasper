@@ -20,6 +20,7 @@ const Button = styled(Link, {
         paddingX: '$l',
         paddingY: '$xs',
         marginTop: '$s',
+        width: 'fit-content',
       },
     },
     color: {
