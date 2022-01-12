@@ -93,8 +93,6 @@ const ArticleContainer = styled('article', {
   alignItems: 'center',
   flexDirection: 'column-reverse',
   width: '640px',
-  // paddingLeft: '$s-resp',
-  // paddingRight: '$xl-resp',
   paddingTop: '$xl-resp',
   backgroundColor: '$white',
   marginX: 'auto',
