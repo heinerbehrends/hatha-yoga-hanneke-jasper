@@ -28,7 +28,7 @@ Dit samenvallen van bewustzijn-adem-lichaam kan zorgen voor een gevoel van harmo
 export const lessenCards = [
   {
     title: 'Groepslessen',
-    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
     cta: 'Boek nu je gratis proefles',
     link: '/groepslessen',
   },
@@ -48,6 +48,6 @@ export const lessenCards = [
     title: 'Lessen voor scholieren',
     text: `Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
     cta: 'Boek nu u gratis adviesgresprek',
-    link: 'voor-scholieren',
+    link: '/voor-scholieren',
   },
 ];
