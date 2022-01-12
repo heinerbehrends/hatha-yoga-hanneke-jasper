@@ -17,7 +17,7 @@ const global = globalCss({
   },
 });
 
-const Heading = styled('h1', {
+export const Heading = styled('h1', {
   fontSize: 'clamp(30px, 5vw, 48px)',
   lineHeight: '33px',
   textAlign: 'center',
