@@ -1,11 +1,13 @@
-import { StaticImage } from 'gatsby-plugin-image';
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import React from 'react';
 import { styled } from '../../stitches.config';
 
 export type InfoCardProps = {
   title: string;
   text: string;
+  image: IGatsbyImageData;
   color: 'red' | 'blue' | 'green';
+  html?: string;
 };
 
 export const ImageCardContainer = styled('section', {
@@ -14,7 +16,6 @@ export const ImageCardContainer = styled('section', {
   alignItems: 'center',
   justifyContent: 'center',
   borderRadius: '$s-resp',
-  // height: '300px',
   variants: {
     size: {
       bigScreen: {
@@ -135,7 +136,13 @@ const TextContainer = styled('div', {
   paddingX: '$s',
 });
 
-export default function InfoCards({ title, text, color }: InfoCardProps) {
+export default function InfoCard({
+  title,
+  text,
+  image,
+  color,
+  html,
+}: InfoCardProps) {
   return (
     <ImageCardContainer size={{ '@initial': 'smallScreen', '@l': 'bigScreen' }}>
       <ImageContainer
@@ -143,14 +150,7 @@ export default function InfoCards({ title, text, color }: InfoCardProps) {
         hideUnderLarge={true}
         size={{ '@m': 'smallScreen', '@l': 'bigScreen' }}
       >
-        <StaticImage
-          alt="Een foto van een yoga houding"
-          width={300}
-          height={300}
-          layout="constrained"
-          src="../images/houding-1.png"
-          placeholder="none"
-        />
+        <GatsbyImage alt="Een foto van een yoga houding" image={image} />
       </ImageContainer>
 
       <ArticleContainer>
@@ -163,19 +163,15 @@ export default function InfoCards({ title, text, color }: InfoCardProps) {
           }}
           color={color}
         >
-          <StaticImage
-            alt="Een foto van een yoga houding"
-            width={300}
-            height={300}
-            layout="constrained"
-            src="../images/houding-1.png"
-            placeholder="none"
-          />
+          <GatsbyImage alt="Een foto van een yoga houding" image={image} />
         </ImageContainer>
         <TextContainer>
           <SmallerHeading>{title}</SmallerHeading>
           <Shape hideUnderLarge />
-          <Paragraph> {text}</Paragraph>
+          <Paragraph>{text}</Paragraph>
+          {html ? (
+            <Paragraph dangerouslySetInnerHTML={{ __html: html! }} />
+          ) : null}
         </TextContainer>
       </ArticleContainer>
     </ImageCardContainer>
