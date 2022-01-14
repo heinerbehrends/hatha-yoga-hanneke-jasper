@@ -80,7 +80,7 @@ export default function NavItem({
       activeStyle={{
         fontWeight: 'bold',
       }}
-      size={{ '@initial': 'small', '@md': 'big' }}
+      size={{ '@initial': 'small', '@m': 'big' }}
       hideUnderMedium={hideUnderMedium}
       hideUnderLarge={hideUnderLarge}
       hideAtLarge={hideAtLarge}
