@@ -71,8 +71,6 @@ const svgStyles = css({
   },
 });
 
-const translateLeftStyle = {} as const;
-
 export default function Hero() {
   const dahliaRef = useRef<HTMLDivElement | null>(null);
   return (
