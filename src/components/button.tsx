@@ -14,6 +14,7 @@ const Button = styled(Link, {
       small: {
         fontSize: '$s',
         paddingX: '$xs',
+        marginX: '$s',
       },
       big: {
         fontSize: '$body',
