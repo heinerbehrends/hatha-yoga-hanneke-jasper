@@ -4,7 +4,7 @@ import { styled } from '../../stitches.config';
 import Button from './button';
 import { SmallerHeading } from './InfoCard';
 
-type LessenCard = {
+export type LessenCard = {
   title: string;
   text: string;
   cta: string;
@@ -53,10 +53,8 @@ export default function LessenCards({ lessenCards }: LessenCardProps) {
         <LessenContainer key={lessenCard.title}>
           <div>
             <SmallerHeading>{lessenCard.title}</SmallerHeading>
-            <p>
-              {lessenCard.text}{' '}
-              <LeesMeerLink to={lessenCard.link}>Lees meer</LeesMeerLink>
-            </p>
+            <p dangerouslySetInnerHTML={{ __html: lessenCard.text }}></p>
+            <LeesMeerLink to={lessenCard.link}>Lees meer</LeesMeerLink>
           </div>
           <Button size="big" color="greenTint" to="/contact">
             {lessenCard.cta}
