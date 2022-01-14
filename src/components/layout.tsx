@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled } from '../../stitches.config';
+import { globalCss, styled } from '../../stitches.config';
 import NavBar from './navBar';
 
 const PageContainer = styled('main', {
@@ -14,12 +14,24 @@ const PageContainer = styled('main', {
   },
 });
 
+const globalStyles = globalCss({
+  '*': {
+    fontFamily: '$default',
+    fontSize: '$body',
+  },
+  body: {
+    backgroundColor: '$background',
+    color: '$text',
+  },
+});
+
 type LayoutProps = {
   children: React.ReactNode;
   slot?: React.ReactNode;
 };
 
 export default function Layout({ children, slot }: LayoutProps) {
+  globalStyles();
   return (
     <>
       <NavBar />
