@@ -22,7 +22,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query');
   }
   const lessonPages = result.data.allWpLes.nodes;
-  console.log(lessonPages[0]);
   lessonPages.forEach((node) => {
     createPage({
       path: `/${node.slug}`,
