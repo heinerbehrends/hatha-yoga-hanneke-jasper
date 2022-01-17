@@ -59,7 +59,7 @@ const ImageContainer = styled('div', {
 type TestimonialProps = {
   quote: string;
   author: string;
-  image: {
+  image?: {
     alt: string;
     gatsbyImageData: IGatsbyImageData;
   };
@@ -76,9 +76,11 @@ export default function Testimonial({
         <blockquote dangerouslySetInnerHTML={{ __html: quote }} />
         <figcaption>{author}</figcaption>
       </div>
-      <ImageContainer>
-        <GatsbyImage alt={image.alt} image={image.gatsbyImageData} />
-      </ImageContainer>
+      {image ? (
+        <ImageContainer>
+          <GatsbyImage alt={image.alt} image={image.gatsbyImageData} />
+        </ImageContainer>
+      ) : null}
     </TestimonialContainer>
   );
 }
