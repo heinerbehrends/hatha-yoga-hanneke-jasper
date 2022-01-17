@@ -120,7 +120,7 @@ const Shape = styled('div', {
 });
 
 export const SmallerHeading = styled('h2', {
-  fontSize: '$xl',
+  fontSize: '$l',
   fontWeight: 500,
 });
 
