@@ -2,27 +2,21 @@ import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import React from 'react';
 import { styled } from '../../stitches.config';
 
-export type InfoCardProps = {
-  title: string;
-  text: string;
-  image: IGatsbyImageData;
-  color: 'red' | 'blue' | 'green';
-  html?: string;
-};
-
-export const ImageCardContainer = styled('section', {
+export const InfoCardContainer = styled('section', {
   display: 'flex',
+  marginX: 'auto',
   gridTemplateColumns: '300px 1fr',
   alignItems: 'center',
   justifyContent: 'center',
   borderRadius: '$s-resp',
+  overflow: 'hidden',
   variants: {
     size: {
       bigScreen: {
-        marginTop: '$3xl-resp',
+        marginTop: '$3xl',
       },
       smallScreen: {
-        // marginTop: '$m-resp',
+        marginTop: '$xl',
       },
     },
   },
@@ -58,10 +52,10 @@ const ImageContainer = styled('div', {
         flexDirection: 'column',
         float: 'none',
         width: '100%',
-        borderRadius: '16px',
+        borderRadius: 0,
         alignItems: 'center',
         margin: 0,
-        marginTop: '$xl',
+        marginTop: '$m',
       },
       mobile: {
         marginX: 0,
@@ -97,7 +91,7 @@ const ArticleContainer = styled('article', {
   paddingTop: '$xl-resp',
   backgroundColor: '$white',
   marginX: 'auto',
-  '@s': {
+  '@l': {
     borderRadius: '$m-resp',
     marginLeft: '-60px',
     paddingX: '$3xl',
@@ -122,11 +116,13 @@ const Shape = styled('div', {
 export const SmallerHeading = styled('h2', {
   fontSize: '$l',
   fontWeight: 500,
+  paddingLeft: '$l',
 });
 
 const Paragraph = styled('p', {
   fontSize: '$s',
   marginTop: '$xs',
+  paddingX: '$l',
   '@s': {
     fontSize: '$body',
   },
@@ -136,15 +132,16 @@ const TextContainer = styled('div', {
   paddingX: '$s',
 });
 
-export default function InfoCard({
-  title,
-  text,
-  image,
-  color,
-  html,
-}: InfoCardProps) {
+export type InfoCardProps = {
+  title: string;
+  image: IGatsbyImageData;
+  color: 'red' | 'blue' | 'green';
+  html: string;
+};
+
+export default function InfoCard({ title, image, color, html }: InfoCardProps) {
   return (
-    <ImageCardContainer size={{ '@initial': 'smallScreen', '@l': 'bigScreen' }}>
+    <InfoCardContainer size={{ '@initial': 'smallScreen', '@l': 'bigScreen' }}>
       <ImageContainer
         color={color}
         hideUnderLarge={true}
@@ -168,12 +165,9 @@ export default function InfoCard({
         <TextContainer>
           <SmallerHeading>{title}</SmallerHeading>
           <Shape hideUnderLarge />
-          <Paragraph>{text}</Paragraph>
-          {html ? (
-            <Paragraph dangerouslySetInnerHTML={{ __html: html! }} />
-          ) : null}
+          <Paragraph dangerouslySetInnerHTML={{ __html: html }} />
         </TextContainer>
       </ArticleContainer>
-    </ImageCardContainer>
+    </InfoCardContainer>
   );
 }
