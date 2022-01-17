@@ -9,6 +9,20 @@ export type LessenNode = {
   };
 };
 
+export type TestimonialNode = {
+  content: string;
+  aanbevolenDoor: {
+    aanbevolenDoor: string;
+    foto: {
+      localFile: {
+        childImageSharp: {
+          gatsbyImageData: IGatsbyImageData;
+        };
+      };
+    };
+  };
+};
+
 type HomePageProps = {
   data: {
     wpPage: {
@@ -45,6 +59,9 @@ type HomePageProps = {
     };
     allWpLes: {
       nodes: LessenNode[];
+    };
+    allWpAanbeveling: {
+      nodes: TestimonialNode[];
     };
   };
 };
