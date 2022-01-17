@@ -95,6 +95,8 @@ const ArticleContainer = styled('article', {
     borderRadius: '$m-resp',
     marginLeft: '-60px',
     paddingX: '$3xl',
+    paddingTop: '$xl',
+    paddingBottom: '$m',
   },
 });
 
@@ -117,6 +119,9 @@ export const SmallerHeading = styled('h2', {
   fontSize: '$l',
   fontWeight: 500,
   paddingLeft: '$l',
+  '@l': {
+    paddingLeft: 0,
+  },
 });
 
 const Paragraph = styled('p', {
@@ -126,10 +131,13 @@ const Paragraph = styled('p', {
   '@s': {
     fontSize: '$body',
   },
+  '@l': {
+    paddingX: 0,
+  },
 });
 
 const TextContainer = styled('div', {
-  paddingX: '$s',
+  height: 'fit-content',
 });
 
 export type InfoCardProps = {
@@ -145,7 +153,7 @@ export default function InfoCard({ title, image, color, html }: InfoCardProps) {
       <ImageContainer
         color={color}
         hideUnderLarge={true}
-        size={{ '@m': 'smallScreen', '@l': 'bigScreen' }}
+        size={{ '@initial': 'mobile', '@m': 'smallScreen', '@l': 'bigScreen' }}
       >
         <GatsbyImage alt="Een foto van een yoga houding" image={image} />
       </ImageContainer>
