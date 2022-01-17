@@ -26,19 +26,19 @@ export default function Home(props: HomePageProps) {
       <Heading>Wat kan Hatha Yoga voor je doen?</Heading>
       <InfoCard
         color="blue"
-        text={infoCardsData.inhoud0}
+        html={infoCardsData.inhoud0}
         title={infoCardsData.titel0}
         image={getImage(infoCardsData.afbeelding0)}
       />
       <InfoCard
         color="red"
-        text={infoCardsData.inhoud2}
+        html={infoCardsData.inhoud2}
         title={infoCardsData.titel2}
         image={getImage(infoCardsData.afbeelding2)}
       />
       <InfoCard
         color="green"
-        text={infoCardsData.inhoud3}
+        html={infoCardsData.inhoud3}
         title={infoCardsData.titel3}
         image={getImage(infoCardsData.afbeelding3)}
       />
