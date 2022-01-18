@@ -76,7 +76,7 @@ export default function NavItem({
   return (
     <NavItemStyled
       className={className}
-      to={slug}
+      to={`/${slug}`}
       activeStyle={{
         fontWeight: 'bold',
       }}
