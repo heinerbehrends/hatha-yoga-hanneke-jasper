@@ -6,6 +6,7 @@ export const navBarItemStyles = css({
   display: 'flex',
   alignItems: 'center',
   paddingY: '$s',
+  paddingX: '$m',
   color: '$white',
   backgroundColor: '$blueDark',
   textAlign: 'center',
