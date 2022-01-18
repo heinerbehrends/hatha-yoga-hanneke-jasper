@@ -12,6 +12,19 @@ const PageContainer = styled('main', {
   '@m': {
     backgroundColor: 'inherit',
   },
+  variants: {
+    background: {
+      true: {
+        backgroundColor: '$white',
+      },
+    },
+    border: {
+      true: {
+        borderRight: '2px solid $blue',
+        borderLeft: '2px solid $green',
+      },
+    },
+  },
 });
 
 const globalStyles = globalCss({
@@ -28,15 +41,24 @@ const globalStyles = globalCss({
 type LayoutProps = {
   children: React.ReactNode;
   slot?: React.ReactNode;
+  background?: boolean;
+  border?: boolean;
 };
 
-export default function Layout({ children, slot }: LayoutProps) {
+export default function Layout({
+  children,
+  slot,
+  background,
+  border,
+}: LayoutProps) {
   globalStyles();
   return (
     <>
       <NavBar />
       {slot}
-      <PageContainer>{children}</PageContainer>
+      <PageContainer background={background} border={border}>
+        {children}
+      </PageContainer>
     </>
   );
 }
