@@ -16,7 +16,6 @@ type LessenCardProps = { lessenCards: LessenCard[] };
 export const LessenCardsContainer = styled('article', {
   display: 'grid',
   gridGap: '$s',
-  paddingX: '$s',
   gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
   '@m': {
     marginTop: '$3xl',
