@@ -59,10 +59,7 @@ const ImageContainer = styled('div', {
 type TestimonialProps = {
   quote: string;
   author: string;
-  image?: {
-    alt: string;
-    gatsbyImageData: IGatsbyImageData;
-  };
+  image?: IGatsbyImageData;
 };
 
 export default function Testimonial({
@@ -78,7 +75,7 @@ export default function Testimonial({
       </div>
       {image ? (
         <ImageContainer>
-          <GatsbyImage alt={image.alt} image={image.gatsbyImageData} />
+          <GatsbyImage alt="" image={image} />
         </ImageContainer>
       ) : null}
     </TestimonialContainer>
