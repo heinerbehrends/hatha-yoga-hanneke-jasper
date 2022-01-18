@@ -5,7 +5,7 @@ import Hero from '../components/hero';
 import InfoCard from '../components/InfoCard';
 import LessenCards from '../components/LessenCard';
 import HomePageProps from './index/homePageProps';
-import { getImage, getLessonsData } from './index/indexUtils';
+import { getLocalImage, getLessonsData } from './index/indexUtils';
 import { graphql } from 'gatsby';
 import Testimonial from '../components/testimonial';
 
@@ -28,31 +28,26 @@ export default function Home(props: HomePageProps) {
         color="blue"
         html={infoCardsData.inhoud0}
         title={infoCardsData.titel0}
-        image={getImage(infoCardsData.afbeelding0)}
+        image={getLocalImage(infoCardsData.afbeelding0)}
       />
       <InfoCard
         color="red"
         html={infoCardsData.inhoud2}
         title={infoCardsData.titel2}
-        image={getImage(infoCardsData.afbeelding2)}
+        image={getLocalImage(infoCardsData.afbeelding2)}
       />
       <InfoCard
         color="green"
         html={infoCardsData.inhoud3}
         title={infoCardsData.titel3}
-        image={getImage(infoCardsData.afbeelding3)}
+        image={getLocalImage(infoCardsData.afbeelding3)}
       />
       <LessenCards lessenCards={getLessonsData(lessonNodes)} />
-      {testimonialNodes.map((testimonial) => (
+      {testimonialNodes.map(({ aanbevolenDoor, content }) => (
         <Testimonial
-          author={testimonial.aanbevolenDoor.aanbevolenDoor}
-          image={{
-            gatsbyImageData:
-              testimonial.aanbevolenDoor.foto.localFile.childImageSharp
-                .gatsbyImageData,
-            alt: '',
-          }}
-          quote={testimonial.content}
+          author={aanbevolenDoor.aanbevolenDoor}
+          image={getLocalImage(aanbevolenDoor.foto)}
+          quote={content}
         />
       ))}
     </Layout>

@@ -9,7 +9,7 @@ type ImageNode = {
     };
   };
 };
-export function getImage(imageNode: ImageNode): IGatsbyImageData {
+export function getLocalImage(imageNode: ImageNode): IGatsbyImageData {
   return imageNode.localFile.childImageSharp.gatsbyImageData;
 }
 export function getLessonsData(lessonNodes: LessenNode[]): LessenCard[] {
