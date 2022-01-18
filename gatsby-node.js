@@ -26,7 +26,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
       path: `/${node.slug}`,
       component: path.resolve(`./src/layouts/lessonLayout.tsx`),
-      context: { id: node.id },
+      context: { id: node.id, title: node.title },
     });
   });
 };
