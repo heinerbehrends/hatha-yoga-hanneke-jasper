@@ -15,7 +15,7 @@ export default function NavLessen() {
       {navItems.map((item, index) => (
         <NavItem
           hideUnderLarge={true}
-          slug={slugify(item, { lower: true })}
+          slug={slugify(item, { lower: true }).toLowerCase()}
           key={index}
         >
           {item}

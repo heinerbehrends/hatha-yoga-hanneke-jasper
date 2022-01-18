@@ -28,7 +28,7 @@ export default function DropdownMenu({ items }: DropdownMenuItems) {
       </Trigger>
       <DropdownPrimitives.Content>
         {items.map((item, index) => (
-          <Link to={slugify(item)} key={index}>
+          <Link to={slugify(item).toLowerCase()} key={index}>
             <DropdownPrimitives.Item className={navBarItemStyles()}>
               {item}
             </DropdownPrimitives.Item>
