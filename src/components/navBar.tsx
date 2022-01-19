@@ -31,7 +31,7 @@ export default function NavBar() {
   return (
     <NavBarContainer>
       <NavContainer>
-        <NavItem slug="/">Home</NavItem>
+        <NavItem slug="">Home</NavItem>
         <NavLessen />
         <NavItem hideUnderMedium slug="over-mij">
           Over mij
