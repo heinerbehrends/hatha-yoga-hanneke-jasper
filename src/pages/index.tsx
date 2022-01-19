@@ -8,6 +8,7 @@ import HomePageProps from './index/homePageProps';
 import { getLocalImage, getLessonsData } from './index/indexUtils';
 import { graphql } from 'gatsby';
 import Testimonial from '../components/testimonial';
+import ContactForm from '../components/ContactForm';
 
 export const Heading = styled('h1', {
   fontSize: 'clamp(30px, 5vw, 48px)',
@@ -50,6 +51,7 @@ export default function Home(props: HomePageProps) {
           quote={content}
         />
       ))}
+      <ContactForm />
     </Layout>
   );
 }
