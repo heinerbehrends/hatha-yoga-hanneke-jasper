@@ -1,5 +1,5 @@
 import { IGatsbyImageData } from 'gatsby-plugin-image';
-import { LessenCard } from '../../components/LessenCard';
+import { LessenCard } from './components/LessenCard';
 import { LessenNode } from './homePageProps';
 
 type ImageNode = {

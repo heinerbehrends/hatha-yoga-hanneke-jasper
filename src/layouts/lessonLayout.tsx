@@ -6,7 +6,7 @@ import Button from '../components/button';
 import Layout from '../components/layout';
 import Testimonial from '../components/testimonial';
 import { Heading } from '../pages';
-import { getLocalImage } from '../pages/index/indexUtils';
+import { getLocalImage } from '../utils';
 
 const LessenHTML = styled('article', {
   marginTop: '$s',
