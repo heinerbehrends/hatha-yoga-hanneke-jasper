@@ -6,7 +6,7 @@ import Button from '../components/button';
 import Layout from '../components/layout';
 import Testimonial from '../components/testimonial';
 import { Heading } from '../pages';
-import { getLocalImage } from '../utils';
+import { getLocalImage, ImageNode } from '../utils';
 
 const LessenHTML = styled('article', {
   marginTop: '$s',
@@ -48,16 +48,10 @@ type LessonData = {
       };
     };
     wpAanbeveling?: {
-      content: string;
-      aanbevolenDoor: {
+      aanbeveling: {
+        aanbevelingTekst: string;
         aanbevolenDoor: string;
-        foto: {
-          localFile: {
-            childImageSharp: {
-              gatsbyImageData: IGatsbyImageData;
-            };
-          };
-        };
+        foto: ImageNode;
       };
     };
   };
@@ -83,9 +77,9 @@ export default function LessonLayout({
         </Button>
         {wpAanbeveling ? (
           <Testimonial
-            quote={wpAanbeveling.content}
-            author={wpAanbeveling.aanbevolenDoor.aanbevolenDoor}
-            image={getLocalImage(wpAanbeveling.aanbevolenDoor.foto)}
+            quote={wpAanbeveling.aanbeveling.aanbevelingTekst}
+            author={wpAanbeveling.aanbeveling.aanbevolenDoor}
+            image={getLocalImage(wpAanbeveling.aanbeveling.foto)}
           />
         ) : null}
       </LessenContainer>
@@ -117,9 +111,9 @@ export const lessonPageQuery = graphql`
         }
       }
     }
-    wpAanbeveling(aanbevolenDoor: { toonOpPagina: { eq: $title } }) {
-      content
-      aanbevolenDoor {
+    wpAanbeveling(aanbeveling: { toonOpPagina: { eq: $title } }) {
+      aanbeveling {
+        aanbevelingTekst
         aanbevolenDoor
         foto {
           localFile {
