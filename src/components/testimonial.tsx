@@ -21,22 +21,30 @@ const TestimonialContainer = styled('figure', {
     fontSize: '100px',
     paddingRight: '$m',
     lineHeight: '60px',
-    transform: 'translateY(30px)',
+    transform: 'translateY(10px)',
+    '@s': {
+      paddingRight: '$l',
+      fontSize: '120px',
+      lineHeight: '80px',
+      transform: 'translate(-5px, 10px)',
+    },
+    '@m': {
+      transform: 'translate(-15px, 10px)',
+      paddingRight: '$s',
+    },
+    '@l': {
+      transform: 'translate(-15px, 10px)',
+    },
   },
   '@s': {
     border: '1px solid $blue',
     borderRadius: '$s',
     fontSize: '$xl',
-    '&:before': {
-      fontWeight: 'light',
-      content: 'open-quote',
-      paddingRight: '$xl',
-      fontSize: '240px',
-      lineHeight: '80px',
-      transform: 'translateY(50px)',
-    },
     '& figcaption': {
       fontSize: '$body',
+    },
+    '@m': {
+      fontSize: '$xl',
     },
   },
 });
