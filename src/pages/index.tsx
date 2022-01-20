@@ -9,6 +9,7 @@ import { getLocalImage, getLessonsData } from '../utils';
 import { graphql } from 'gatsby';
 import Testimonial from '../components/testimonial';
 import ContactForm from '../components/ContactForm';
+import ContactCards from '../components/ContactCards';
 
 export const Heading = styled('h1', {
   fontSize: 'clamp(30px, 5vw, 48px)',
@@ -18,16 +19,24 @@ export const Heading = styled('h1', {
   paddingX: '$s',
 });
 
+const Contact = styled('div', {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(2, 1fr)',
+  gridGap: '$s',
+  marginTop: '$s',
+});
+
 export default function Home(props: HomePageProps) {
   const infoCardsData = props.data.wpPage.overHathaYoga.infos;
-  console.log(infoCardsData);
   const lessonNodes = props.data.allWpLes.nodes.reverse();
   const testimonialNodes = props.data.allWpAanbeveling.nodes;
+  const contactInfo = props.data.wpPage.contactgegevens;
   return (
     <Layout slot={<Hero />}>
       <Heading>Wat kan Hatha Yoga voor je doen?</Heading>
       {infoCardsData.map((info, index) => (
         <InfoCard
+          key={info.titel}
           color={index}
           html={info.inhoud}
           title={info.titel}
@@ -35,14 +44,23 @@ export default function Home(props: HomePageProps) {
         />
       ))}
       <LessenCards lessenCards={getLessonsData(lessonNodes)} />
-      {testimonialNodes.map(({ aanbevolenDoor, content }) => (
-        <Testimonial
-          author={aanbevolenDoor.aanbevolenDoor}
-          image={getLocalImage(aanbevolenDoor.foto)}
-          quote={content}
+      {testimonialNodes.map(
+        ({ aanbeveling: { aanbevelingTekst, foto, aanbevolenDoor } }) => (
+          <Testimonial
+            author={aanbevolenDoor}
+            image={getLocalImage(foto)}
+            quote={aanbevelingTekst}
+          />
+        )
+      )}
+      <Contact>
+        <ContactCards
+          emailadres={contactInfo.emailadres}
+          telefoonnummer={contactInfo.telefoonnummer}
+          telefonischBereikbaar={contactInfo.telefonischBereikbaar}
         />
-      ))}
-      <ContactForm />
+        <ContactForm />
+      </Contact>
     </Layout>
   );
 }
@@ -69,6 +87,13 @@ export const query = graphql`
           }
         }
       }
+      contactgegevens {
+        adres
+        emailadres
+        telefoonnummer
+        telefonischBereikbaar
+        kvkNummer
+      }
     }
     allWpLes {
       nodes {
@@ -82,19 +107,19 @@ export const query = graphql`
     }
     allWpAanbeveling(
       filter: {
-        aanbevolenDoor: {
+        aanbeveling: {
           toonOpPagina: { eq: "Wat kan hatha yoga voor je doen?" }
         }
       }
     ) {
       nodes {
-        content
-        aanbevolenDoor {
+        aanbeveling {
+          aanbevelingTekst
           aanbevolenDoor
           foto {
             localFile {
               childImageSharp {
-                gatsbyImageData(width: 90, placeholder: NONE)
+                gatsbyImageData
               }
             }
           }
