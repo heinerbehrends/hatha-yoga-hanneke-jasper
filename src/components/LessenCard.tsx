@@ -45,6 +45,9 @@ const LessenContainer = styled('div', {
 const LeesMeerLink = styled(Link, {
   color: '$coral',
   display: 'block',
+  '&:focus': {
+    textDecoration: 'underline',
+  },
 });
 
 export default function LessenCards({ lessenCards }: LessenCardProps) {
