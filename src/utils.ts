@@ -2,7 +2,7 @@ import { IGatsbyImageData } from 'gatsby-plugin-image';
 import { LessenCard } from './components/LessenCard';
 import { LessenNode } from './homePageProps';
 
-type ImageNode = {
+export type ImageNode = {
   localFile: {
     childImageSharp: {
       gatsbyImageData: IGatsbyImageData;
