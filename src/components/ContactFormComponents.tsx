@@ -77,7 +77,6 @@ export const FormContainer = styled('div', {
   paddingX: '$xxl',
   paddingY: '$l',
   marginX: 'auto',
-  marginTop: '$s',
   width: 'fit-content',
   display: 'flex',
   flexDirection: 'column',
