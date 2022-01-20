@@ -19,30 +19,21 @@ export const Heading = styled('h1', {
 });
 
 export default function Home(props: HomePageProps) {
-  const infoCardsData = props.data.wpPage.overHathaYoga;
+  const infoCardsData = props.data.wpPage.overHathaYoga.infos;
+  console.log(infoCardsData);
   const lessonNodes = props.data.allWpLes.nodes.reverse();
   const testimonialNodes = props.data.allWpAanbeveling.nodes;
   return (
     <Layout slot={<Hero />}>
       <Heading>Wat kan Hatha Yoga voor je doen?</Heading>
-      <InfoCard
-        color="blue"
-        html={infoCardsData.inhoud0}
-        title={infoCardsData.titel0}
-        image={getLocalImage(infoCardsData.afbeelding0)}
-      />
-      <InfoCard
-        color="red"
-        html={infoCardsData.inhoud2}
-        title={infoCardsData.titel2}
-        image={getLocalImage(infoCardsData.afbeelding2)}
-      />
-      <InfoCard
-        color="green"
-        html={infoCardsData.inhoud3}
-        title={infoCardsData.titel3}
-        image={getLocalImage(infoCardsData.afbeelding3)}
-      />
+      {infoCardsData.map((info, index) => (
+        <InfoCard
+          color={index}
+          html={info.inhoud}
+          title={info.titel}
+          image={getLocalImage(info.afbeelding)}
+        />
+      ))}
       <LessenCards lessenCards={getLessonsData(lessonNodes)} />
       {testimonialNodes.map(({ aanbevolenDoor, content }) => (
         <Testimonial
@@ -61,45 +52,19 @@ export const query = graphql`
     wpPage(title: { eq: "Wat kan hatha yoga voor je doen?" }) {
       title
       overHathaYoga {
-        titel0
-        inhoud0
-        afbeelding0 {
-          localFile {
-            childImageSharp {
-              gatsbyImageData(
-                placeholder: NONE
-                width: 300
-                height: 300
-                layout: CONSTRAINED
-              )
-            }
-          }
-        }
-        titel2
-        inhoud2
-        afbeelding2 {
-          localFile {
-            childImageSharp {
-              gatsbyImageData(
-                placeholder: NONE
-                width: 300
-                height: 300
-                layout: CONSTRAINED
-              )
-            }
-          }
-        }
-        titel3
-        inhoud3
-        afbeelding3 {
-          localFile {
-            childImageSharp {
-              gatsbyImageData(
-                placeholder: NONE
-                width: 300
-                height: 300
-                layout: CONSTRAINED
-              )
+        infos {
+          titel
+          inhoud
+          afbeelding {
+            localFile {
+              childImageSharp {
+                gatsbyImageData(
+                  placeholder: NONE
+                  width: 300
+                  height: 300
+                  layout: CONSTRAINED
+                )
+              }
             }
           }
         }

@@ -143,15 +143,17 @@ const TextContainer = styled('div', {
 export type InfoCardProps = {
   title: string;
   image: IGatsbyImageData;
-  color: 'red' | 'blue' | 'green';
+  color: number;
   html: string;
 };
+
+const colorMap = ['blue', 'red', 'green'] as const;
 
 export default function InfoCard({ title, image, color, html }: InfoCardProps) {
   return (
     <InfoCardContainer size={{ '@initial': 'smallScreen', '@l': 'bigScreen' }}>
       <ImageContainer
-        color={color}
+        color={colorMap[color]}
         hideUnderLarge={true}
         size={{ '@initial': 'mobile', '@m': 'smallScreen', '@l': 'bigScreen' }}
       >
@@ -166,7 +168,7 @@ export default function InfoCard({ title, image, color, html }: InfoCardProps) {
             '@m': 'smallScreen',
             '@l': 'bigScreen',
           }}
-          color={color}
+          color={colorMap[color]}
         >
           <GatsbyImage alt="Een foto van een yoga houding" image={image} />
         </ImageContainer>
