@@ -27,5 +27,5 @@ export default function handler(
         console.error(error);
       }
     });
-  res.status(200).json({ hello: `world` });
+  res.status(200).json({ message: 'Message was send succesfully' });
 }

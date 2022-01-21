@@ -1,3 +1,4 @@
+import { CheckIcon } from '@modulz/radix-icons';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import {
@@ -10,24 +11,52 @@ import {
 } from './ContactFormComponents';
 
 export default function ContactForm() {
-  const { register, formState } = useForm({
+  const {
+    register,
+    formState: { errors, isSubmitSuccessful, isSubmitted },
+    handleSubmit,
+  } = useForm<FormValues>({
     mode: 'onBlur',
     shouldFocusError: true,
   });
-  const { isSubmitSuccessful } = formState;
-
+  console.log('isSubmitte', isSubmitted);
+  console.log('isSubmitSuccessful', isSubmitSuccessful);
+  type FormValues = { name: string; email: string; message: string };
+  async function onSubmit(data: FormValues) {
+    await window
+      .fetch(`api/send-email`, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+      .then((response) => {
+        if (response.status !== 200) {
+          throw new Error(
+            'Er was een probleem met het verzenden van je bericht.'
+          );
+        }
+      });
+  }
+  function onError() {
+    console.log('error');
+  }
   return (
     <form
       method="POST"
-      data-netlify="true"
+      onSubmit={(event) =>
+        handleSubmit(
+          onSubmit,
+          onError
+        )(event).catch((error) => {
+          console.log(error);
+        })
+      }
       encType="application/x-www-form-urlencoded"
       name="contact-form"
       id="contact"
-      action="/succes"
-      // {...props}
     >
-      {/* hidden form field neccessary for netlify form submission */}
-      {/* <input type="hidden" name="form-name" value="contact-form" /> */}
       <FormContainer>
         <Label for="name">Naam</Label>
         <InputStyled
@@ -35,13 +64,13 @@ export default function ContactForm() {
           autoFocus
           id="name"
           placeholder="Naam"
-          {...register('naam', {
+          {...register('name', {
             required: 'Dit is een verplicht veld',
             min: 2,
             max: 30,
           })}
         />
-        {formState.errors.name ? (
+        {errors.name ? (
           <ErrorMessage>Dit is een verplicht veld</ErrorMessage>
         ) : null}
         <Label for="email">E-mail</Label>
@@ -57,9 +86,7 @@ export default function ContactForm() {
             },
           })}
         />
-        {formState.errors.email && (
-          <ErrorMessage>{formState.errors.email.message}</ErrorMessage>
-        )}
+        {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
         <Label for="message">Bericht</Label>
         <InputStyled
           as="textarea"
@@ -73,14 +100,17 @@ export default function ContactForm() {
           placeholder="Uw vraag of boodschap"
           rows={6}
         />
-        {formState.errors.message && (
+        {errors.message && (
           <ErrorMessage>Het bericht is te kort of te lang</ErrorMessage>
         )}
-        <SubmitButton type="submit" as="button">
-          {isSubmitSuccessful ? 'Verstuurd!' : 'Verstuur >'}
-        </SubmitButton>
+        <SubmitButton
+          type="submit"
+          value={`${isSubmitSuccessful ? 'Verstuurd!' : 'Verstuur >'}`}
+        />
         {isSubmitSuccessful ? (
-          <SuccessMessage>U bericht is verstuurd.</SuccessMessage>
+          <SuccessMessage>
+            <CheckIcon /> U bericht is verzonden.
+          </SuccessMessage>
         ) : null}
       </FormContainer>
     </form>
