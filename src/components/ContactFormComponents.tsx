@@ -6,16 +6,15 @@ export const InputStyled = styled('input', {
   padding: '$s',
   maxWidth: '280px',
   '@m': {
-    width: '480px',
     fontSize: '$body',
   },
   borderRadius: '$s',
-  border: '1px solid #333',
+  border: '1px solid $red',
   fontSize: '$body',
   transition: 'background-color 1.5s ease-in',
   '&:focus': {
     outline: 'none',
-    boxShadow: 'focus',
+    border: '2px dotted $coral',
   },
 });
 
@@ -27,17 +26,17 @@ export const SubmitButton = styled(InputStyled, {
   transitionDuration: '0.25s',
   '&:focus': {
     outline: 'none',
-    boxShadow: 'focus',
-    transform: 'scale(1.05)',
+    transform: 'scale(1.01)',
+    border: '2px dotted $coral',
   },
   '&:hover': {
-    transform: 'scale(1.05)',
+    transform: 'scale(1.01)',
   },
 });
 
 export const SuccessMessage = styled('span', {
   color: '$green',
-  marginLeft: '$l',
+  marginLeft: '$xs',
   marginTop: '$s',
 });
 
@@ -74,10 +73,13 @@ export const FormContainer = styled('div', {
   backgroundColor: '$white',
   borderRadius: '$s',
   border: '1px solid $coral',
-  paddingX: '$xxl',
+  paddingX: '$m',
+  '@l': {
+    paddingX: '$xxl',
+  },
   paddingY: '$l',
   marginX: 'auto',
-  width: 'fit-content',
+  // width: 'fit-content',
   display: 'flex',
   flexDirection: 'column',
 });

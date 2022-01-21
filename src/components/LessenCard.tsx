@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import { styled } from '../../stitches.config';
 import Button from './button';
-import { SmallerHeading } from './InfoCard';
+import { Paragraph, SmallerHeading } from './InfoCard';
 
 export type LessenCard = {
   title: string;
@@ -18,7 +18,7 @@ export const LessenCardsContainer = styled('article', {
   gridGap: '$s',
   gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
   '@m': {
-    marginTop: '$3xl',
+    marginTop: '$xl',
   },
 });
 
@@ -29,24 +29,34 @@ const LessenContainer = styled('div', {
   backgroundColor: '$white',
   padding: '$s',
   fontSize: '$s',
+  borderBottom: '1px solid $coral',
   '@s': {
     fontSize: '$body',
     padding: '$l',
   },
   '@l': {
+    borderRadius: '$s',
     border: '1px solid',
     borderColor: '$blue',
     padding: '64px',
-    paddingTop: '48px',
+    paddingTop: '$xl',
   },
-  borderRadius: '$s',
 });
 
 const LeesMeerLink = styled(Link, {
   color: '$coral',
-  display: 'block',
+  boxSizing: 'content-box',
+  display: 'inline-block',
+  border: '2px dotted rgba(0, 0, 0, 0)',
+  cursor: 'pointer',
+  '&:hover': {
+    textDecoration: 'underline',
+  },
   '&:focus': {
     textDecoration: 'underline',
+    borderColor: '$green',
+    paddingX: '$xxs',
+    borderRadius: '$xxs',
   },
 });
 
@@ -57,7 +67,9 @@ export default function LessenCards({ lessenCards }: LessenCardProps) {
         <LessenContainer key={lessenCard.title}>
           <div>
             <SmallerHeading>{lessenCard.title}</SmallerHeading>
-            <p dangerouslySetInnerHTML={{ __html: lessenCard.text }}></p>
+            <Paragraph
+              dangerouslySetInnerHTML={{ __html: lessenCard.text }}
+            ></Paragraph>
             <LeesMeerLink to={lessenCard.link}>Lees meer</LeesMeerLink>
           </div>
           <Button size="big" color="greenTint" to="/contact">

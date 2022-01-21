@@ -1,6 +1,6 @@
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import React from 'react';
-import { styled } from '../../stitches.config';
+import { css, styled } from '../../stitches.config';
 
 export const InfoCardContainer = styled('section', {
   display: 'flex',
@@ -9,21 +9,23 @@ export const InfoCardContainer = styled('section', {
   alignItems: 'center',
   justifyContent: 'center',
   borderRadius: '$s-resp',
-  overflow: 'hidden',
   variants: {
     size: {
       bigScreen: {
+        overflow: 'hidden',
         marginTop: '$3xl',
+        '&:first-of-type': {
+          marginTop: '$xl',
+        },
       },
       smallScreen: {
-        marginTop: '$xl',
+        marginTop: '$l',
       },
     },
   },
 });
 
 const ImageContainer = styled('div', {
-  backgroundColor: '$blue',
   display: 'flex',
   alignContent: 'center',
   justifyContent: 'center',
@@ -43,7 +45,6 @@ const ImageContainer = styled('div', {
     },
     size: {
       bigScreen: {
-        height: 'min(31.25vw, 300px)',
         width: 'min(31.25vw, 300px)',
         borderRadius: '50%',
         marginTop: '$l',
@@ -59,6 +60,7 @@ const ImageContainer = styled('div', {
       },
       mobile: {
         marginX: 0,
+        paddingX: 0,
         marginTop: '$l',
         width: '100%',
         borderRadius: 0,
@@ -76,7 +78,6 @@ const ImageContainer = styled('div', {
         shapeOutside: 'circle(42.58% at 5.13rem 10.38rem)',
         display: 'inherit',
         marginTop: '$m',
-        borderRadius: '$s',
         '@l': { display: 'none' },
       },
     },
@@ -87,11 +88,11 @@ const ArticleContainer = styled('article', {
   display: 'flex',
   alignItems: 'center',
   flexDirection: 'column-reverse',
-  width: '640px',
-  paddingTop: '$xl-resp',
+  width: '100%',
   backgroundColor: '$white',
   marginX: 'auto',
   '@l': {
+    width: '66%',
     borderRadius: '$m-resp',
     marginLeft: '-60px',
     paddingX: '$3xl',
@@ -118,19 +119,31 @@ const Shape = styled('div', {
 export const SmallerHeading = styled('h2', {
   fontSize: '$l',
   fontWeight: 500,
-  paddingLeft: '$l',
+  paddingLeft: '$s',
+  '@m': {
+    paddingLeft: '$m',
+  },
   '@l': {
     paddingLeft: 0,
   },
+  '& svg': {
+    transform: 'scale(120%)',
+    marginRight: '$xs',
+  },
 });
 
-const Paragraph = styled('p', {
+export const Paragraph = styled('p', {
   fontSize: '$s',
-  marginTop: '$xs',
-  paddingX: '$l',
+  marginTop: 0,
+  paddingX: '$s',
   '@s': {
     fontSize: '$body',
   },
+  '@m': {
+    paddingLeft: '$m',
+    paddingRight: '$m',
+  },
+
   '@l': {
     paddingX: 0,
   },
@@ -138,6 +151,13 @@ const Paragraph = styled('p', {
 
 const TextContainer = styled('div', {
   height: 'fit-content',
+});
+
+const imageStyles = css({
+  width: '50%',
+  '@m': {
+    width: '33',
+  },
 });
 
 export type InfoCardProps = {
@@ -170,7 +190,11 @@ export default function InfoCard({ title, image, color, html }: InfoCardProps) {
           }}
           color={colorMap[color]}
         >
-          <GatsbyImage alt="Een foto van een yoga houding" image={image} />
+          <GatsbyImage
+            alt="Een foto van een yoga houding"
+            image={image}
+            className={imageStyles()}
+          />
         </ImageContainer>
         <TextContainer>
           <SmallerHeading>{title}</SmallerHeading>

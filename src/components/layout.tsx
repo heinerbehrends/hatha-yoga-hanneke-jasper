@@ -9,7 +9,6 @@ const PageContainer = styled('main', {
   flexDirection: 'column',
   alignContent: 'center',
   backgroundColor: 'white',
-  paddingX: '$s',
   '@m': {
     backgroundColor: 'inherit',
     paddingX: 'none',

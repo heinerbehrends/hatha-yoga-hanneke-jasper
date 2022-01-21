@@ -39,7 +39,7 @@ const TestimonialContainer = styled('figure', {
   '@s': {
     border: '1px solid $blue',
     borderRadius: '$s',
-    fontSize: '$xl',
+    fontSize: '$l',
     '& figcaption': {
       fontSize: '$body',
     },
@@ -64,6 +64,11 @@ const ImageContainer = styled('div', {
   },
 });
 
+const FigCaption = styled('figcaption', {
+  marginLeft: '$s-resp',
+  display: 'inline',
+});
+
 type TestimonialProps = {
   quote: string;
   author: string;
@@ -77,15 +82,20 @@ export default function Testimonial({
 }: TestimonialProps) {
   return (
     <TestimonialContainer>
-      <div>
-        <blockquote dangerouslySetInnerHTML={{ __html: quote }} />
-        <figcaption>{author}</figcaption>
+      <div style={{ display: 'flex' }}>
+        <div>
+          <blockquote
+            style={{ display: 'inline' }}
+            dangerouslySetInnerHTML={{ __html: quote }}
+          />
+          <FigCaption>{author}</FigCaption>
+        </div>
+        {image ? (
+          <ImageContainer>
+            <GatsbyImage alt="" image={image} />
+          </ImageContainer>
+        ) : null}
       </div>
-      {image ? (
-        <ImageContainer>
-          <GatsbyImage alt="" image={image} />
-        </ImageContainer>
-      ) : null}
     </TestimonialContainer>
   );
 }
