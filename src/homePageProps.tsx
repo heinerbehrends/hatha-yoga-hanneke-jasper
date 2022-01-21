@@ -1,4 +1,3 @@
-import { IGatsbyImageData } from 'gatsby-plugin-image';
 import { ImageNode } from './utils';
 
 export type LessenNode = {
@@ -11,6 +10,7 @@ export type LessenNode = {
 };
 
 export type TestimonialNode = {
+  id: string;
   aanbeveling: {
     aanbevelingTekst: string;
     aanbevolenDoor: string;
