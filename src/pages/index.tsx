@@ -15,7 +15,7 @@ export const Heading = styled('h1', {
   fontSize: 'clamp(30px, 5vw, 48px)',
   lineHeight: '33px',
   textAlign: 'center',
-  marginTop: '$xl-resp',
+  marginTop: '$3xl-resp',
   paddingX: '$s',
 });
 
@@ -23,7 +23,8 @@ const Contact = styled('div', {
   display: 'grid',
   gridTemplateColumns: 'repeat(2, 1fr)',
   gridGap: '$s',
-  marginTop: '$s',
+  marginTop: '$xl',
+  marginX: '$s',
 });
 
 export default function Home(props: HomePageProps) {
@@ -43,16 +44,19 @@ export default function Home(props: HomePageProps) {
           image={getLocalImage(info.afbeelding)}
         />
       ))}
+      <Heading as="h2">Lesvormen</Heading>
       <LessenCards lessenCards={getLessonsData(lessonNodes)} />
       {testimonialNodes.map(
-        ({ aanbeveling: { aanbevelingTekst, foto, aanbevolenDoor } }) => (
+        ({ id, aanbeveling: { aanbevelingTekst, foto, aanbevolenDoor } }) => (
           <Testimonial
+            key={id}
             author={aanbevolenDoor}
             image={getLocalImage(foto)}
             quote={aanbevelingTekst}
           />
         )
       )}
+      <Heading as="h2">Contact</Heading>
       <Contact>
         <ContactCards
           emailadres={contactInfo.emailadres}
@@ -113,6 +117,7 @@ export const query = graphql`
       }
     ) {
       nodes {
+        id
         aanbeveling {
           aanbevelingTekst
           aanbevolenDoor
