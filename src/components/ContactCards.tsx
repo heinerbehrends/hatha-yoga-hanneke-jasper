@@ -1,6 +1,12 @@
+import {
+  ChatBubbleIcon,
+  EnvelopeClosedIcon,
+  PaperPlaneIcon,
+} from '@modulz/radix-icons';
 import React from 'react';
 import { styled } from '../../stitches.config';
 import Button from './button';
+import { SmallerHeading } from './InfoCard';
 
 const ContactCardsContainer = styled('section', {
   display: 'grid',
@@ -11,7 +17,8 @@ const ContactCardsContainer = styled('section', {
 const ContactCard = styled('div', {
   backgroundColor: '$white',
   paddingX: '$m',
-  paddingY: '$m',
+  paddingTop: '$s',
+  paddingBottom: '$m',
   borderRadius: '$s',
   border: '1px solid $green',
   '&:not(:first-child)': {
@@ -54,6 +61,9 @@ export default function ContactCards(props: ContactCardsProps) {
     <ContactCardsContainer>
       <Adress>
         <ContactCard>
+          <SmallerHeading>
+            <PaperPlaneIcon /> WhatsApp
+          </SmallerHeading>
           Ik ben op WhatsApp! Je kunt me een bericht sturen naar{' '}
           {props.telefoonnummer} of maak gebruik van onderstaande button.
           <Button
@@ -66,6 +76,9 @@ export default function ContactCards(props: ContactCardsProps) {
           </Button>
         </ContactCard>
         <ContactCard>
+          <SmallerHeading>
+            <ChatBubbleIcon /> Telefoon
+          </SmallerHeading>
           {props.telefonischBereikbaar} Je kunt me bellen onder{' '}
           {props.telefoonnummer}.
           <Button
@@ -78,7 +91,12 @@ export default function ContactCards(props: ContactCardsProps) {
           </Button>
         </ContactCard>
         <ContactCard>
-          Of stuur een mailtje aan {props.emailadres}
+          <SmallerHeading>
+            <EnvelopeClosedIcon />
+            Email{' '}
+          </SmallerHeading>
+          Gebruik het contactformulier of stuur een mailtje naar{' '}
+          {props.emailadres}.
           <Button
             as="a"
             href={`mailto:${props.emailadres}`}
