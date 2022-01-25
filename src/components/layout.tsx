@@ -1,6 +1,9 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import { globalCss, styled } from '../../stitches.config';
+import Footer from './footer';
 import NavBar from './navBar';
+import { getLocalImage, ImageNode } from '../utils';
 
 const PageContainer = styled('main', {
   maxWidth: '960px',
@@ -46,6 +49,23 @@ type LayoutProps = {
   border?: boolean;
 };
 
+type FooterData = {
+  overMij: {
+    overMijSamenvatting: {
+      samenvatting: string;
+      overMijFoto: ImageNode;
+    };
+  };
+  contact: {
+    contactgegevens: {
+      emailadres: string;
+      telefoonnummer: string;
+      adres: string;
+      kvkNummer: string;
+    };
+  };
+};
+
 export default function Layout({
   children,
   slot,
@@ -53,6 +73,31 @@ export default function Layout({
   border,
 }: LayoutProps) {
   globalStyles();
+  const data: FooterData = useStaticQuery(graphql`
+    query FooterQuery {
+      overMij: wpPage(title: { eq: "Wie ik ben" }) {
+        overMijSamenvatting {
+          samenvatting
+          overMijFoto {
+            localFile {
+              childImageSharp {
+                gatsbyImageData(width: 90, height: 120, placeholder: NONE)
+              }
+            }
+          }
+        }
+      }
+      contact: wpPage(isFrontPage: { eq: true }) {
+        contactgegevens {
+          emailadres
+          telefoonnummer
+          adres
+          kvkNummer
+        }
+      }
+    }
+  `);
+  const aboutData = data.overMij.overMijSamenvatting;
   return (
     <>
       <NavBar />
@@ -60,6 +105,13 @@ export default function Layout({
       <PageContainer background={background} border={border}>
         {children}
       </PageContainer>
+      <Footer
+        about={{
+          excerpt: aboutData.samenvatting,
+          image: getLocalImage(aboutData.overMijFoto),
+        }}
+        contact={data.contact.contactgegevens}
+      />
     </>
   );
 }
