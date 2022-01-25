@@ -49,7 +49,7 @@ export const navBarItemStyles = css({
       },
       big: {
         paddingX: '$s',
-        fontSize: '$body',
+        fontSize: '$bodySmall',
       },
     },
   },
