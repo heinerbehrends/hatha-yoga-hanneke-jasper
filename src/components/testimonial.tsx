@@ -9,6 +9,7 @@ const TestimonialContainer = styled('figure', {
   backgroundColor: '$white',
   lineHeight: 1.1,
   padding: '$s',
+  marginX: '$s',
   marginTop: '$s',
   borderTop: '1px solid $blue',
   overflow: 'hidden',
