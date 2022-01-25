@@ -4,7 +4,6 @@ import { styled } from '../../stitches.config';
 export const InputStyled = styled('input', {
   backgroundColor: '$greenTint',
   padding: '$s',
-  maxWidth: '280px',
   '@m': {
     fontSize: '$body',
   },
