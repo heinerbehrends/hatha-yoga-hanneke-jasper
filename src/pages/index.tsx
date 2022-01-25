@@ -21,7 +21,7 @@ export const Heading = styled('h1', {
 
 const Contact = styled('div', {
   display: 'grid',
-  gridTemplateColumns: 'repeat(2, 1fr)',
+  gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
   gridGap: '$s',
   marginTop: '$xl',
   marginX: '$s',
@@ -71,7 +71,7 @@ export default function Home(props: HomePageProps) {
 
 export const query = graphql`
   query HomePageQuery {
-    wpPage(title: { eq: "Wat kan hatha yoga voor je doen?" }) {
+    wpPage(isFrontPage: { eq: true }) {
       title
       overHathaYoga {
         infos {
