@@ -12,8 +12,8 @@ export default function handler(
   const sgMail = require('@sendgrid/mail');
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   const msg = {
-    to: 'heiner.s.behrends@gmail.com', // Change to your recipient
-    from: 'heinerbehrends@hotmail.com', // Change to your verified sender
+    to: 'heiner.s.behrends@gmail.com',
+    from: 'heinerbehrends@hotmail.com',
     subject: `A new message from ${req.body.name} arrived`,
     html: `Emailadres: ${req.body.email} <br /> Message: ${req.body.message}`,
   };
@@ -27,5 +27,5 @@ export default function handler(
         console.error(error);
       }
     });
-  res.status(200).json({ message: 'Message was send succesfully' });
+  res.status(200).json({ message: 'Message was sent succesfully' });
 }
