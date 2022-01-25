@@ -97,7 +97,7 @@ const ArticleContainer = styled('article', {
     marginLeft: '-60px',
     paddingX: '$3xl',
     paddingTop: '$xl',
-    paddingBottom: '$m',
+    paddingBottom: '$xl',
   },
 });
 
@@ -134,7 +134,7 @@ export const SmallerHeading = styled('h2', {
 
 export const Paragraph = styled('p', {
   fontSize: '$s',
-  marginTop: 0,
+  marginTop: '2px',
   paddingX: '$s',
   '@s': {
     fontSize: '$body',
