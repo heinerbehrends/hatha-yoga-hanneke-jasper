@@ -13,14 +13,12 @@ import {
 export default function ContactForm() {
   const {
     register,
-    formState: { errors, isSubmitSuccessful, isSubmitted },
+    formState: { errors, isSubmitSuccessful },
     handleSubmit,
   } = useForm<FormValues>({
     mode: 'onBlur',
     shouldFocusError: true,
   });
-  console.log('isSubmitte', isSubmitted);
-  console.log('isSubmitSuccessful', isSubmitSuccessful);
   type FormValues = { name: string; email: string; message: string };
   async function onSubmit(data: FormValues) {
     await window
