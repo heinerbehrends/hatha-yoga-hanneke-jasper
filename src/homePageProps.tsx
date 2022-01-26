@@ -27,8 +27,13 @@ type InfoNode = {
 type HomePageProps = {
   data: {
     wpPage: {
+      introductie: {
+        kop: string;
+        introductie: string;
+      };
       title: string;
       overHathaYoga: {
+        infoKop: string;
         infos: InfoNode[];
       };
       contactgegevens: {
@@ -37,6 +42,9 @@ type HomePageProps = {
         telefoonnummer: string;
         telefonischBereikbaar: string;
         kvkNummer: string;
+      };
+      seo: {
+        metaDesc: string;
       };
     };
     allWpLes: {
