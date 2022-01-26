@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
 import { globalCss, styled } from '../../stitches.config';
 import Footer from './footer';
@@ -8,6 +9,7 @@ import { getLocalImage, ImageNode } from '../utils';
 const PageContainer = styled('main', {
   maxWidth: '960px',
   marginX: 'auto',
+  paddingBottom: '$3xl',
   display: 'flex',
   flexDirection: 'column',
   alignContent: 'center',
@@ -39,6 +41,10 @@ const globalStyles = globalCss({
   body: {
     backgroundColor: '$background',
     color: '$text',
+    fontSize: '$bodySmall',
+    '@m': {
+      fontSize: '$body',
+    },
   },
 });
 
@@ -100,6 +106,9 @@ export default function Layout({
   const aboutData = data.overMij.overMijSamenvatting;
   return (
     <>
+      <Helmet>
+        <meta property="og:image" content="localhost:8000/og-image.png" />
+      </Helmet>
       <NavBar />
       {slot}
       <PageContainer background={background} border={border}>
