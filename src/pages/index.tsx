@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import { styled } from '../../stitches.config';
 import Layout from '../components/layout';
 import Hero from '../components/hero';
@@ -23,18 +24,47 @@ const Contact = styled('div', {
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
   gridGap: '$s',
-  marginTop: '$xl',
-  marginX: '$s',
+  marginTop: '$s',
+  marginX: '$xs',
+  '@l': {
+    marginTop: '$xl',
+  },
+});
+
+const Introduction = styled('section', {
+  backgroundColor: '$white',
+  paddingX: '$s',
+  marginTop: '$s',
+  '@m': {
+    marginTop: '$l',
+  },
+  '@l': {
+    marginTop: '$xl',
+    paddingX: '$3xl',
+    paddingTop: '$xl',
+    paddingBottom: '$xl',
+    borderRadius: '$m-resp',
+  },
 });
 
 export default function Home(props: HomePageProps) {
+  const introductionData = props.data.wpPage.introductie;
   const infoCardsData = props.data.wpPage.overHathaYoga.infos;
   const lessonNodes = props.data.allWpLes.nodes.reverse();
   const testimonialNodes = props.data.allWpAanbeveling.nodes;
   const contactInfo = props.data.wpPage.contactgegevens;
   return (
     <Layout slot={<Hero />}>
-      <Heading>Wat kan Hatha Yoga voor je doen?</Heading>
+      <Helmet>
+        <title>{introductionData.kop}</title>
+        <meta name="description" content={props.data.wpPage.seo.metaDesc} />
+        <meta property="og:title" content={introductionData.kop} />
+      </Helmet>
+      <Heading>{introductionData.kop}</Heading>
+      <Introduction
+        dangerouslySetInnerHTML={{ __html: introductionData.introductie }}
+      />
+      <Heading as="h2">{props.data.wpPage.overHathaYoga.infoKop}</Heading>
       {infoCardsData.map((info, index) => (
         <InfoCard
           key={info.titel}
@@ -72,8 +102,12 @@ export default function Home(props: HomePageProps) {
 export const query = graphql`
   query HomePageQuery {
     wpPage(isFrontPage: { eq: true }) {
-      title
+      introductie {
+        kop
+        introductie
+      }
       overHathaYoga {
+        infoKop
         infos {
           titel
           inhoud
@@ -97,6 +131,9 @@ export const query = graphql`
         telefoonnummer
         telefonischBereikbaar
         kvkNummer
+      }
+      seo {
+        metaDesc
       }
     }
     allWpLes {
