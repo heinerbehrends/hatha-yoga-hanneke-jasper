@@ -36,4 +36,5 @@ body {
   font-family: 'Asap';
   line-height: 1.5;
   font-size: 18px;
+  overflow-x: hidden;
 }
