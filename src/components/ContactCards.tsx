@@ -10,6 +10,7 @@ import { SmallerHeading } from './InfoCard';
 
 const ContactCardsContainer = styled('section', {
   display: 'grid',
+  width: '100%',
   gridGap: '$s',
   gridTemplateColumns: 'none',
 });
@@ -28,14 +29,10 @@ const ContactCard = styled('div', {
 
 const Adress = styled('address', {
   '& a': {
-    fontsize: '$mobile',
     display: 'block',
     width: 'fit-content',
     marginLeft: 0,
     marginTop: '$s',
-    '@s': {
-      fontsize: '$body',
-    },
   },
 });
 

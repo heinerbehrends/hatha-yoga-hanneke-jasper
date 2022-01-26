@@ -69,16 +69,20 @@ export function Label(props: labelProps) {
 }
 
 export const FormContainer = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  width: '100%',
   backgroundColor: '$white',
   borderRadius: '$s',
   border: '1px solid $coral',
+  paddingY: '$l',
+  // width: 'fit-content',
   paddingX: '$m',
+  // '@s': {
+  //   width: '100%',
+  // },
   '@l': {
     paddingX: '$xxl',
+    marginX: 'auto',
   },
-  paddingY: '$l',
-  marginX: 'auto',
-  // width: 'fit-content',
-  display: 'flex',
-  flexDirection: 'column',
 });

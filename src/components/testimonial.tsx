@@ -9,7 +9,6 @@ const TestimonialContainer = styled('figure', {
   backgroundColor: '$white',
   lineHeight: 1.1,
   padding: '$s',
-  marginX: '$s',
   marginTop: '$s',
   borderTop: '1px solid $blue',
   overflow: 'hidden',
@@ -20,9 +19,8 @@ const TestimonialContainer = styled('figure', {
   '&:before': {
     content: 'open-quote',
     fontSize: '100px',
-    paddingRight: '$m',
     lineHeight: '60px',
-    transform: 'translateY(10px)',
+    transform: 'translate(-20px, 10px)',
     '@s': {
       paddingRight: '$l',
       fontSize: '120px',
@@ -38,6 +36,7 @@ const TestimonialContainer = styled('figure', {
     },
   },
   '@s': {
+    marginX: '$s',
     border: '1px solid $blue',
     borderRadius: '$s',
     fontSize: '$l',

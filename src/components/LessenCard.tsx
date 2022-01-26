@@ -28,10 +28,8 @@ const LessenContainer = styled('div', {
   justifyContent: 'space-between',
   backgroundColor: '$white',
   padding: '$s',
-  fontSize: '$s',
   borderBottom: '1px solid $coral',
   '@s': {
-    fontSize: '$body',
     padding: '$l',
   },
   '@l': {

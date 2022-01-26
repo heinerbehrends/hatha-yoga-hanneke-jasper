@@ -19,7 +19,7 @@ export const InfoCardContainer = styled('section', {
         },
       },
       smallScreen: {
-        marginTop: '$l',
+        marginTop: '$s',
       },
     },
   },
@@ -119,7 +119,7 @@ const Shape = styled('div', {
 export const SmallerHeading = styled('h2', {
   fontSize: '$l',
   fontWeight: 500,
-  paddingLeft: '$s',
+  // paddingLeft: '$s',
   '@m': {
     paddingLeft: '$m',
   },
@@ -133,13 +133,11 @@ export const SmallerHeading = styled('h2', {
 });
 
 export const Paragraph = styled('p', {
-  fontSize: '$s',
   marginTop: '2px',
-  paddingX: '$s',
-  '@s': {
-    fontSize: '$body',
-  },
+  // paddingX: '$s',
+  fontSize: '$bodySmall',
   '@m': {
+    fontSize: '$body',
     paddingLeft: '$m',
     paddingRight: '$m',
   },
@@ -150,6 +148,8 @@ export const Paragraph = styled('p', {
 });
 
 const TextContainer = styled('div', {
+  paddingX: '$s',
+
   height: 'fit-content',
 });
 

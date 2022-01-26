@@ -8,26 +8,29 @@ import {
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import React from 'react';
 import { css, styled } from '../../stitches.config';
-import { Paragraph, SmallerHeading } from './InfoCard';
+import { SmallerHeading } from './InfoCard';
 
 const FooterStyled = styled('footer', {
-  marginTop: '$3xl',
   backgroundColor: '$blueDark',
   color: '$white',
-  paddingY: '$l',
+  paddingY: '$3xl',
+  paddingLeft: '$l',
 });
 
 const FooterContainer = styled('section', {
   display: 'grid',
   gridGap: '$m',
-  gridTemplateColumns: 'repeat(auto-fill, minmax(45ch, 1fr))',
   maxWidth: '960px',
   marginX: 'auto',
+  '@m': {
+    gridTemplateColumns: 'repeat(auto-fill, minmax(36ch, 1fr))',
+  },
 });
 
 const FooterBio = styled('article', {});
 
 const FooterContact = styled('address', {
+  width: 'fit-content',
   '@l': {
     paddingLeft: '$xl',
   },
@@ -38,7 +41,6 @@ const ContactItem = styled('a', {
   display: 'flex',
   alignItems: 'center',
   fontSize: '$bodySmall',
-  paddingX: '$m',
   paddingY: '$xxs',
   '&:hover': {
     textDecoration: 'underline',
@@ -58,15 +60,22 @@ const imageStyles = css({
   height: '120px',
 });
 
-const FooterParagraph = styled(Paragraph, {
-  width: '75%',
+const FooterParagraph = styled('p', {
+  fontSize: '$bodySmall',
+  width: '66%',
   '@s': {
+    width: '75%',
     fontSize: '$bodySmall',
   },
   '& a': {
     textDecoration: 'underline',
     cursor: 'pointer',
   },
+});
+
+const BioContainer = styled('div', {
+  display: 'flex',
+  width: 'content',
 });
 
 type FooterProps = {
@@ -112,7 +121,7 @@ export default function Footer({ about, contact }: FooterProps) {
         </FooterContact>
         <FooterBio>
           <SmallerHeading>Over mij</SmallerHeading>
-          <div style={{ display: 'flex' }}>
+          <BioContainer>
             <FooterParagraph
               dangerouslySetInnerHTML={{ __html: about.excerpt }}
             />
@@ -121,7 +130,7 @@ export default function Footer({ about, contact }: FooterProps) {
               image={about.image}
               className={imageStyles()}
             />
-          </div>
+          </BioContainer>
         </FooterBio>
       </FooterContainer>
     </FooterStyled>

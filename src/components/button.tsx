@@ -17,8 +17,14 @@ const Button = styled(Link, {
         marginX: '$s',
       },
       big: {
-        fontSize: '$body',
-        paddingX: '$l',
+        paddingX: '$m',
+        fontSize: '$bodySmall',
+        '@s': {
+          paddingX: '$l',
+        },
+        '@l': {
+          fontSize: '$body',
+        },
         paddingY: '$xs',
         marginTop: '$s',
         width: 'fit-content',
