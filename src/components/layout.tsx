@@ -34,14 +34,35 @@ const PageContainer = styled('main', {
 });
 
 const globalStyles = globalCss({
+  // Remove all the styles of the "User-Agent-Stylesheet",
+  // except for the 'display' property
+  '*:where(:not(iframe, canvas, img, svg, video):not(svg *))': {
+    all: 'unset',
+    display: 'revert',
+  },
+  // Preferred box-sizing value
+  '*,*::before,*::after': {
+    boxSizing: 'border-box',
+  },
   '*': {
     fontFamily: '$default',
     fontSize: '$body',
+  },
+  // For images to not be able to exceed their container
+  img: {
+    maxWidth: '100%',
+  },
+  // revert the 'white-space' property for textarea elements on Safari
+  textarea: {
+    whiteSpace: 'revert',
   },
   body: {
     backgroundColor: '$background',
     color: '$text',
     fontSize: '$bodySmall',
+    marginTop: '60px',
+    fontFamily: 'Asap',
+    lineHeight: '1.5',
     '@m': {
       fontSize: '$body',
     },
