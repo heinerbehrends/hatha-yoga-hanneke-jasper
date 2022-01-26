@@ -51,7 +51,7 @@ export const { styled, css, getCssText, globalCss } = createStitches({
       l: '24px',
       xl: '32px',
       xxl: '48px',
-      '3xl': '56px',
+      '3xl': '64px',
     },
     space: {
       xxs: '4px',
