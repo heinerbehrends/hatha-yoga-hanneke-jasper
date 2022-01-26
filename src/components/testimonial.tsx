@@ -20,7 +20,7 @@ const TestimonialContainer = styled('figure', {
     content: 'open-quote',
     fontSize: '100px',
     lineHeight: '60px',
-    transform: 'translate(-20px, 10px)',
+    transform: 'translate(-20px, 8px)',
     '@s': {
       paddingRight: '$l',
       fontSize: '120px',

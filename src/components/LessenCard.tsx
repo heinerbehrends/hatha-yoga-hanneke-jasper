@@ -16,8 +16,8 @@ type LessenCardProps = { lessenCards: LessenCard[] };
 export const LessenCardsContainer = styled('article', {
   display: 'grid',
   gridGap: '$s',
-  gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
   '@m': {
+    gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
     marginTop: '$xl',
   },
 });
@@ -28,6 +28,7 @@ const LessenContainer = styled('div', {
   justifyContent: 'space-between',
   backgroundColor: '$white',
   padding: '$s',
+  paddingBottom: '$m',
   borderBottom: '1px solid $coral',
   '@s': {
     padding: '$l',
@@ -36,7 +37,7 @@ const LessenContainer = styled('div', {
     borderRadius: '$s',
     border: '1px solid',
     borderColor: '$blue',
-    padding: '64px',
+    padding: '$3xl',
     paddingTop: '$xl',
   },
 });

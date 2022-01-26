@@ -14,7 +14,10 @@ const FooterStyled = styled('footer', {
   backgroundColor: '$blueDark',
   color: '$white',
   paddingY: '$3xl',
-  paddingLeft: '$l',
+  paddingLeft: '$m',
+  '@s': {
+    paddingLeft: '$l',
+  },
 });
 
 const FooterContainer = styled('section', {
@@ -40,7 +43,6 @@ const ContactItem = styled('a', {
   cursor: 'pointer',
   display: 'flex',
   alignItems: 'center',
-  fontSize: '$bodySmall',
   paddingY: '$xxs',
   '&:hover': {
     textDecoration: 'underline',
@@ -50,7 +52,6 @@ const ContactItem = styled('a', {
   },
   '@s': {},
   '@l': {
-    fontSize: '$body',
     paddingLeft: 0,
   },
 });
@@ -61,11 +62,9 @@ const imageStyles = css({
 });
 
 const FooterParagraph = styled('p', {
-  fontSize: '$bodySmall',
   width: '66%',
   '@s': {
     width: '75%',
-    fontSize: '$bodySmall',
   },
   '& a': {
     textDecoration: 'underline',
@@ -100,7 +99,7 @@ export default function Footer({ about, contact }: FooterProps) {
           <SmallerHeading>Contact</SmallerHeading>
           <ContactItem href={`https://wa.me/316${telNrAfterDash}`}>
             <PaperPlaneIcon />
-            Ik ben op WhatsApp
+            Stuur een appje
           </ContactItem>
           <ContactItem href={`mailto:${contact.emailadres}`}>
             <EnvelopeClosedIcon />

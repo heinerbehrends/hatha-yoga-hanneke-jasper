@@ -22,10 +22,12 @@ export const Heading = styled('h1', {
 
 const Contact = styled('div', {
   display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
   gridGap: '$s',
   marginTop: '$s',
   marginX: '$xs',
+  '@s': {
+    gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
+  },
   '@l': {
     marginTop: '$xl',
   },
