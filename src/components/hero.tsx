@@ -4,7 +4,7 @@ import HYHJ from '../images/HYHJ.svg';
 import {
   HeroContainer,
   ImageContainer,
-  imageStyles,
+  heroImageStyles,
   LogoContainer,
   PaddingContainer,
   svgStyles,
@@ -27,7 +27,7 @@ export default function Hero() {
         <ImageContainer>
           <PaddingContainer>
             <StaticImage
-              className={imageStyles()}
+              className={heroImageStyles()}
               alt="picture of a dahlia"
               src="../images/dahlia.png"
               placeholder="none"

@@ -8,8 +8,8 @@ import {
   Shape,
   Paragraph,
   ImageContainer,
+  infoImageStyles,
 } from './infoCardStyles';
-import { imageStyles } from './footerStyles';
 
 export type InfoCardProps = {
   title: string;
@@ -44,7 +44,7 @@ export default function InfoCard({ title, image, color, html }: InfoCardProps) {
           <GatsbyImage
             alt="Een foto van een yoga houding"
             image={image}
-            className={imageStyles()}
+            className={infoImageStyles()}
           />
         </ImageContainer>
         <TextContainer>

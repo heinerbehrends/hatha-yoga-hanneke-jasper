@@ -46,7 +46,7 @@ export const ContactItem = styled('a', {
   },
 });
 
-export const imageStyles = css({
+export const footerImageStyles = css({
   width: '90px',
   height: '120px',
 });

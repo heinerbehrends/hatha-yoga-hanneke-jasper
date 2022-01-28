@@ -15,7 +15,7 @@ import {
   FooterBio,
   BioContainer,
   FooterParagraph,
-  imageStyles,
+  footerImageStyles,
 } from './footerStyles';
 import { SmallerHeading } from './infoCardStyles';
 
@@ -69,7 +69,7 @@ export default function Footer({ about, contact }: FooterProps) {
             <GatsbyImage
               alt="foto van yogadocent Hanneke Jasper"
               image={about.image}
-              className={imageStyles()}
+              className={footerImageStyles()}
             />
           </BioContainer>
         </FooterBio>

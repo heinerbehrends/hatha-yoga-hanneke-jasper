@@ -114,10 +114,9 @@ export const Shape = styled('div', {
   },
 });
 
-export const SmallerHeading = styled('h2', {
+export const SmallerHeading = styled('h3', {
   fontSize: '$l',
   fontWeight: 500,
-  // paddingLeft: '$s',
   '@m': {
     paddingLeft: '$m',
   },
@@ -150,7 +149,7 @@ export const TextContainer = styled('div', {
   height: 'fit-content',
 });
 
-export const imageStyles = css({
+export const infoImageStyles = css({
   width: '50%',
   '@m': {
     width: '33',
