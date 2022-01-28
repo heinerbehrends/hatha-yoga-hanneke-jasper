@@ -7,8 +7,7 @@ export const TestimonialContainer = styled('figure', {
   backgroundColor: '$white',
   lineHeight: 1.1,
   padding: '$s',
-  marginTop: '$s',
-  borderTop: '1px solid $blue',
+  borderBottom: '1px solid $blue',
   overflow: 'hidden',
   '& figcaption': {
     fontSize: '$s',
@@ -34,6 +33,7 @@ export const TestimonialContainer = styled('figure', {
     },
   },
   '@s': {
+    marginTop: '$s',
     marginX: '$s',
     border: '1px solid $blue',
     borderRadius: '$s',
@@ -47,7 +47,7 @@ export const TestimonialContainer = styled('figure', {
   },
 });
 
-export const ImageContainer = styled('div', {
+export const TestimonialImage = styled('div', {
   borderRadius: '50%',
   marginLeft: '$s',
   overflow: 'hidden',
