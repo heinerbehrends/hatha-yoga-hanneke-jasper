@@ -9,6 +9,18 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Hatha Yoga Hanneke Jasper`,
+        short_name: `HYHJ`,
+        start_url: `/`,
+        background_color: `white`,
+        theme_color: `#A3BCA9`,
+        display: `standalone`,
+        icon: 'src/images/dahlia.png',
+      },
+    },
+    {
       resolve: 'gatsby-source-wordpress',
       options: {
         url: 'http://hathayoga.webopbouw.nl/graphql',
@@ -26,12 +38,6 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        icon: 'src/images/icon.png',
-      },
-    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
