@@ -44,7 +44,7 @@ type HomePageProps = {
         kvkNummer: string;
       };
       seo: {
-        metaDesc: string;
+        omschrijving: string;
       };
     };
     allWpLes: {

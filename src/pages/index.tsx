@@ -23,7 +23,7 @@ export default function Home(props: HomePageProps) {
     <Layout slot={<Hero />}>
       <Helmet>
         <title>{introductionData.kop}</title>
-        <meta name="description" content={props.data.wpPage.seo.metaDesc} />
+        <meta name="description" content={props.data.wpPage.seo.omschrijving} />
         <meta property="og:title" content={introductionData.kop} />
       </Helmet>
       <Heading>{introductionData.kop}</Heading>
@@ -101,7 +101,7 @@ export const query = graphql`
         kvkNummer
       }
       seo {
-        metaDesc
+        omschrijving
       }
     }
     allWpLes {
