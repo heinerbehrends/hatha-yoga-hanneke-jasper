@@ -4,47 +4,9 @@ import {
   PaperPlaneIcon,
 } from '@modulz/radix-icons';
 import React from 'react';
-import { styled } from '../../stitches.config';
 import Button from './button';
-import { SmallerHeading } from './InfoCard';
-
-const ContactCardsContainer = styled('section', {
-  display: 'grid',
-  width: '100%',
-  gridGap: '$s',
-  gridTemplateColumns: 'none',
-});
-
-const ContactCard = styled('div', {
-  backgroundColor: '$white',
-  paddingX: '$m',
-  paddingTop: '$s',
-  paddingBottom: '$m',
-  borderRadius: '$s',
-  border: '1px solid $green',
-  '&:not(:first-child)': {
-    marginTop: '$s',
-  },
-});
-
-const Adress = styled('address', {
-  '& a': {
-    display: 'block',
-    width: 'fit-content',
-    marginLeft: 0,
-    marginTop: '$s',
-  },
-});
-
-const data = {
-  contactgegevens: {
-    adres: 'Straatnaam 00a, 9700 Groningen',
-    emailadres: 'voorbeeld@gmail.com',
-    telefoonnummer: '06-xxxxxxxx',
-    kvkNummer: '12345678',
-  },
-};
-console.log(data.contactgegevens.telefoonnummer.split('-')[1]);
+import { ContactCardsContainer, Adress, ContactCard } from './contactStyles';
+import { SmallerHeading } from './infoCardStyles';
 
 type ContactCardsProps = {
   telefoonnummer: string;

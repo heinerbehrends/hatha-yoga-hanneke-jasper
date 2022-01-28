@@ -1,3 +1,5 @@
+import React from 'react';
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import {
   BackpackIcon,
   ChatBubbleIcon,
@@ -5,77 +7,17 @@ import {
   HomeIcon,
   PaperPlaneIcon,
 } from '@modulz/radix-icons';
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
-import React from 'react';
-import { css, styled } from '../../stitches.config';
-import { SmallerHeading } from './InfoCard';
-
-const FooterStyled = styled('footer', {
-  backgroundColor: '$blueDark',
-  color: '$white',
-  paddingY: '$3xl',
-  paddingLeft: '$m',
-  '@s': {
-    paddingLeft: '$l',
-  },
-});
-
-const FooterContainer = styled('section', {
-  display: 'grid',
-  gridGap: '$m',
-  maxWidth: '960px',
-  marginX: 'auto',
-  '@m': {
-    gridTemplateColumns: 'repeat(auto-fill, minmax(36ch, 1fr))',
-  },
-});
-
-const FooterBio = styled('article', {});
-
-const FooterContact = styled('address', {
-  width: 'fit-content',
-  '@l': {
-    paddingLeft: '$xl',
-  },
-});
-
-const ContactItem = styled('a', {
-  cursor: 'pointer',
-  display: 'flex',
-  alignItems: 'center',
-  paddingY: '$xxs',
-  '&:hover': {
-    textDecoration: 'underline',
-  },
-  '& svg': {
-    marginRight: '$xs',
-  },
-  '@s': {},
-  '@l': {
-    paddingLeft: 0,
-  },
-});
-
-const imageStyles = css({
-  width: '90px',
-  height: '120px',
-});
-
-const FooterParagraph = styled('p', {
-  width: '66%',
-  '@s': {
-    width: '75%',
-  },
-  '& a': {
-    textDecoration: 'underline',
-    cursor: 'pointer',
-  },
-});
-
-const BioContainer = styled('div', {
-  display: 'flex',
-  width: 'content',
-});
+import {
+  FooterStyled,
+  FooterContainer,
+  FooterContact,
+  ContactItem,
+  FooterBio,
+  BioContainer,
+  FooterParagraph,
+  imageStyles,
+} from './footerStyles';
+import { SmallerHeading } from './infoCardStyles';
 
 type FooterProps = {
   about: {

@@ -1,6 +1,5 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { styled } from '../../stitches.config';
 import Layout from '../components/layout';
 import Hero from '../components/hero';
 import InfoCard from '../components/InfoCard';
@@ -11,43 +10,8 @@ import { graphql } from 'gatsby';
 import Testimonial from '../components/testimonial';
 import ContactForm from '../components/ContactForm';
 import ContactCards from '../components/ContactCards';
-
-export const Heading = styled('h1', {
-  fontSize: 'clamp(30px, 5vw, 48px)',
-  lineHeight: '33px',
-  textAlign: 'center',
-  marginTop: '$3xl-resp',
-  paddingX: '$s',
-});
-
-const Contact = styled('div', {
-  display: 'grid',
-  gridGap: '$s',
-  marginTop: '$s',
-  marginX: '$xs',
-  '@s': {
-    gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
-  },
-  '@l': {
-    marginTop: '$xl',
-  },
-});
-
-const Introduction = styled('section', {
-  backgroundColor: '$white',
-  paddingX: '$s',
-  marginTop: '$s',
-  '@m': {
-    marginTop: '$l',
-  },
-  '@l': {
-    marginTop: '$xl',
-    paddingX: '$3xl',
-    paddingTop: '$xl',
-    paddingBottom: '$xl',
-    borderRadius: '$m-resp',
-  },
-});
+import { Heading, Introduction } from '../components/indexStyles';
+import { Contact } from '../components/contactStyles';
 
 export default function Home(props: HomePageProps) {
   const introductionData = props.data.wpPage.introductie;
