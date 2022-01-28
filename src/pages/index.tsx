@@ -1,16 +1,16 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import Layout from '../components/layout';
+import HomePageProps from '../homePageProps';
+import { Heading, Introduction } from '../components/indexStyles';
 import Hero from '../components/hero';
 import InfoCard from '../components/InfoCard';
 import LessenCards from '../components/LessenCard';
-import HomePageProps from '../homePageProps';
 import { getLocalImage, getLessonsData } from '../utils';
-import { graphql } from 'gatsby';
 import Testimonial from '../components/testimonial';
 import ContactForm from '../components/ContactForm';
 import ContactCards from '../components/ContactCards';
-import { Heading, Introduction } from '../components/indexStyles';
 import { Contact } from '../components/contactStyles';
 
 export default function Home(props: HomePageProps) {
@@ -116,9 +116,7 @@ export const query = graphql`
     }
     allWpAanbeveling(
       filter: {
-        aanbeveling: {
-          toonOpPagina: { eq: "Wat kan hatha yoga voor je doen?" }
-        }
+        aanbeveling: { toonOpPagina: { eq: "Yogalessen in Groningen" } }
       }
     ) {
       nodes {
