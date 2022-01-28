@@ -3,7 +3,7 @@ const path = require('path');
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
-  const result = await graphql(`
+  const resultLessons = await graphql(`
     query LessonPagesQuery {
       allWpLes {
         nodes {
@@ -18,10 +18,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
     }
   `);
-  if (result.errors) {
+  if (resultLessons.errors) {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query');
   }
-  const lessonPages = result.data.allWpLes.nodes;
+  const lessonPages = resultLessons.data.allWpLes.nodes;
   lessonPages.forEach((node) => {
     createPage({
       path: `/${node.slug}`,
@@ -29,4 +29,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       context: { id: node.id, title: node.title },
     });
   });
+
+  // const resultPosts = await graphql``;
 };
