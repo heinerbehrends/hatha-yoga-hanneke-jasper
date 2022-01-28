@@ -14,7 +14,7 @@ export default function NavBar() {
           Over mij
         </NavItem>
         <Button
-          to="/contact/"
+          to="#contact"
           color="zacht"
           size={{ '@initial': 'small', '@md': 'big' }}
         >
