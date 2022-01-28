@@ -3,9 +3,9 @@ import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import React from 'react';
 import { css, styled } from '../../stitches.config';
 import Button from '../components/button';
+import { Heading } from '../components/indexStyles';
 import Layout from '../components/layout';
 import Testimonial from '../components/testimonial';
-import { Heading } from '../pages';
 import { getLocalImage, ImageNode } from '../utils';
 
 const LessenHTML = styled('article', {

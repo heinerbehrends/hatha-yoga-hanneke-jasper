@@ -1,7 +1,10 @@
 import React from 'react';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
-import { ImageContainer } from './infoCardStyles';
-import { TestimonialContainer, FigCaption } from './testimonialStyles';
+import {
+  TestimonialContainer,
+  FigCaption,
+  TestimonialImage,
+} from './testimonialStyles';
 type TestimonialProps = {
   quote: string;
   author: string;
@@ -24,9 +27,9 @@ export default function Testimonial({
           <FigCaption>{author}</FigCaption>
         </div>
         {image ? (
-          <ImageContainer>
+          <TestimonialImage>
             <GatsbyImage alt="" image={image} />
-          </ImageContainer>
+          </TestimonialImage>
         ) : null}
       </div>
     </TestimonialContainer>

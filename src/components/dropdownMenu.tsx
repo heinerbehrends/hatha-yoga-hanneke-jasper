@@ -4,7 +4,8 @@ import { ChevronDownIcon } from '@modulz/radix-icons';
 import { Link } from 'gatsby';
 import { styled } from '../../stitches.config';
 import slugify from 'slugify';
-import NavItem, { navBarItemStyles } from './navItem';
+import NavItem from './navItem';
+import { navBarItemStyles } from './navBarStyles';
 
 type DropdownMenuItems = { items: string[] };
 

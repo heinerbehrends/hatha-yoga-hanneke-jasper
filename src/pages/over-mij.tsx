@@ -3,7 +3,7 @@ import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 import { graphql } from 'gatsby';
 import { css, styled } from '../../stitches.config';
-import { Heading } from './index';
+import { Heading } from '../components/indexStyles';
 
 export const query = graphql`
   query OverMij {
