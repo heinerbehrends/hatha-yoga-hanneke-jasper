@@ -52,7 +52,9 @@ export default function Home(props: HomePageProps) {
           />
         )
       )}
-      <Heading as="h2">Contact</Heading>
+      <Heading id="contact" as="h2" style={{ scrollMarginTop: '80px' }}>
+        Contact
+      </Heading>
       <Contact>
         <ContactCards
           emailadres={contactInfo.emailadres}
