@@ -56,31 +56,16 @@ export default function ContactForm() {
       id="contact"
     >
       <FormContainer>
-        <Label for="name">Naam</Label>
-        <InputStyled
-          type="text"
-          autoFocus
-          id="name"
-          placeholder="Naam"
-          {...register('name', {
-            required: 'Dit is een verplicht veld',
-            min: 2,
-            max: 30,
-          })}
-        />
-        {errors.name ? (
-          <ErrorMessage>Dit is een verplicht veld</ErrorMessage>
-        ) : null}
         <Label for="email">E-mail</Label>
         <InputStyled
           type="email"
           id="email"
           placeholder="E-mail adres"
           {...register('email', {
-            required: 'Dit is een verplicht veld.',
+            required: true,
             pattern: {
               value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              message: 'Ongeldige e-mailadres.',
+              message: 'Vul hier je emailadres in ajb.',
             },
           })}
         />
@@ -93,13 +78,12 @@ export default function ContactForm() {
           {...register('message', {
             required: true,
             minLength: 6,
-            maxLength: 2000,
           })}
-          placeholder="Uw vraag of boodschap"
+          placeholder="Je vraag of bericht..."
           rows={6}
         />
         {errors.message && (
-          <ErrorMessage>Het bericht is te kort of te lang</ErrorMessage>
+          <ErrorMessage>Vul hier je bericht in ajb.</ErrorMessage>
         )}
         <SubmitButton
           type="submit"
