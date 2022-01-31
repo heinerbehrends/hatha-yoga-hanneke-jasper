@@ -146,6 +146,9 @@ export default function Layout({
     const body = document.getElementsByTagName('body')[0];
     const height = body.offsetHeight;
     const width = body.offsetWidth;
+    if (width <= 960) {
+      return;
+    }
     const svg = SVG(body).viewbox(0, 0, width, height);
     const points = [...Array(32)].map(() => ({
       x: random(0, width),
