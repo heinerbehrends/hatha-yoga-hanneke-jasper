@@ -3,11 +3,10 @@ import * as DropdownPrimitives from '@radix-ui/react-dropdown-menu';
 import { ChevronDownIcon } from '@modulz/radix-icons';
 import { Link } from 'gatsby';
 import { styled } from '../../stitches.config';
-import slugify from 'slugify';
 import NavItem from './navItem';
 import { navBarItemStyles } from './navBarStyles';
 
-type DropdownMenuItems = { items: string[] };
+type DropdownMenuItems = { items: { title: string; slug: string }[] };
 
 const Trigger = styled(DropdownPrimitives.Trigger, {
   variants: {
@@ -29,9 +28,9 @@ export default function DropdownMenu({ items }: DropdownMenuItems) {
       </Trigger>
       <DropdownPrimitives.Content>
         {items.map((item, index) => (
-          <Link to={slugify(item).toLowerCase()} key={index}>
+          <Link to={`/${item.slug}`} key={index}>
             <DropdownPrimitives.Item className={navBarItemStyles()}>
-              {item}
+              {item.title}
             </DropdownPrimitives.Item>
           </Link>
         ))}
