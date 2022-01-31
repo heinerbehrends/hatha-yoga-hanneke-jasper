@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Helmet from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
 import { globalCss, styled } from '../../stitches.config';
 import Footer from './footer';
 import NavBar from './navBar';
 import { getLocalImage, ImageNode } from '../utils';
+import SVG from 'svg.js';
+import {
+  random,
+  createVoronoiTessellation,
+} from '@georgedoescode/generative-utils';
+import { theme } from '../../stitches.config';
 
 const PageContainer = styled('main', {
   maxWidth: '960px',
@@ -57,6 +63,9 @@ const globalStyles = globalCss({
     whiteSpace: 'revert',
   },
   body: {
+    display: 'grid',
+    gridTemplateColumns: '1fr',
+    gridTemplateRows: '1fr',
     backgroundColor: '$background',
     color: '$text',
     fontSize: '$bodySmall',
@@ -65,6 +74,13 @@ const globalStyles = globalCss({
     lineHeight: '$body',
     '@m': {
       fontSize: '$body',
+    },
+    '& #SvgjsSvg1001': {
+      gridArea: '1/1',
+      zIndex: -1,
+    },
+    '& #___gatsby': {
+      gridArea: '1/1',
     },
   },
 });
@@ -125,6 +141,43 @@ export default function Layout({
     }
   `);
   const aboutData = data.overMij.overMijSamenvatting;
+  useEffect(() => {
+    // draw the generative svg
+    const body = document.getElementsByTagName('body')[0];
+    const height = body.offsetHeight;
+    const width = body.offsetWidth;
+    const svg = SVG(body).viewbox(0, 0, width, height);
+    const points = [...Array(32)].map(() => ({
+      x: random(0, width),
+      y: random(0, height),
+    }));
+    const tessellation = createVoronoiTessellation({
+      width,
+      height,
+      points,
+      relaxIterations: 2,
+    });
+    type Cell = {
+      innerCircleRadius: number;
+      centroid: { x: number; y: number };
+    };
+    tessellation.cells.forEach((cell: Cell) =>
+      svg
+        .circle(cell.innerCircleRadius * 2)
+        .cx(cell.centroid.x)
+        .cy(cell.centroid.y)
+        .stroke(
+          random([
+            `${theme.colors.green.value}`,
+            `${theme.colors.coral.value}`,
+            `${theme.colors.blue.value}`,
+          ])
+        )
+        .attr('stroke-width', `0.75px`)
+        .fill({ opacity: 0 })
+        .scale(0.9)
+    );
+  }, []);
   return (
     <>
       <Helmet>
