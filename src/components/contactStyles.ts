@@ -30,6 +30,10 @@ export const ContactCard = styled('div', {
   '&:not(:first-child)': {
     marginTop: '$s',
   },
+  '@l': {
+    paddingTop: '$m',
+    paddingBottom: '$l',
+  },
 });
 
 export const Adress = styled('address', {
