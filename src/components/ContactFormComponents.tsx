@@ -3,7 +3,8 @@ import { styled } from '../../stitches.config';
 
 export const InputStyled = styled('input', {
   backgroundColor: '$greenTint',
-  padding: '$s',
+  paddingX: '$m',
+  paddingY: '$s',
   '@m': {
     fontSize: '$body',
   },
@@ -42,7 +43,7 @@ export const SuccessMessage = styled('span', {
 const Error = styled('span', {
   marginLeft: '$s',
   marginTop: '$xxs',
-  color: '$coral',
+  color: '$green',
 });
 
 type errorMessageProps = {
@@ -76,12 +77,15 @@ export const FormContainer = styled('div', {
   borderRadius: '$s',
   border: '1px solid $coral',
   paddingY: '$l',
-  // width: 'fit-content',
+  paddingBottom: '$xxl',
   paddingX: '$m',
-  // '@s': {
-  //   width: '100%',
-  // },
+  '@s': {
+    maxWidth: '400px',
+    marginX: 'auto',
+    paddinX: 0,
+  },
   '@l': {
+    width: 'unset',
     paddingX: '$xxl',
     marginX: 'auto',
   },
