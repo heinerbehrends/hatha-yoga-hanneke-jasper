@@ -11,10 +11,7 @@ export const InfoCardContainer = styled('section', {
     size: {
       bigScreen: {
         overflow: 'hidden',
-        marginTop: '$3xl',
-        '&:first-of-type': {
-          marginTop: '$xl',
-        },
+        marginTop: '$xl',
       },
       smallScreen: {
         marginTop: '$s',
@@ -140,6 +137,7 @@ export const Paragraph = styled('p', {
 
   '@l': {
     paddingX: 0,
+    marginTop: '$xxs',
   },
 });
 
