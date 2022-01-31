@@ -11,6 +11,10 @@ import { getLocalImage, ImageNode } from '../utils';
 const LessenHTML = styled('article', {
   marginTop: '$s',
   '@l': { marginTop: '$l' },
+  '& ul': {
+    listStyleImage: 'circle',
+    listStylePosition: 'inside',
+  },
 });
 
 const LessenContainer = styled('div', {
