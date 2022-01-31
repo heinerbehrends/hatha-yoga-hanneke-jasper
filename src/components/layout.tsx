@@ -62,7 +62,7 @@ const globalStyles = globalCss({
     fontSize: '$bodySmall',
     marginTop: '60px',
     fontFamily: 'Asap',
-    lineHeight: '1.5',
+    lineHeight: '$body',
     '@m': {
       fontSize: '$body',
     },
