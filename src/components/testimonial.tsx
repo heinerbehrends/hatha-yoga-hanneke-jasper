@@ -4,6 +4,7 @@ import {
   TestimonialContainer,
   FigCaption,
   TestimonialImage,
+  Blockquote,
 } from './testimonialStyles';
 type TestimonialProps = {
   quote: string;
@@ -20,7 +21,7 @@ export default function Testimonial({
     <TestimonialContainer>
       <div style={{ display: 'flex' }}>
         <div>
-          <blockquote
+          <Blockquote
             style={{ display: 'inline' }}
             dangerouslySetInnerHTML={{ __html: quote }}
           />

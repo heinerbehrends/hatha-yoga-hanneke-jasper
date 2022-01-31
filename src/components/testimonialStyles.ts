@@ -1,8 +1,6 @@
 import { styled } from '../../stitches.config';
 
 export const TestimonialContainer = styled('figure', {
-  fontSize: '$m',
-  fontStyle: 'italic',
   display: 'flex',
   backgroundColor: '$white',
   lineHeight: 1.1,
@@ -13,7 +11,18 @@ export const TestimonialContainer = styled('figure', {
     fontSize: '$s',
     fontStyle: 'normal',
   },
+  '@s': {
+    marginTop: '$s',
+    marginX: '$s',
+    border: '1px solid $blue',
+    borderRadius: '$s',
+  },
+  '@m': {
+    fontSize: '$xl',
+    marginX: 0,
+  },
   '&:before': {
+    fontStyle: 'italic',
     content: 'open-quote',
     fontSize: '100px',
     lineHeight: '60px',
@@ -29,21 +38,22 @@ export const TestimonialContainer = styled('figure', {
       paddingRight: '$s',
     },
     '@l': {
-      transform: 'translate(-15px, 10px)',
+      transform: 'translate(-10px, 8px)',
     },
   },
+});
+
+export const Blockquote = styled('blockquote', {
+  fontSize: '$m',
+  fontStyle: 'italic',
   '@s': {
-    marginTop: '$s',
-    marginX: '$s',
-    border: '1px solid $blue',
-    borderRadius: '$s',
     fontSize: '$l',
     '& figcaption': {
       fontSize: '$body',
     },
-    '@m': {
-      fontSize: '$xl',
-    },
+  },
+  '@m': {
+    fontSize: '$xl',
   },
 });
 
