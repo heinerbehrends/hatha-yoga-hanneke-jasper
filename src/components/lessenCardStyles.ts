@@ -25,8 +25,8 @@ export const LessenContainer = styled('div', {
     borderRadius: '$s',
     border: '1px solid',
     borderColor: '$blue',
-    padding: '$3xl',
-    paddingTop: '$xl',
+    paddingX: '$xxl',
+    paddingY: '$xl',
   },
 });
 
