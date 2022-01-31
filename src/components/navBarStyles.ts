@@ -27,6 +27,7 @@ export const NavBarContainer = styled('div', {
 export const navBarItemStyles = css({
   display: 'flex',
   alignItems: 'center',
+  fontSize: '$s',
   paddingY: '$s',
   paddingX: '$m',
   color: '$white',
