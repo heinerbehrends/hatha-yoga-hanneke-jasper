@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import Layout from '../components/layout';
 import HomePageProps from '../homePageProps';
-import { Heading, Introduction } from '../components/indexStyles';
+import { Heading, Introduction, SubHeading } from '../components/indexStyles';
 import Hero from '../components/hero';
 import InfoCard from '../components/InfoCard';
 import LessenCards from '../components/LessenCard';
@@ -30,7 +30,7 @@ export default function Home(props: HomePageProps) {
       <Introduction
         dangerouslySetInnerHTML={{ __html: introductionData.introductie }}
       />
-      <Heading as="h2">{props.data.wpPage.overHathaYoga.infoKop}</Heading>
+      <SubHeading as="h2">{props.data.wpPage.overHathaYoga.infoKop}</SubHeading>
       {infoCardsData.map((info, index) => (
         <InfoCard
           key={info.titel}
@@ -40,7 +40,7 @@ export default function Home(props: HomePageProps) {
           image={getLocalImage(info.afbeelding)}
         />
       ))}
-      <Heading as="h2">Lesvormen</Heading>
+      <SubHeading as="h2">Lesvormen</SubHeading>
       <LessenCards lessenCards={getLessonsData(lessonNodes)} />
       {testimonialNodes.map(
         ({ id, aanbeveling: { aanbevelingTekst, foto, aanbevolenDoor } }) => (
@@ -52,9 +52,9 @@ export default function Home(props: HomePageProps) {
           />
         )
       )}
-      <Heading id="contact" as="h2" style={{ scrollMarginTop: '80px' }}>
+      <SubHeading id="contact" as="h2" style={{ scrollMarginTop: '80px' }}>
         Contact
-      </Heading>
+      </SubHeading>
       <Contact>
         <ContactCards
           emailadres={contactInfo.emailadres}
