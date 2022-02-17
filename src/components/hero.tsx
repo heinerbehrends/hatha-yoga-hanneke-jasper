@@ -31,7 +31,7 @@ export default function Hero() {
               alt="picture of a dahlia"
               src="../images/dahlia.png"
               placeholder="none"
-              width={400}
+              width={309}
             />
             <HYHJ className={svgStyles()} />
           </PaddingContainer>

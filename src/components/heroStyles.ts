@@ -50,12 +50,12 @@ export const LogoContainer = styled('div', {
 });
 
 export const heroImageStyles = css({
-  width: 'clamp(128px, 33%, 300px)',
-  height: 'clamp(128px, 33%, 300px)',
+  width: 'clamp(128px, 40%, 500px)',
+  height: 'clamp(128px, 40%, 500px)',
   marginX: 'auto',
   '@m': {
-    height: '33%',
-    width: '33%',
+    height: '40%',
+    width: '40%',
   },
   zIndex: 1,
 });
