@@ -2,7 +2,7 @@ import { styled } from '../../stitches.config';
 
 export const Heading = styled('h1', {
   fontFamily: 'Ostrich Sans',
-  fontSize: 'clamp(30px, 25vw, 64px)',
+  fontSize: 'clamp(30px, 28vw, 74px)',
   lineHeight: '0.9',
   textAlign: 'center',
   marginTop: '$3xl-resp',
@@ -12,7 +12,7 @@ export const Heading = styled('h1', {
 export const SubHeading = styled('h2', {
   color: '$blueDark',
   fontFamily: 'asap',
-  fontSize: '32px',
+  fontSize: '40px',
   textAlign: 'center',
   lineHeight: '$heading',
   paddingX: '$s',
