@@ -142,6 +142,9 @@ export default function Layout({
   `);
   const aboutData = data.overMij.overMijSamenvatting;
   useEffect(() => {
+    // get the width and height of the window
+    const windowSurface = window.innerWidth * window.innerHeight;
+    const averageCircleSurface = 23720;
     // draw the generative svg
     const body = document.getElementsByTagName('body')[0];
     const height = body.offsetHeight;
@@ -150,7 +153,9 @@ export default function Layout({
       return;
     }
     const svg = SVG(body).viewbox(0, 0, width, height);
-    const points = [...Array(32)].map(() => ({
+    const points = [
+      ...Array(Math.floor(windowSurface / averageCircleSurface)),
+    ].map(() => ({
       x: random(0, width),
       y: random(0, height),
     }));
