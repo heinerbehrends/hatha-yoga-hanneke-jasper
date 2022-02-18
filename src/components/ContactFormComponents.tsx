@@ -4,17 +4,20 @@ import { styled } from '../../stitches.config';
 export const InputStyled = styled('input', {
   backgroundColor: '$greenTint',
   paddingX: '$m',
-  paddingY: '$s',
-  '@m': {
+  paddingY: 'calc($s + 1px)',
+  '@l': {
     fontSize: '$body',
   },
+  minWidth: 0,
   borderRadius: '$s',
-  border: '1px solid $red',
-  fontSize: '$body',
+  border: '1px solid $coral',
   transition: 'background-color 1.5s ease-in',
   '&:focus': {
     outline: 'none',
+    boxSizing: 'content-box',
+    boxShadow: 'none',
     border: '2px dotted $coral',
+    paddingY: '$s',
   },
 });
 
@@ -41,9 +44,10 @@ export const SuccessMessage = styled('span', {
 });
 
 const Error = styled('span', {
+  lineHeight: 0,
   marginLeft: '$s',
   marginTop: '$xxs',
-  color: '$green',
+  color: '$coral',
 });
 
 type errorMessageProps = {
@@ -55,6 +59,7 @@ export function ErrorMessage({ children }: errorMessageProps) {
 }
 
 const LabelStyled = styled('label', {
+  display: 'inline',
   marginLeft: '$s',
   marginTop: '$s',
   marginBottom: '$xxs',
@@ -74,8 +79,7 @@ export const FormContainer = styled('div', {
   flexDirection: 'column',
   width: '100%',
   backgroundColor: '$white',
-  borderRadius: '$s',
-  border: '1px solid $coral',
+  borderBottom: '1px solid $coral',
   paddingY: '$l',
   paddingBottom: '$xxl',
   paddingX: '$m',
@@ -85,6 +89,8 @@ export const FormContainer = styled('div', {
     paddinX: 0,
   },
   '@l': {
+    borderRadius: '$s',
+    border: '1px solid $coral',
     width: 'unset',
     paddingX: '$xxl',
     marginX: 'auto',

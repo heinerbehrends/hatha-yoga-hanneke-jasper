@@ -17,7 +17,7 @@ export const TestimonialContainer = styled('figure', {
     border: '1px solid $blue',
     borderRadius: '$s',
   },
-  '@m': {
+  '@l': {
     fontSize: '$xl',
     marginX: 0,
   },
@@ -33,7 +33,7 @@ export const TestimonialContainer = styled('figure', {
       lineHeight: '80px',
       transform: 'translate(-5px, 10px)',
     },
-    '@m': {
+    '@l': {
       transform: 'translate(-15px, 10px)',
       paddingRight: '$s',
     },
@@ -52,7 +52,7 @@ export const Blockquote = styled('blockquote', {
       fontSize: '$body',
     },
   },
-  '@m': {
+  '@l': {
     fontSize: '$xl',
   },
 });

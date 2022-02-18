@@ -4,7 +4,7 @@ export const { styled, css, getCssText, globalCss, theme } = createStitches({
   media: {
     s: '(min-width: 480px)',
     m: '(min-width: 640px)',
-    l: '(min-width: 960px)',
+    l: '(min-width: 720px)',
   },
   utils: {
     paddingX: (value: string | number) => ({
@@ -50,7 +50,7 @@ export const { styled, css, getCssText, globalCss, theme } = createStitches({
       body: '18px',
       l: '24px',
       xl: '32px',
-      xxl: '48px',
+      xxl: '40px',
       '3xl': '64px',
     },
     lineHeights: {

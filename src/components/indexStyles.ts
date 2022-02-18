@@ -2,35 +2,41 @@ import { styled } from '../../stitches.config';
 
 export const Heading = styled('h1', {
   fontFamily: 'Ostrich Sans',
-  fontSize: 'clamp(30px, 28vw, 74px)',
+  fontSize: 'clamp(30px,16vw, 74px)',
   lineHeight: '0.9',
   textAlign: 'center',
+  marginTop: '$xxl-resp',
+  paddingX: '$m',
+});
+
+export const HomePageHeading = styled(Heading, {
   marginTop: '$3xl-resp',
-  paddingX: '$s',
 });
 
 export const SubHeading = styled('h2', {
   color: '$blueDark',
   fontFamily: 'asap',
-  fontSize: '40px',
+  fontSize: 'min(32px,14vw)',
   textAlign: 'center',
   lineHeight: '$heading',
-  paddingX: '$s',
-  marginTop: '$l',
-  '@l': {
-    marginTop: '$xl',
-  },
+  paddingX: '$m',
+  marginTop: '$xl',
+  // '@l': {
+  //   marginTop: '$xl',
+  // },
 });
 
 export const Introduction = styled('section', {
   backgroundColor: '$white',
-  paddingX: '$s',
+  paddingX: '$m',
   marginTop: '$s',
   '@m': {
     marginTop: '$l',
   },
   '@l': {
+    fontSize: '$body',
     marginTop: '$xl',
+    marginX: '$l',
     paddingX: '$3xl',
     paddingTop: '$xl',
     paddingBottom: '$xl',

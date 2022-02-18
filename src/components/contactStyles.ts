@@ -4,7 +4,6 @@ export const Contact = styled('div', {
   display: 'grid',
   gridGap: '$s',
   marginTop: '$s',
-  marginX: '$xs',
   '@s': {
     gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
   },
@@ -25,12 +24,13 @@ export const ContactCard = styled('div', {
   paddingX: '$m',
   paddingTop: '$s',
   paddingBottom: '$m',
-  borderRadius: '$s',
-  border: '1px solid $green',
+  borderBottom: '1px solid $green',
   '&:not(:first-child)': {
     marginTop: '$s',
   },
   '@l': {
+    borderRadius: '$s',
+    border: '1px solid $green',
     paddingTop: '$m',
     paddingBottom: '$l',
   },

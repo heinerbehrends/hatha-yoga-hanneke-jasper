@@ -2,9 +2,11 @@ import { styled } from '../../stitches.config';
 import { Link } from 'gatsby';
 
 export const LessenCardsContainer = styled('article', {
+  marginTop: '$l',
   display: 'grid',
-  gridGap: '$s',
-  '@m': {
+  gridGap: '$xl',
+  fontSize: '$bodySmall',
+  '@l': {
     gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
     marginTop: '$xl',
   },
@@ -15,7 +17,7 @@ export const LessenContainer = styled('div', {
   flexDirection: 'column',
   justifyContent: 'space-between',
   backgroundColor: '$white',
-  padding: '$s',
+  paddingX: '$m',
   paddingBottom: '$m',
   borderBottom: '1px solid $coral',
   '@s': {

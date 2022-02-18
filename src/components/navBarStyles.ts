@@ -56,13 +56,13 @@ export const navBarItemStyles = css({
     hideUnderMedium: {
       true: {
         display: 'none',
-        '@m': { display: 'initial' },
+        '@l': { display: 'initial' },
       },
     },
     hideAtLarge: {
       true: {
         display: 'initial',
-        '@m': { display: 'none' },
+        '@l': { display: 'none' },
       },
     },
     size: {
@@ -71,7 +71,7 @@ export const navBarItemStyles = css({
         fontSize: '$s',
       },
       big: {
-        paddingX: '$s',
+        paddingX: '$m',
         fontSize: '$bodySmall',
       },
     },

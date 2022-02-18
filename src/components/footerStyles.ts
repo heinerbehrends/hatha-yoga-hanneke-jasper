@@ -3,9 +3,10 @@ import { css, styled } from '../../stitches.config';
 export const FooterStyled = styled('footer', {
   backgroundColor: '$blueDark',
   color: '$white',
-  paddingY: '$3xl',
+  paddingY: '$xxl',
   paddingLeft: '$m',
   '@s': {
+    paddingY: '$3xl',
     paddingLeft: '$l',
   },
 });
@@ -15,7 +16,7 @@ export const FooterContainer = styled('section', {
   gridGap: '$m',
   maxWidth: '960px',
   marginX: 'auto',
-  '@m': {
+  '@l': {
     gridTemplateColumns: 'repeat(auto-fill, minmax(36ch, 1fr))',
   },
 });
@@ -54,7 +55,7 @@ export const footerImageStyles = css({
 export const FooterParagraph = styled('p', {
   width: '66%',
   '@s': {
-    width: '75%',
+    width: 'fit-content',
   },
   '& a': {
     textDecoration: 'underline',

@@ -26,7 +26,7 @@ export const ImageContainer = styled('div', {
 export const PaddingContainer = styled('div', {
   display: 'flex',
   paddingY: '6%',
-  '@m': {
+  '@l': {
     paddingY: '8%',
     paddingLeft: '5%',
   },
@@ -35,27 +35,28 @@ export const PaddingContainer = styled('div', {
 export const TextLogo = styled('h1', {
   textAlign: 'center',
   fontFamily: 'Ostrich Sans',
+  lineHeight: '$heading',
   color: '$coral',
-  fontSize: '$3xl',
-  lineHeight: '56px',
+  fontSize: 'clamp(30px,16vw, 74px)',
+  // lineHeight: '56px',
   paddingY: '$m',
 });
 
 export const LogoContainer = styled('div', {
   width: '100%',
   backgroundColor: '$white',
-  '@m': {
+  '@l': {
     display: 'none',
   },
 });
 
 export const heroImageStyles = css({
-  width: 'clamp(128px, 40%, 500px)',
-  height: 'clamp(128px, 40%, 500px)',
+  width: 'clamp(154px, 33%, 400px)',
+  height: 'clamp(154px, 33%, 400px)',
   marginX: 'auto',
-  '@m': {
-    height: '40%',
-    width: '40%',
+  '@l': {
+    height: '38%',
+    width: '38%',
   },
   zIndex: 1,
 });
@@ -63,7 +64,7 @@ export const heroImageStyles = css({
 export const svgStyles = css({
   display: 'none',
   transform: 'translateX(-50px)',
-  '@m': {
+  '@l': {
     display: 'initial',
   },
 });
