@@ -12,7 +12,6 @@ import {
 } from './heroStyles';
 
 export default function Hero() {
-  // const dahliaRef = useRef<HTMLDivElement | null>(null);
   return (
     <>
       <LogoContainer>
@@ -20,10 +19,7 @@ export default function Hero() {
           hatha yoga <br /> hanneke jasper
         </TextLogo>
       </LogoContainer>
-      <HeroContainer
-        // ref={dahliaRef}
-        size={{ '@initial': 'mobile', '@m': 'bigScreen' }}
-      >
+      <HeroContainer size={{ '@initial': 'mobile', '@l': 'bigScreen' }}>
         <ImageContainer>
           <PaddingContainer>
             <StaticImage
