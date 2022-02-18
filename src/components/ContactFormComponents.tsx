@@ -96,3 +96,7 @@ export const FormContainer = styled('div', {
     marginX: 'auto',
   },
 });
+
+export const LabelContainer = styled('div', {
+  marginTop: '$l',
+});

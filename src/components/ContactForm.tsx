@@ -8,6 +8,7 @@ import {
   FormContainer,
   SubmitButton,
   SuccessMessage,
+  LabelContainer,
 } from './ContactFormComponents';
 
 export default function ContactForm() {
@@ -56,7 +57,33 @@ export default function ContactForm() {
       id="contact"
     >
       <FormContainer>
-        <Label for="email">E-mail</Label>
+        <div>
+          {errors.name ? (
+            <ErrorMessage>Vul hier je naam in ajb</ErrorMessage>
+          ) : (
+            <Label for="email">Naam</Label>
+          )}
+        </div>
+        <InputStyled
+          type="text"
+          id="name"
+          placeholder="Je naam"
+          {...register('name', {
+            required: true,
+            minLength: 2,
+            pattern: {
+              value: /[A-Za-z]{2}/,
+              message: 'Vul hier je naam in ajb.',
+            },
+          })}
+        />
+        <LabelContainer>
+          {errors.email ? (
+            <ErrorMessage>Vul hier je emailadres in ajb</ErrorMessage>
+          ) : (
+            <Label for="email">E-mail</Label>
+          )}
+        </LabelContainer>
         <InputStyled
           type="email"
           id="email"
@@ -69,8 +96,13 @@ export default function ContactForm() {
             },
           })}
         />
-        {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
-        <Label for="message">Bericht</Label>
+        <LabelContainer>
+          {errors.message ? (
+            <ErrorMessage>Vul hier je bericht in ajb.</ErrorMessage>
+          ) : (
+            <Label for="message">Bericht</Label>
+          )}
+        </LabelContainer>
         <InputStyled
           as="textarea"
           id="message"
@@ -82,9 +114,7 @@ export default function ContactForm() {
           placeholder="Je vraag of bericht..."
           rows={6}
         />
-        {errors.message && (
-          <ErrorMessage>Vul hier je bericht in ajb.</ErrorMessage>
-        )}
+
         <SubmitButton
           type="submit"
           value={`${isSubmitSuccessful ? 'Verstuurd!' : 'Verstuur >'}`}
