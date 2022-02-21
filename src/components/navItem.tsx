@@ -24,7 +24,7 @@ export default function NavItem({
       activeStyle={{
         fontWeight: 'bold',
       }}
-      size={{ '@initial': 'small', '@m': 'big' }}
+      size={{ '@initial': 'small', '@l': 'big' }}
       hideUnderMedium={hideUnderMedium}
       hideUnderLarge={hideUnderLarge}
       hideAtLarge={hideAtLarge}

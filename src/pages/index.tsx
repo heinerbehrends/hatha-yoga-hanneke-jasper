@@ -3,7 +3,11 @@ import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import Layout from '../components/layout';
 import HomePageProps from '../homePageProps';
-import { Heading, Introduction, SubHeading } from '../components/indexStyles';
+import {
+  HomePageHeading,
+  Introduction,
+  SubHeading,
+} from '../components/indexStyles';
 import Hero from '../components/hero';
 import InfoCard from '../components/InfoCard';
 import LessenCards from '../components/LessenCard';
@@ -26,7 +30,7 @@ export default function Home(props: HomePageProps) {
         <meta name="description" content={props.data.wpPage.seo.omschrijving} />
         <meta property="og:title" content={introductionData.kop} />
       </Helmet>
-      <Heading>{introductionData.kop}</Heading>
+      <HomePageHeading>{introductionData.kop}</HomePageHeading>
       <Introduction
         dangerouslySetInnerHTML={{ __html: introductionData.introductie }}
       />
@@ -109,7 +113,7 @@ export const query = graphql`
         title
         excerpt
         slug
-        buttonTekst {
+        extraVelden {
           buttonTekst
         }
       }

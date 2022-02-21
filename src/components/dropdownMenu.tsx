@@ -6,7 +6,11 @@ import { styled } from '../../stitches.config';
 import NavItem from './navItem';
 import { navBarItemStyles } from './navBarStyles';
 
-type DropdownMenuItems = { items: { title: string; slug: string }[] };
+export type DropdownMenuItem = {
+  title: string;
+  slug: string;
+  extraVelden: { menuTekst: string };
+};
 
 const Trigger = styled(DropdownPrimitives.Trigger, {
   variants: {
@@ -18,7 +22,7 @@ const Trigger = styled(DropdownPrimitives.Trigger, {
   },
 });
 
-export default function DropdownMenu({ items }: DropdownMenuItems) {
+export default function DropdownMenu({ items }: { items: DropdownMenuItem[] }) {
   return (
     <DropdownPrimitives.Root>
       <Trigger hide={{ '@l': true }}>
@@ -30,7 +34,7 @@ export default function DropdownMenu({ items }: DropdownMenuItems) {
         {items.map((item, index) => (
           <Link to={`/${item.slug}`} key={index}>
             <DropdownPrimitives.Item className={navBarItemStyles()}>
-              {item.title}
+              {item.extraVelden.menuTekst}
             </DropdownPrimitives.Item>
           </Link>
         ))}

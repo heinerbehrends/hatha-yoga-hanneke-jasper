@@ -18,13 +18,13 @@ const LessenHTML = styled('article', {
 });
 
 const LessenContainer = styled('div', {
-  paddingX: '$s',
-  '@m': {
+  paddingX: '$m',
+  '@l': {
     paddingX: '$l',
   },
-  '@l': {
-    paddingX: '$xxl',
-  },
+  // '@l': {
+  //   paddingX: '$xxl',
+  // },
 });
 
 const imageStyles = css({
@@ -38,7 +38,7 @@ type LessonData = {
       slug: string;
       title: string;
       content: string;
-      buttonTekst: {
+      extraVelden: {
         buttonTekst: string;
       };
       featuredImage: {
@@ -76,8 +76,8 @@ export default function LessonLayout({
           className={imageStyles()}
         />
         <LessenHTML dangerouslySetInnerHTML={{ __html: wpLes.content }} />
-        <Button to="/contact" size="big" color="greenTint">
-          {wpLes.buttonTekst.buttonTekst}
+        <Button to="/#contact" size="big" color="greenTint">
+          {wpLes.extraVelden.buttonTekst}
         </Button>
         {wpAanbeveling ? (
           <Testimonial
@@ -98,7 +98,7 @@ export const lessonPageQuery = graphql`
       slug
       title
       content
-      buttonTekst {
+      extraVelden {
         buttonTekst
       }
       featuredImage {

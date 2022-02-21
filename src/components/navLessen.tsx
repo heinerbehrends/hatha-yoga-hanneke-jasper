@@ -5,7 +5,11 @@ import NavItem from './navItem';
 
 type NavItemsData = {
   allWpLes: {
-    nodes: { slug: string; title: string }[];
+    nodes: {
+      title: string;
+      slug: string;
+      extraVelden: { menuTekst: string };
+    }[];
   };
 };
 export default function NavLessen() {
@@ -13,8 +17,10 @@ export default function NavLessen() {
     query LessenSlugQuery {
       allWpLes {
         nodes {
-          title
           slug
+          extraVelden {
+            menuTekst
+          }
         }
       }
     }
@@ -24,7 +30,7 @@ export default function NavLessen() {
     <>
       {navItems.map((item, index) => (
         <NavItem hideUnderLarge={true} slug={item.slug} key={index}>
-          {item.title}
+          {item.extraVelden.menuTekst}
         </NavItem>
       ))}
       <DropdownMenu items={navItems} />

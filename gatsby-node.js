@@ -11,7 +11,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           slug
           title
           content
-          buttonTekst {
+          extraVelden {
             buttonTekst
           }
         }

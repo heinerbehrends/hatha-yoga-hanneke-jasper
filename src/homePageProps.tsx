@@ -4,7 +4,7 @@ export type LessenNode = {
   title: string;
   excerpt: string;
   slug: string;
-  buttonTekst: {
+  extraVelden: {
     buttonTekst: string;
   };
 };

@@ -16,7 +16,7 @@ export function getLessonsData(lessonNodes: LessenNode[]): LessenCard[] {
   return lessonNodes.map((node) => ({
     title: node.title,
     text: node.excerpt,
-    cta: node.buttonTekst.buttonTekst,
+    cta: node.extraVelden.buttonTekst,
     link: node.slug,
   }));
 }
