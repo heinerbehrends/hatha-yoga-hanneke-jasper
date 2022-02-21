@@ -10,9 +10,7 @@ export default function NavBar() {
       <NavContainer>
         <NavItem slug="">Home</NavItem>
         <NavLessen />
-        <NavItem hideUnderMedium slug="over-mij">
-          Over mij
-        </NavItem>
+        <NavItem slug="over-mij">Over mij</NavItem>
         <Button
           to="#contact"
           color="zacht"
