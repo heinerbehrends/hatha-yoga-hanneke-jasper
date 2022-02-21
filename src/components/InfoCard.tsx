@@ -26,7 +26,7 @@ export default function InfoCard({ title, image, color, html }: InfoCardProps) {
       <ImageContainer
         color={colorMap[color]}
         hideUnderLarge={true}
-        size={{ '@initial': 'mobile', '@m': 'smallScreen', '@l': 'bigScreen' }}
+        size={{ '@initial': 'mobile', '@l': 'bigScreen' }}
       >
         <GatsbyImage alt="Een foto van een yoga houding" image={image} />
       </ImageContainer>
@@ -36,7 +36,6 @@ export default function InfoCard({ title, image, color, html }: InfoCardProps) {
           hideAtLarge={true}
           size={{
             '@initial': 'mobile',
-            '@m': 'smallScreen',
             '@l': 'bigScreen',
           }}
           color={colorMap[color]}
