@@ -14,7 +14,7 @@ export const InfoCardContainer = styled('section', {
         marginTop: '$xl',
       },
       smallScreen: {
-        marginTop: '$s',
+        marginTop: '$l',
       },
     },
   },
@@ -43,15 +43,7 @@ export const ImageContainer = styled('div', {
         width: 'min(31.25vw, 300px)',
         borderRadius: '50%',
         marginTop: '$l',
-      },
-      smallScreen: {
-        flexDirection: 'column',
-        float: 'none',
-        width: '100%',
-        borderRadius: 0,
-        alignItems: 'center',
-        margin: 0,
-        marginTop: '$m',
+        marginLeft: '$m',
       },
       mobile: {
         marginX: 0,
@@ -89,8 +81,11 @@ export const ArticleContainer = styled('article', {
   '@l': {
     width: '66%',
     borderRadius: '$m-resp',
-    marginLeft: '-60px',
-    paddingX: '$3xl',
+    transform: 'translateX(-60px)',
+    // marginLeft: '-60px',
+    // marginRight: '-30px',
+    paddingLeft: '$xxl',
+    paddingRight: '$l',
     paddingTop: '$xl',
     paddingBottom: '$xl',
   },
@@ -114,12 +109,9 @@ export const Shape = styled('div', {
 export const SmallerHeading = styled('h3', {
   fontSize: '$l',
   fontWeight: 500,
-  '@m': {
-    paddingLeft: '$m',
-  },
-  '@l': {
-    paddingLeft: 0,
-  },
+  // '@l': {
+  //   paddingLeft: 0,
+  // },
   '& svg': {
     transform: 'scale(120%)',
     marginRight: '$xs',
@@ -128,28 +120,24 @@ export const SmallerHeading = styled('h3', {
 
 export const Paragraph = styled('p', {
   marginTop: '2px',
-  fontSize: '$bodySmall',
-  '@m': {
+  '@l': {
     fontSize: '$body',
     paddingLeft: '$m',
     paddingRight: '$m',
-  },
-
-  '@l': {
     paddingX: 0,
     marginTop: '$xxs',
   },
 });
 
 export const TextContainer = styled('div', {
-  paddingX: '$s',
+  paddingX: '$m',
 
   height: 'fit-content',
 });
 
 export const infoImageStyles = css({
   width: '50%',
-  '@m': {
+  '@l': {
     width: '33',
   },
 });
