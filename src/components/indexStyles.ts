@@ -16,14 +16,11 @@ export const HomePageHeading = styled(Heading, {
 export const SubHeading = styled('h2', {
   color: '$blueDark',
   fontFamily: 'asap',
-  fontSize: 'min(32px,14vw)',
+  fontSize: 'min(36px,14vw)',
   textAlign: 'center',
   lineHeight: '$heading',
   paddingX: '$m',
   marginTop: '$xl',
-  // '@l': {
-  //   marginTop: '$xl',
-  // },
 });
 
 export const Introduction = styled('section', {
