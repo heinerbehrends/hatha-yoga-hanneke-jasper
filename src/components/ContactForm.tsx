@@ -9,6 +9,7 @@ import {
   SubmitButton,
   SuccessMessage,
   LabelContainer,
+  Form,
 } from './ContactFormComponents';
 
 export default function ContactForm() {
@@ -42,7 +43,7 @@ export default function ContactForm() {
     console.log('error');
   }
   return (
-    <form
+    <Form
       method="POST"
       onSubmit={(event) =>
         handleSubmit(
@@ -125,6 +126,6 @@ export default function ContactForm() {
           </SuccessMessage>
         ) : null}
       </FormContainer>
-    </form>
+    </Form>
   );
 }
