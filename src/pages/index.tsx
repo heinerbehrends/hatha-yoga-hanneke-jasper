@@ -5,7 +5,7 @@ import Layout from '../components/layout';
 import HomePageProps from '../homePageProps';
 import {
   HomePageHeading,
-  Introduction,
+  TextBox,
   SubHeading,
 } from '../components/indexStyles';
 import Hero from '../components/hero';
@@ -31,7 +31,7 @@ export default function Home(props: HomePageProps) {
         <meta property="og:title" content={introductionData.kop} />
       </Helmet>
       <HomePageHeading>{introductionData.kop}</HomePageHeading>
-      <Introduction
+      <TextBox
         dangerouslySetInnerHTML={{ __html: introductionData.introductie }}
       />
       <SubHeading as="h2">{props.data.wpPage.overHathaYoga.infoKop}</SubHeading>
@@ -56,7 +56,7 @@ export default function Home(props: HomePageProps) {
           />
         )
       )}
-      <SubHeading id="contact" as="h2" style={{ scrollMarginTop: '80px' }}>
+      <SubHeading id="contact" as="h2">
         Contact
       </SubHeading>
       <Contact>
