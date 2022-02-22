@@ -51,8 +51,8 @@ export const LogoContainer = styled('div', {
 });
 
 export const heroImageStyles = css({
-  width: 'clamp(154px, 33%, 400px)',
-  height: 'clamp(154px, 33%, 400px)',
+  width: 'clamp(154px, 38%, 400px)',
+  height: 'clamp(154px, 38%, 400px)',
   marginX: 'auto',
   '@l': {
     height: '38%',

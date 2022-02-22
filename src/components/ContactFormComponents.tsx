@@ -75,16 +75,16 @@ export function Label(props: labelProps) {
 }
 
 export const FormContainer = styled('div', {
+  alignSelf: 'center',
   display: 'flex',
   flexDirection: 'column',
   width: '100%',
   backgroundColor: '$white',
-  borderBottom: '1px solid $coral',
   paddingY: '$l',
   paddingBottom: '$xxl',
   paddingX: '$m',
   '@s': {
-    maxWidth: '400px',
+    maxWidth: '480px',
     marginX: 'auto',
     paddinX: 0,
   },
@@ -93,8 +93,14 @@ export const FormContainer = styled('div', {
     border: '1px solid $coral',
     width: 'unset',
     paddingX: '$xxl',
-    marginX: 'auto',
+    marginX: 0,
+    maxWidth: 'unset',
   },
+});
+
+export const Form = styled('form', {
+  borderBottom: '1px solid $coral',
+  '@l': { borderBottom: 'none' },
 });
 
 export const LabelContainer = styled('div', {

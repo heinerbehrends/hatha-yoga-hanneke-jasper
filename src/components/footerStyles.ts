@@ -4,16 +4,16 @@ export const FooterStyled = styled('footer', {
   backgroundColor: '$blueDark',
   color: '$white',
   paddingY: '$xxl',
-  paddingLeft: '$m',
+  paddingX: '$m',
   '@s': {
     paddingY: '$3xl',
-    paddingLeft: '$l',
+    paddingX: 0,
   },
 });
 
 export const FooterContainer = styled('section', {
   display: 'grid',
-  gridGap: '$m',
+  gridGap: '$s',
   maxWidth: '960px',
   marginX: 'auto',
   '@l': {
@@ -21,13 +21,10 @@ export const FooterContainer = styled('section', {
   },
 });
 
-export const FooterBio = styled('article', {});
+export const FooterBio = styled('article', { paddingX: '$m' });
 
 export const FooterContact = styled('address', {
-  width: 'fit-content',
-  '@l': {
-    paddingLeft: '$xl',
-  },
+  paddingX: '$m',
 });
 
 export const ContactItem = styled('a', {
@@ -65,5 +62,5 @@ export const FooterParagraph = styled('p', {
 
 export const BioContainer = styled('div', {
   display: 'flex',
-  width: 'content',
+  width: 'fit-content',
 });

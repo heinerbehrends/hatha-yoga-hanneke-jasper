@@ -6,6 +6,8 @@ export const LessenCardsContainer = styled('article', {
   display: 'grid',
   gridGap: '$xl',
   fontSize: '$bodySmall',
+  // '@s': { gridGap: 0 },
+  '@m': { gridGap: '$s' },
   '@l': {
     gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
     marginTop: '$xl',
@@ -20,9 +22,9 @@ export const LessenContainer = styled('div', {
   paddingX: '$m',
   paddingBottom: '$m',
   borderBottom: '1px solid $coral',
-  '@s': {
-    padding: '$l',
-  },
+  // '@s': {
+  //   padding: '$l',
+  // },
   '@l': {
     borderRadius: '$s',
     border: '1px solid',

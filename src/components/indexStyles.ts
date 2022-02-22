@@ -23,7 +23,7 @@ export const SubHeading = styled('h2', {
   marginTop: '$xl',
 });
 
-export const Introduction = styled('section', {
+export const TextBox = styled('section', {
   backgroundColor: '$white',
   paddingX: '$m',
   marginTop: '$s',
@@ -33,7 +33,7 @@ export const Introduction = styled('section', {
   '@l': {
     fontSize: '$body',
     marginTop: '$xl',
-    marginX: '$l',
+    // marginX: '$l',
     paddingX: '$3xl',
     paddingTop: '$xl',
     paddingBottom: '$xl',

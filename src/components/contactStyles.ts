@@ -1,14 +1,15 @@
 import { styled } from '../../stitches.config';
 
 export const Contact = styled('div', {
+  // alignSelf: 'center',
   display: 'grid',
   gridGap: '$s',
   marginTop: '$s',
-  '@s': {
-    gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
-  },
+  '@s': {},
   '@l': {
+    gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
     marginTop: '$xl',
+    marginRight: 0,
   },
 });
 
@@ -19,7 +20,7 @@ export const ContactCardsContainer = styled('section', {
   gridTemplateColumns: 'none',
 });
 
-export const ContactCard = styled('div', {
+export const ContactCardWrapper = styled('div', {
   backgroundColor: '$white',
   paddingX: '$m',
   paddingTop: '$s',
@@ -34,6 +35,11 @@ export const ContactCard = styled('div', {
     paddingTop: '$m',
     paddingBottom: '$l',
   },
+});
+
+export const ContactCardInner = styled('div', {
+  maxWidth: '420px',
+  margin: '0 auto',
 });
 
 export const Adress = styled('address', {
