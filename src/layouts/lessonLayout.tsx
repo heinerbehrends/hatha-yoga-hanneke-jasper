@@ -2,8 +2,10 @@ import { graphql } from 'gatsby';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import React from 'react';
 import { css, styled } from '../../stitches.config';
-import Button from '../components/button';
-import { Heading } from '../components/indexStyles';
+import ContactCards from '../components/ContactCards';
+import ContactForm from '../components/ContactForm';
+import { Contact } from '../components/contactStyles';
+import { Heading, TextBox } from '../components/indexStyles';
 import Layout from '../components/layout';
 import Testimonial from '../components/testimonial';
 import { getLocalImage, ImageNode } from '../utils';
@@ -22,9 +24,10 @@ const LessenContainer = styled('div', {
   '@l': {
     paddingX: '$l',
   },
-  // '@l': {
-  //   paddingX: '$xxl',
-  // },
+});
+
+const LessenContactContainer = styled('div', {
+  paddingX: '$l',
 });
 
 const imageStyles = css({
@@ -33,6 +36,15 @@ const imageStyles = css({
 });
 
 type LessonData = {
+  pageContext: {
+    contactData: {
+      adres: string;
+      emailadres: string;
+      telefoonnummer: string;
+      telefonischBereikbaar: string;
+      kvkNummer: string;
+    };
+  };
   data: {
     wpLes: {
       slug: string;
@@ -63,7 +75,9 @@ type LessonData = {
 
 export default function LessonLayout({
   data: { wpLes, wpAanbeveling },
+  pageContext,
 }: LessonData) {
+  const contactData = pageContext.contactData;
   return (
     <Layout background={true} border={true}>
       <LessenContainer>
@@ -75,10 +89,10 @@ export default function LessonLayout({
           }
           className={imageStyles()}
         />
-        <LessenHTML dangerouslySetInnerHTML={{ __html: wpLes.content }} />
-        <Button to="/#contact" size="big" color="greenTint">
+        <TextBox dangerouslySetInnerHTML={{ __html: wpLes.content }} />
+        {/* <Button to="/#contact" size="big" color="greenTint">
           {wpLes.extraVelden.buttonTekst}
-        </Button>
+        </Button> */}
         {wpAanbeveling ? (
           <Testimonial
             quote={wpAanbeveling.aanbeveling.aanbevelingTekst}
@@ -87,6 +101,17 @@ export default function LessonLayout({
           />
         ) : null}
       </LessenContainer>
+      <Heading>{wpLes.extraVelden.buttonTekst}</Heading>
+      <LessenContactContainer>
+        <Contact>
+          <ContactCards
+            emailadres={contactData.emailadres}
+            telefoonnummer={contactData.telefoonnummer}
+            telefonischBereikbaar={contactData.telefonischBereikbaar}
+          />
+          <ContactForm />
+        </Contact>
+      </LessenContactContainer>
     </Layout>
   );
 }
