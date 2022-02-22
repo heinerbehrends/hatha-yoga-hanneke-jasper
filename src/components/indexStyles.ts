@@ -20,6 +20,7 @@ export const SubHeading = styled('h2', {
   textAlign: 'center',
   lineHeight: '$heading',
   paddingX: '$m',
+  scrollMarginTop: '100px',
   marginTop: '$xl',
 });
 
