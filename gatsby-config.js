@@ -26,7 +26,7 @@ module.exports = {
         url: 'http://hathayoga.webopbouw.nl/graphql',
         schema: {
           perPage: 20, // currently set to 100
-          requestConcurrency: 5, // currently set to 15
+          requestConcurrency: 1, // currently set to 15
           previewRequestConcurrency: 2, // currently set to 5
         },
       },
