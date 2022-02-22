@@ -5,19 +5,10 @@ import { css, styled } from '../../stitches.config';
 import ContactCards from '../components/ContactCards';
 import ContactForm from '../components/ContactForm';
 import { Contact } from '../components/contactStyles';
-import { Heading, TextBox } from '../components/indexStyles';
+import { Heading, SubHeading, TextBox } from '../components/indexStyles';
 import Layout from '../components/layout';
 import Testimonial from '../components/testimonial';
 import { getLocalImage, ImageNode } from '../utils';
-
-const LessenHTML = styled('article', {
-  marginTop: '$s',
-  '@l': { marginTop: '$l' },
-  '& ul': {
-    listStyleImage: 'circle',
-    listStylePosition: 'inside',
-  },
-});
 
 const LessenContainer = styled('div', {
   paddingX: '$m',
@@ -90,9 +81,6 @@ export default function LessonLayout({
           className={imageStyles()}
         />
         <TextBox dangerouslySetInnerHTML={{ __html: wpLes.content }} />
-        {/* <Button to="/#contact" size="big" color="greenTint">
-          {wpLes.extraVelden.buttonTekst}
-        </Button> */}
         {wpAanbeveling ? (
           <Testimonial
             quote={wpAanbeveling.aanbeveling.aanbevelingTekst}
@@ -101,7 +89,7 @@ export default function LessonLayout({
           />
         ) : null}
       </LessenContainer>
-      <Heading>{wpLes.extraVelden.buttonTekst}</Heading>
+      <SubHeading id="contact">{wpLes.extraVelden.buttonTekst}</SubHeading>
       <LessenContactContainer>
         <Contact>
           <ContactCards
