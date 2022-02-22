@@ -27,6 +27,10 @@ export const TextBox = styled('section', {
   backgroundColor: '$white',
   paddingX: '$m',
   marginTop: '$s',
+  '& ul': {
+    listStyleType: 'circle',
+    listStylePosition: 'inside',
+  },
   '@m': {
     marginTop: '$l',
   },
