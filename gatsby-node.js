@@ -1,6 +1,6 @@
 const path = require('path');
 
-exports.createPages = async ({ graphql, actions, reporter }) => {
+exports.createPagesStatefully = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
   const resultLessons = await graphql(`
