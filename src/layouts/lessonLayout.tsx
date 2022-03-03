@@ -27,15 +27,6 @@ const imageStyles = css({
 });
 
 type LessonData = {
-  pageContext: {
-    contactData: {
-      adres: string;
-      emailadres: string;
-      telefoonnummer: string;
-      telefonischBereikbaar: string;
-      kvkNummer: string;
-    };
-  };
   data: {
     wpLes: {
       slug: string;
@@ -61,14 +52,23 @@ type LessonData = {
         foto: ImageNode;
       };
     };
+    wpPage: {
+      contactgegevens: {
+        adres: string;
+        emailadres: string;
+        telefoonnummer: string;
+        telefonischBereikbaar: string;
+        kvkNummer: string;
+      };
+    };
   };
 };
 
 export default function LessonLayout({
-  data: { wpLes, wpAanbeveling },
-  pageContext,
-}: LessonData) {
-  const contactData = pageContext.contactData;
+  data: { wpLes, wpAanbeveling, wpPage },
+}: // pageContext,
+LessonData) {
+  const contactData = wpPage.contactgegevens;
   return (
     <Layout background={true} border={true}>
       <LessenContainer>
@@ -139,6 +139,15 @@ export const lessonPageQuery = graphql`
             }
           }
         }
+      }
+    }
+    wpPage(isFrontPage: { eq: true }) {
+      contactgegevens {
+        adres
+        emailadres
+        telefoonnummer
+        telefonischBereikbaar
+        kvkNummer
       }
     }
   }
