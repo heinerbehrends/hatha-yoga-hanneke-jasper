@@ -25,6 +25,4 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       context: { id: node.id, title: node.title },
     });
   });
-
-  // const resultPosts = await graphql``;
 };
