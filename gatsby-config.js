@@ -20,17 +20,17 @@ module.exports = {
         icon: 'src/images/dahlia.png',
       },
     },
-    {
-      resolve: 'gatsby-source-wordpress',
-      options: {
-        url: 'http://hathayoga.webopbouw.nl/graphql',
-        schema: {
-          perPage: 100, // currently set to 100
-          requestConcurrency: 1, // currently set to 15
-          previewRequestConcurrency: 1, // currently set to 5
-        },
-      },
-    },
+    // {
+    //   resolve: 'gatsby-source-wordpress',
+    //   options: {
+    //     url: 'http://hathayoga.webopbouw.nl/graphql',
+    //     schema: {
+    //       perPage: 100, // currently set to 100
+    //       requestConcurrency: 1, // currently set to 15
+    //       previewRequestConcurrency: 1, // currently set to 5
+    //     },
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
