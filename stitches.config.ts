@@ -5,6 +5,7 @@ export const { styled, css, getCssText, globalCss, theme } = createStitches({
     s: '(min-width: 480px)',
     m: '(min-width: 640px)',
     l: '(min-width: 720px)',
+    xl: '(min-width: 960px)',
   },
   utils: {
     paddingX: (value: string | number) => ({
