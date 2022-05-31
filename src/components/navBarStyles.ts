@@ -47,22 +47,10 @@ export const navBarItemStyles = css({
     backgroundColor: '$white',
   },
   variants: {
-    hideUnderLarge: {
+    hideUnderExtraLarge: {
       true: {
         display: 'none',
-        '@l': { display: 'initial' },
-      },
-    },
-    hideUnderMedium: {
-      true: {
-        display: 'none',
-        '@l': { display: 'initial' },
-      },
-    },
-    hideAtLarge: {
-      true: {
-        display: 'initial',
-        '@l': { display: 'none' },
+        '@xl': { display: 'initial' },
       },
     },
     size: {

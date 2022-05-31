@@ -42,6 +42,7 @@ export const TextBox = styled('section', {
     paddingX: '$3xl',
     paddingTop: '$xl',
     paddingBottom: '$xl',
-    borderRadius: '$m-resp',
+    borderRadius: '$s-resp',
+    border: '1px solid $green',
   },
 });

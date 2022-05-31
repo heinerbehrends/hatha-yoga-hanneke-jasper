@@ -21,6 +21,7 @@ export const InfoCardContainer = styled('section', {
 });
 
 export const ImageContainer = styled('div', {
+  overflow: 'hidden',
   display: 'flex',
   alignContent: 'center',
   justifyContent: 'center',

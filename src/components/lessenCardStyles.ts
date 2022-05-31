@@ -9,7 +9,7 @@ export const LessenCardsContainer = styled('article', {
   // '@s': { gridGap: 0 },
   '@m': { gridGap: '$s' },
   '@l': {
-    gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))',
     marginTop: '$xl',
   },
 });

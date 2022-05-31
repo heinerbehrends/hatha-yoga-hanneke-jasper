@@ -16,11 +16,13 @@ export const HeroContainer = styled('div', {
       },
     },
   },
+  length: 0,
 });
 
 export const ImageContainer = styled('div', {
   width: '100%',
   maxWidth: '960px',
+  length: 0,
 });
 
 export const PaddingContainer = styled('div', {
@@ -30,6 +32,7 @@ export const PaddingContainer = styled('div', {
     paddingY: '8%',
     paddingLeft: '5%',
   },
+  length: 0,
 });
 
 export const TextLogo = styled('h1', {
@@ -40,6 +43,7 @@ export const TextLogo = styled('h1', {
   fontSize: 'clamp(30px,16vw, 74px)',
   // lineHeight: '56px',
   paddingY: '$m',
+  length: 0,
 });
 
 export const LogoContainer = styled('div', {
@@ -48,6 +52,7 @@ export const LogoContainer = styled('div', {
   '@l': {
     display: 'none',
   },
+  length: 0,
 });
 
 export const heroImageStyles = css({
@@ -59,6 +64,7 @@ export const heroImageStyles = css({
     width: '38%',
   },
   zIndex: 1,
+  length: 0,
 });
 
 export const svgStyles = css({
@@ -67,4 +73,5 @@ export const svgStyles = css({
   '@l': {
     display: 'initial',
   },
+  length: 0,
 });

@@ -67,8 +67,8 @@ export const TestimonialImage = styled('div', {
   marginRight: '$s',
   '@s': {
     marginRight: 0,
-    height: '90px',
-    flexBasis: '90px',
+    height: '75px',
+    flexBasis: '75px',
   },
 });
 
