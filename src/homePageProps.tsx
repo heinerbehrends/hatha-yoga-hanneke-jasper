@@ -1,11 +1,13 @@
 import { ImageNode } from './utils';
 
-export type LessenNode = {
+export type LessonNode = {
   title: string;
   excerpt: string;
+  content: string;
   slug: string;
   extraVelden: {
     buttonTekst: string;
+    menuTekst: string;
   };
 };
 
@@ -14,7 +16,7 @@ export type TestimonialNode = {
   aanbeveling: {
     aanbevelingTekst: string;
     aanbevolenDoor: string;
-    foto: ImageNode;
+    foto?: ImageNode;
   };
 };
 
@@ -48,7 +50,7 @@ type HomePageProps = {
       };
     };
     allWpLes: {
-      nodes: LessenNode[];
+      nodes: Omit<LessonNode, 'content'>[];
     };
     allWpAanbeveling: {
       nodes: TestimonialNode[];
