@@ -1,4 +1,3 @@
-import { graphql } from 'gatsby';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import React from 'react';
 import { css, styled } from '../../stitches.config';
@@ -26,7 +25,7 @@ const imageStyles = css({
   '@l': { marginTop: '$l' },
 });
 
-type LessonData = {
+export type LessonPageData = {
   data: {
     wpLes: {
       slug: string;
@@ -49,7 +48,7 @@ type LessonData = {
       aanbeveling: {
         aanbevelingTekst: string;
         aanbevolenDoor: string;
-        foto: ImageNode;
+        foto?: ImageNode;
       };
     };
     wpPage: {
@@ -67,7 +66,7 @@ type LessonData = {
 export default function LessonLayout({
   data: { wpLes, wpAanbeveling, wpPage },
 }: // pageContext,
-LessonData) {
+LessonPageData) {
   const contactData = wpPage.contactgegevens;
   return (
     <Layout background={true} border={true}>
@@ -85,7 +84,11 @@ LessonData) {
           <Testimonial
             quote={wpAanbeveling.aanbeveling.aanbevelingTekst}
             author={wpAanbeveling.aanbeveling.aanbevolenDoor}
-            image={getLocalImage(wpAanbeveling.aanbeveling.foto)}
+            image={
+              wpAanbeveling.aanbeveling?.foto
+                ? getLocalImage(wpAanbeveling.aanbeveling?.foto)
+                : undefined
+            }
           />
         ) : null}
       </LessenContainer>
@@ -103,52 +106,3 @@ LessonData) {
     </Layout>
   );
 }
-
-export const lessonPageQuery = graphql`
-  query LessonPageQuery($id: String, $title: String) {
-    wpLes(id: { eq: $id }) {
-      id
-      slug
-      title
-      content
-      extraVelden {
-        buttonTekst
-      }
-      featuredImage {
-        node {
-          localFile {
-            childImageSharp {
-              gatsbyImageData(
-                width: 960
-                placeholder: BLURRED
-                blurredOptions: {}
-              )
-            }
-          }
-        }
-      }
-    }
-    wpAanbeveling(aanbeveling: { toonOpPagina: { eq: $title } }) {
-      aanbeveling {
-        aanbevelingTekst
-        aanbevolenDoor
-        foto {
-          localFile {
-            childImageSharp {
-              gatsbyImageData(width: 90, placeholder: NONE)
-            }
-          }
-        }
-      }
-    }
-    wpPage(isFrontPage: { eq: true }) {
-      contactgegevens {
-        adres
-        emailadres
-        telefoonnummer
-        telefonischBereikbaar
-        kvkNummer
-      }
-    }
-  }
-`;
