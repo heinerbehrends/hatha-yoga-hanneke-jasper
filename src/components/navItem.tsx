@@ -2,18 +2,14 @@ import React from 'react';
 import { NavItemStyled } from './navBarStyles';
 type NavItemProps = {
   slug?: string;
-  hideUnderLarge?: boolean;
-  hideUnderMedium?: boolean;
-  hideAtLarge?: boolean;
+  hideUnderExtraLarge?: boolean;
   children: React.ReactNode;
   className?: string;
 };
 
 export default function NavItem({
   slug = '',
-  hideUnderLarge = false,
-  hideUnderMedium = false,
-  hideAtLarge = false,
+  hideUnderExtraLarge = false,
   children,
   className,
 }: NavItemProps) {
@@ -25,9 +21,7 @@ export default function NavItem({
         fontWeight: 'bold',
       }}
       size={{ '@initial': 'small', '@l': 'big' }}
-      hideUnderMedium={hideUnderMedium}
-      hideUnderLarge={hideUnderLarge}
-      hideAtLarge={hideAtLarge}
+      hideUnderExtraLarge={hideUnderExtraLarge}
     >
       {children}
     </NavItemStyled>

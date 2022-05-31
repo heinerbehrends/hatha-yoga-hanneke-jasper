@@ -1,55 +1,18 @@
 import React from 'react';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 import { graphql } from 'gatsby';
 import { styled } from '../../stitches.config';
 import { Heading, TextBox } from '../components/indexStyles';
-
-export const query = graphql`
-  query OverMij {
-    wpPage(title: { eq: "Wie ik ben" }) {
-      title
-      content
-      slug
-      featuredImage {
-        node {
-          altText
-          localFile {
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-        }
-      }
-    }
-  }
-`;
+import { makeOverMijData } from '../data/overMijData';
+import { ImageNode } from '../utils';
 
 const OverMijContainer = styled('section', {
   display: 'flex',
+  length: 0,
 });
 
-type OverMijData = {
-  data: {
-    wpPage: {
-      title: string;
-      content: string;
-      slug: string;
-      featuredImage: {
-        node: {
-          altText: string;
-          localFile: {
-            childImageSharp: {
-              gatsbyImageData: IGatsbyImageData;
-            };
-          };
-        };
-      };
-    };
-  };
-};
-
-export default function OverMij({ data }: OverMijData) {
+export default function OverMij({ hanneke }: OverMijImageData) {
+  const { data } = makeOverMijData(hanneke);
   const { title, content } = data.wpPage;
   return (
     <Layout>
@@ -64,3 +27,17 @@ export default function OverMij({ data }: OverMijData) {
     </Layout>
   );
 }
+
+export const query = graphql`
+  query OverMijPicsQuery {
+    hanneke: file(relativePath: { eq: "hanneke.png" }) {
+      childImageSharp {
+        gatsbyImageData(width: 300)
+      }
+    }
+  }
+`;
+
+type OverMijImageData = {
+  hanneke: ImageNode;
+};
