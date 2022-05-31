@@ -25,7 +25,7 @@ const Trigger = styled(DropdownPrimitives.Trigger, {
 export default function DropdownMenu({ items }: { items: DropdownMenuItem[] }) {
   return (
     <DropdownPrimitives.Root>
-      <Trigger hide={{ '@l': true }}>
+      <Trigger hide={{ '@xl': true }}>
         <NavItem>
           Lessen <ChevronDownIcon />
         </NavItem>
