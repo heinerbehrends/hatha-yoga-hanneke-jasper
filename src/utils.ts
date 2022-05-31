@@ -1,18 +1,21 @@
 import { IGatsbyImageData } from 'gatsby-plugin-image';
 import { LessenCard } from './components/LessenCard';
-import { LessenNode } from './homePageProps';
+import { LessonNode } from './homePageProps';
 
 export type ImageNode = {
-  localFile: {
-    childImageSharp: {
-      gatsbyImageData: IGatsbyImageData;
-    };
+  childImageSharp: {
+    gatsbyImageData: IGatsbyImageData;
   };
 };
-export function getLocalImage(imageNode: ImageNode): IGatsbyImageData {
-  return imageNode.localFile.childImageSharp.gatsbyImageData;
+export function getLocalImage(
+  imageNode: ImageNode | undefined
+): IGatsbyImageData | undefined {
+  if (!imageNode) return;
+  return imageNode.childImageSharp.gatsbyImageData;
 }
-export function getLessonsData(lessonNodes: LessenNode[]): LessenCard[] {
+export function getLessonsData(
+  lessonNodes: Omit<LessonNode, 'content'>[]
+): LessenCard[] {
   return lessonNodes.map((node) => ({
     title: node.title,
     text: node.excerpt,
