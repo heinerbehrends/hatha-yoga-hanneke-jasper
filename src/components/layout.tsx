@@ -4,7 +4,8 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { globalCss, styled } from '../../stitches.config';
 import Footer from './footer';
 import NavBar from './navBar';
-import { getLocalImage, ImageNode } from '../utils';
+import { getLocalImage } from '../utils';
+import { makeFooterData } from '../data/footerData';
 
 const PageContainer = styled('main', {
   maxWidth: '960px',
@@ -16,7 +17,7 @@ const PageContainer = styled('main', {
   backgroundColor: 'white',
   '@l': {
     backgroundColor: '$background',
-    paddingX: 'none',
+    paddingX: '$s',
   },
   variants: {
     background: {
@@ -31,6 +32,7 @@ const PageContainer = styled('main', {
       },
     },
   },
+  length: 0,
 });
 
 const globalStyles = globalCss({
@@ -68,12 +70,11 @@ const globalStyles = globalCss({
     '@m': {
       fontSize: '$body',
     },
-    '& #SvgjsSvg1001': {
-      gridArea: '1/1',
-      zIndex: -1,
-    },
-    '& #___gatsby': {
-      gridArea: '1/1',
+    h2: {
+      fontSize: '$xxl',
+      marginTop: '$l',
+      marginBottom: '$l',
+      textAlign: 'center',
     },
   },
 });
@@ -85,50 +86,20 @@ type LayoutProps = {
   border?: boolean;
 };
 
-type FooterData = {
-  overMij: {
-    overMijSamenvatting: {
-      samenvatting: string;
-      overMijFoto: ImageNode;
-    };
-  };
-  contact: {
-    contactgegevens: {
-      emailadres: string;
-      telefoonnummer: string;
-      adres: string;
-      kvkNummer: string;
-    };
-  };
-};
-
 export default function Layout({ children, slot, border }: LayoutProps) {
   globalStyles();
-  const data: FooterData = useStaticQuery(graphql`
-    query FooterQuery {
-      overMij: wpPage(title: { eq: "Wie ik ben" }) {
-        overMijSamenvatting {
-          samenvatting
-          overMijFoto {
-            localFile {
-              childImageSharp {
-                gatsbyImageData(width: 90, height: 120, placeholder: NONE)
-              }
-            }
-          }
-        }
-      }
-      contact: wpPage(isFrontPage: { eq: true }) {
-        contactgegevens {
-          emailadres
-          telefoonnummer
-          adres
-          kvkNummer
+  const image = useStaticQuery(graphql`
+    query HannekeQuery {
+      file(relativePath: { eq: "hanneke.png" }) {
+        childImageSharp {
+          gatsbyImageData(width: 300)
         }
       }
     }
   `);
+  const data = makeFooterData(image);
   const aboutData = data.overMij.overMijSamenvatting;
+  console.log(data);
   return (
     <>
       <Helmet>
@@ -140,7 +111,7 @@ export default function Layout({ children, slot, border }: LayoutProps) {
       <Footer
         about={{
           excerpt: aboutData.samenvatting,
-          image: getLocalImage(aboutData.overMijFoto),
+          image: getLocalImage(aboutData.overMijFoto.file)!,
         }}
         contact={data.contact.contactgegevens}
       />
