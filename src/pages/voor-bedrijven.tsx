@@ -25,7 +25,7 @@ type ImageQuery = {
 };
 
 export const query = graphql`
-  query individueleLessenQuery {
+  query voorBedrijvenQuery {
     heiner: file(relativePath: { eq: "Heiner.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 90)
