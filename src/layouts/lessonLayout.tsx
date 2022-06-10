@@ -16,7 +16,7 @@ const LessenContainer = styled('div', {
   },
 });
 
-const LessenContactContainer = styled('div', {
+export const LessenContactContainer = styled('div', {
   paddingX: '$l',
 });
 
