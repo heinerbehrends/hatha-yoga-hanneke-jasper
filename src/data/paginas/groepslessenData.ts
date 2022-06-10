@@ -14,6 +14,7 @@ export const groepslessenData: LessonNode = {
     ontspannende oefeningen worden afgewisseld.
   `,
   content: /* html */ `
+    <h2>Yoga met respect voor je eigen grenzen</h2>
     De lessen zijn niet prestatiegericht, je doet de yoga met respect voor je
     eigen grenzen en binnen je mogelijkheden. Dat maakt dat de yogalessen voor
     iedereen zijn. In de beoefening staat de adem centraal. Door tijdens de
