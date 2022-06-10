@@ -17,6 +17,8 @@ const PageContainer = styled('main', {
   backgroundColor: 'white',
   '@l': {
     backgroundColor: '$background',
+  },
+  '@xl': {
     paddingX: '$s',
   },
   variants: {
@@ -99,7 +101,6 @@ export default function Layout({ children, slot, border }: LayoutProps) {
   `);
   const data = makeFooterData(image);
   const aboutData = data.overMij.overMijSamenvatting;
-  console.log(data);
   return (
     <>
       <Helmet>
