@@ -10,7 +10,7 @@ import Testimonial from '../components/testimonial';
 import { getLocalImage, ImageNode } from '../utils';
 
 const LessenContainer = styled('div', {
-  paddingX: '$m',
+  paddingX: '$xs',
   '@l': {
     paddingX: '$l',
   },
