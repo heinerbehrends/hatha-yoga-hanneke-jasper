@@ -23,12 +23,12 @@ export const navData = {
       },
       {
         title: 'Lessen voor kinderen',
-        slug: 'lessen-voor-kinderen',
+        slug: 'voor-kinderen',
         extraVelden: { menuTekst: 'Voor kinderen' },
       },
       {
         title: 'Lessen voor bedrijven',
-        slug: 'lessen-voor-bedrijven',
+        slug: 'voor-bedrijven',
         extraVelden: { menuTekst: 'Voor bedrijven' },
       },
     ],
