@@ -61,11 +61,13 @@ export default function Footer({ about, contact }: FooterProps) {
           </ContactItem>
         </FooterContact>
         <FooterBio>
-          <SmallerHeading>Over mij</SmallerHeading>
           <BioContainer>
-            <FooterParagraph
-              dangerouslySetInnerHTML={{ __html: about.excerpt }}
-            />
+            <div style={{ width: '66%' }}>
+              <SmallerHeading>Over mij</SmallerHeading>
+              <FooterParagraph
+                dangerouslySetInnerHTML={{ __html: about.excerpt }}
+              />
+            </div>
             <GatsbyImage
               alt="foto van yogadocent Hanneke Jasper"
               image={about.image}
