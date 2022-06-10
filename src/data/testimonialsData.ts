@@ -10,9 +10,7 @@ type Nodes<T> = {
   nodes: T[];
 };
 
-export function makeHeinerTestimonialData(
-  testimonialImage: ImageNode
-): Testimonial {
+export function makeTestimonialData(testimonialImage: ImageNode): Testimonial {
   if (!testimonialImage) {
     throw new Error('testimonialImage is required');
   }

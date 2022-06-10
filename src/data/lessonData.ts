@@ -3,7 +3,7 @@ import { LessonNode } from '../homePageProps';
 import { LessonPageData } from '../layouts/lessonLayout';
 import { ImageNode } from '../utils';
 import { makeContactData } from './contactData';
-import { makeHeinerTestimonialData } from './testimonialsData';
+import { makeTestimonialData } from './testimonialsData';
 
 export type LessonData = LessonNode & {
   featuredImage: {
@@ -42,7 +42,7 @@ export function makeLessonData(
         contactgegevens: makeContactData(),
       },
       wpAanbeveling: {
-        aanbeveling: makeHeinerTestimonialData(lessonImages.heiner),
+        aanbeveling: makeTestimonialData(lessonImages.heiner),
       },
     },
   });
