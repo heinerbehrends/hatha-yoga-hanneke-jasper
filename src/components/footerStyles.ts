@@ -45,8 +45,8 @@ export const ContactItem = styled('a', {
 });
 
 export const footerImageStyles = css({
-  width: '90px',
-  height: '120px',
+  width: '120px',
+  height: '180px',
 });
 
 export const FooterParagraph = styled('p', {
@@ -62,5 +62,5 @@ export const FooterParagraph = styled('p', {
 
 export const BioContainer = styled('div', {
   display: 'flex',
-  width: 'fit-content',
+  // width: 'fit-content',
 });
