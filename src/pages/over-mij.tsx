@@ -2,9 +2,14 @@ import React from 'react';
 import Layout from '../components/layout';
 import { graphql } from 'gatsby';
 import { styled } from '../../stitches.config';
-import { Heading, TextBox } from '../components/indexStyles';
+import { Heading, SubHeading, TextBox } from '../components/indexStyles';
 import { makeOverMijData } from '../data/overMijData';
 import { ImageNode } from '../utils';
+import ContactCards from '../components/ContactCards';
+import ContactForm from '../components/ContactForm';
+import { Contact } from '../components/contactStyles';
+import { LessenContactContainer } from '../layouts/lessonLayout';
+import { makeContactData } from '../data/contactData';
 
 const OverMijContainer = styled('section', {
   display: 'flex',
@@ -14,6 +19,7 @@ const OverMijContainer = styled('section', {
 export default function OverMij({ hanneke }: OverMijImageData) {
   const { data } = makeOverMijData(hanneke);
   const { title, content } = data.wpPage;
+  const contactData = makeContactData();
   return (
     <Layout>
       <Heading>{title}</Heading>
@@ -24,6 +30,17 @@ export default function OverMij({ hanneke }: OverMijImageData) {
           }}
         />
       </OverMijContainer>
+      <SubHeading id="contact">Contact</SubHeading>
+      <LessenContactContainer>
+        <Contact>
+          <ContactCards
+            emailadres={contactData.emailadres}
+            telefoonnummer={contactData.telefoonnummer}
+            telefonischBereikbaar={contactData.telefonischBereikbaar}
+          />
+          <ContactForm />
+        </Contact>
+      </LessenContactContainer>
     </Layout>
   );
 }
