@@ -1,7 +1,7 @@
 import HomePageProps from '../../homePageProps';
 import { ImageNode } from '../../utils';
 import { makeContactData } from '../contactData';
-import { makeHeinerTestimonialData } from '../testimonialsData';
+import { makeTestimonialData } from '../testimonialsData';
 import { groepslessenData } from './groepslessenData';
 import { individueleLessenData } from './individueleLessenData';
 import { voorBedrijvenData } from './voorBedrijvenData';
@@ -89,7 +89,7 @@ export function makeHomeData(images: HomeImages): HomePageProps {
           {
             id: '',
             aanbeveling: {
-              ...makeHeinerTestimonialData(images.aanbevelingen.heiner),
+              ...makeTestimonialData(images.aanbevelingen.heiner),
             },
           },
         ],
