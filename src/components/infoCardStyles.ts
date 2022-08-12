@@ -1,4 +1,4 @@
-import { css, styled } from '../../stitches.config';
+import { styled } from '../../stitches.config';
 
 export const InfoCardContainer = styled('section', {
   display: 'flex',
@@ -41,7 +41,7 @@ export const ImageContainer = styled('div', {
     },
     size: {
       bigScreen: {
-        width: 'min(31.25vw, 300px)',
+        width: '300px',
         borderRadius: '50%',
         marginTop: '$l',
         marginLeft: '$m',
@@ -51,7 +51,7 @@ export const ImageContainer = styled('div', {
         marginX: 0,
         paddingX: 0,
         marginTop: '$l',
-        width: '72%',
+        width: 'min(75vw, 300px)',
       },
     },
     hideUnderLarge: {
