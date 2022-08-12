@@ -1,5 +1,5 @@
 import { IGatsbyImageData } from 'gatsby-plugin-image';
-import { ImageNode } from '../utils';
+import { ImageNode } from '../../utils';
 
 export type OverMijData = {
   data: {

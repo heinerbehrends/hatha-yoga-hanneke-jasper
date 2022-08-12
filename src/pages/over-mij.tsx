@@ -3,7 +3,7 @@ import Layout from '../components/layout';
 import { graphql } from 'gatsby';
 import { styled } from '../../stitches.config';
 import { Heading, SubHeading, TextBox } from '../components/indexStyles';
-import { makeOverMijData } from '../data/overMijData';
+import { makeOverMijData } from '../data/paginas/overMijData';
 import { ImageNode } from '../utils';
 import ContactCards from '../components/ContactCards';
 import ContactForm from '../components/ContactForm';
