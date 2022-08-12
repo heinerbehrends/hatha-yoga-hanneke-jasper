@@ -47,11 +47,11 @@ export const ImageContainer = styled('div', {
         marginLeft: '$m',
       },
       mobile: {
+        borderRadius: '50%',
         marginX: 0,
         paddingX: 0,
         marginTop: '$l',
-        width: '100%',
-        borderRadius: 0,
+        width: '72%',
       },
     },
     hideUnderLarge: {
@@ -134,11 +134,4 @@ export const TextContainer = styled('div', {
   paddingX: '$m',
 
   height: 'fit-content',
-});
-
-export const infoImageStyles = css({
-  width: '50%',
-  '@l': {
-    width: '33',
-  },
 });
