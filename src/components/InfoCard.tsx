@@ -8,7 +8,6 @@ import {
   Shape,
   Paragraph,
   ImageContainer,
-  infoImageStyles,
 } from './infoCardStyles';
 
 export type InfoCardProps = {
@@ -25,7 +24,7 @@ export default function InfoCard({ title, image, color, html }: InfoCardProps) {
     <InfoCardContainer size={{ '@initial': 'smallScreen', '@l': 'bigScreen' }}>
       <ImageContainer
         color={colorMap[color]}
-        hideUnderLarge={true}
+        hideUnderLarge
         size={{ '@initial': 'mobile', '@l': 'bigScreen' }}
       >
         <GatsbyImage alt="Een foto van een yoga houding" image={image} />
@@ -33,18 +32,14 @@ export default function InfoCard({ title, image, color, html }: InfoCardProps) {
 
       <ArticleContainer>
         <ImageContainer
-          hideAtLarge={true}
+          hideAtLarge
           size={{
             '@initial': 'mobile',
             '@l': 'bigScreen',
           }}
           color={colorMap[color]}
         >
-          <GatsbyImage
-            alt="Een foto van een yoga houding"
-            image={image}
-            className={infoImageStyles()}
-          />
+          <GatsbyImage alt="Een foto van een yoga houding" image={image} />
         </ImageContainer>
         <TextContainer>
           <SmallerHeading>{title}</SmallerHeading>
