@@ -1,6 +1,7 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import HYHJ from '../images/HYHJ.svg';
+import DYPG from '../images/DYPG.svg';
+
 import {
   HeroContainer,
   ImageContainer,
@@ -16,7 +17,7 @@ export default function Hero() {
     <>
       <LogoContainer>
         <TextLogo>
-          hatha yoga <br /> hanneke jasper
+          de yogapraktijk <br /> groningen
         </TextLogo>
       </LogoContainer>
       <HeroContainer size={{ '@initial': 'mobile', '@l': 'bigScreen' }}>
@@ -29,7 +30,7 @@ export default function Hero() {
               placeholder="none"
               width={309}
             />
-            <HYHJ className={svgStyles()} />
+            <DYPG className={svgStyles()} />
           </PaddingContainer>
         </ImageContainer>
       </HeroContainer>
