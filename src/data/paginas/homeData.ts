@@ -24,7 +24,7 @@ export function makeHomeData(images: HomeImages): HomePageProps {
       wpPage: {
         title: 'Hatha Yoga Hanneke Jasper',
         introductie: {
-          kop: 'Yogalessen in Groningen',
+          kop: 'Welkom',
           introductie: /* html */ `
             Of je nieuw wilt beginnen of al ervaring hebt, of je ontspanning zoekt of energie, 
             je bent van harte uitgenodigd. Ik biedt groepslessen en individuele lessen aan.
