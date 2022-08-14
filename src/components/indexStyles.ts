@@ -10,13 +10,13 @@ export const Heading = styled('h1', {
 });
 
 export const HomePageHeading = styled(Heading, {
-  marginTop: '$3xl-resp',
+  marginY: '$xxl-resp',
 });
 
 export const SubHeading = styled('h2', {
   color: '$blueDark',
   fontFamily: 'asap',
-  fontSize: 'min(36px,14vw)',
+  fontSize: 'min(42px,14vw)',
   textAlign: 'center',
   lineHeight: '$heading',
   paddingX: '$m',
@@ -37,7 +37,7 @@ export const TextBox = styled('section', {
   },
   '@l': {
     fontSize: '$body',
-    marginTop: '$xl',
+    marginTop: 0,
     // marginX: '$l',
     paddingX: '$3xl',
     paddingTop: '$xl',
