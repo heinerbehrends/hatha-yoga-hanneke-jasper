@@ -3,7 +3,6 @@ import * as DropdownPrimitives from '@radix-ui/react-dropdown-menu';
 import { ChevronDownIcon } from '@modulz/radix-icons';
 import { Link } from 'gatsby';
 import { styled } from '../../stitches.config';
-import NavItem from './navItem';
 import { navBarItemStyles } from './navBarStyles';
 
 export type DropdownMenuItem = {
@@ -26,9 +25,7 @@ export default function DropdownMenu({ items }: { items: DropdownMenuItem[] }) {
   return (
     <DropdownPrimitives.Root>
       <Trigger hide={{ '@xl': true }}>
-        <NavItem slug="/">
-          Lessen <ChevronDownIcon />
-        </NavItem>
+        Lessen <ChevronDownIcon />
       </Trigger>
       <DropdownPrimitives.Content style={{ paddingRight: '8px' }}>
         {items.map((item, index) => (
