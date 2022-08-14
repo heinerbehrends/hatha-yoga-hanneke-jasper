@@ -31,7 +31,7 @@ export const ContactItem = styled('a', {
   cursor: 'pointer',
   display: 'flex',
   alignItems: 'center',
-  paddingY: '$xxs',
+  paddingY: '$xs',
   '&:hover': {
     textDecoration: 'underline',
   },
