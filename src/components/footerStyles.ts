@@ -50,7 +50,7 @@ export const footerImageStyles = css({
 });
 
 export const FooterParagraph = styled('p', {
-  width: '66%',
+  paddingRight: '$s',
   '@s': {
     width: 'fit-content',
   },
