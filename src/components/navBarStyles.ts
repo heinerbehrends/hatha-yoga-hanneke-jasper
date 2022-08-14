@@ -26,6 +26,9 @@ export const navBarItemStyles = css({
   display: 'flex',
   alignItems: 'center',
   fontSize: '$s',
+  '@s': {
+    fontSize: '$bodySmall',
+  },
   paddingY: '$s',
   paddingX: '$s',
   color: '$backgroundLight',
@@ -54,7 +57,7 @@ export const navBarItemStyles = css({
     size: {
       small: {
         paddingX: '$xxs',
-        fontSize: '$s',
+        // fontSize: '$s',
       },
       big: {
         paddingX: '$xs',

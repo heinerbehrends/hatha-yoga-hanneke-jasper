@@ -5,6 +5,7 @@ type NavItemProps = {
   hideUnderExtraLarge?: boolean;
   children: React.ReactNode;
   className?: string;
+  asElement?: 'span' | 'a' | undefined;
 };
 
 export default function NavItem({
@@ -12,10 +13,12 @@ export default function NavItem({
   hideUnderExtraLarge = false,
   children,
   className,
+  asElement = 'a',
 }: NavItemProps) {
   return (
     <NavItemStyled
       className={className}
+      as={asElement}
       to={`/${slug}`}
       activeStyle={{
         textDecoration: 'underline',
