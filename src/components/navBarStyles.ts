@@ -6,9 +6,6 @@ export const NavContainer = styled('nav', {
   height: '60px',
   alignItems: 'center',
   justifyContent: 'space-around',
-  '@l': {
-    justifyContent: 'space-between',
-  },
   maxWidth: '960px',
   marginX: 'auto',
 });
@@ -18,6 +15,7 @@ export const NavBarContainer = styled('div', {
   position: 'fixed',
   top: 0,
   left: 0,
+  paddingX: '$xs',
   margin: 'auto',
   width: '100%',
   backgroundColor: '$blueDark',
