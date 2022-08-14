@@ -4,7 +4,6 @@ export const Contact = styled('div', {
   // alignSelf: 'center',
   display: 'grid',
   gridGap: '$s',
-  marginTop: '$s',
   '@s': {},
   '@l': {
     gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
@@ -23,7 +22,6 @@ export const ContactCardsContainer = styled('section', {
 export const ContactCardWrapper = styled('div', {
   backgroundColor: '$white',
   paddingX: '$m',
-  paddingTop: '$s',
   paddingBottom: '$m',
   borderBottom: '1px solid $green',
   '&:not(:first-child)': {
