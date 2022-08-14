@@ -26,11 +26,11 @@ export default function DropdownMenu({ items }: { items: DropdownMenuItem[] }) {
   return (
     <DropdownPrimitives.Root>
       <Trigger hide={{ '@xl': true }}>
-        <NavItem>
+        <NavItem slug="/">
           Lessen <ChevronDownIcon />
         </NavItem>
       </Trigger>
-      <DropdownPrimitives.Content>
+      <DropdownPrimitives.Content style={{ paddingRight: '8px' }}>
         {items.map((item, index) => (
           <Link to={`/${item.slug}`} key={index}>
             <DropdownPrimitives.Item className={navBarItemStyles()}>
