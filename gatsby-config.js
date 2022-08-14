@@ -4,20 +4,24 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://www.yourdomain.tld',
-    title: 'Hatha Yoga Hanneke Jasper',
+    siteUrl: 'https://www.yogapraktijkgroningen.nl',
+    title: 'Yogapraktijk Groningen',
   },
   plugins: [
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Hatha Yoga Hanneke Jasper`,
-        short_name: `HYHJ`,
+        name: `Yogapraktijk Groningen`,
+        short_name: `Yogapraktijk`,
         start_url: `/`,
         background_color: `white`,
-        theme_color: `#A3BCA9`,
+        theme_color: `#538696`,
         display: `standalone`,
         icon: 'src/images/dahlia.png',
+        icon_options: {
+          purpose: `any maskable`,
+        },
+        cache_busting_mode: 'none',
       },
     },
     {
@@ -28,11 +32,18 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        workboxConfig: {
+          globPatterns: ['**/src/images/*'],
+        },
+      },
+    },
     'gatsby-plugin-gatsby-cloud',
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-preact',
-    'gatsby-plugin-offline',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
