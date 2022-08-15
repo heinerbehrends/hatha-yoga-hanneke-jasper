@@ -60,8 +60,9 @@ export const heroImageStyles = css({
   height: 'clamp(154px, 38%, 400px)',
   marginX: 'auto',
   '@l': {
-    height: '38%',
-    width: '38%',
+    height: '46%',
+    width: '46%',
+    transform: 'translateX(32px)',
   },
   zIndex: 1,
   length: 0,
