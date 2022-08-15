@@ -110,12 +110,10 @@ export const Shape = styled('div', {
 export const SmallerHeading = styled('h3', {
   fontSize: '$l',
   fontWeight: 500,
-  // '@l': {
-  //   paddingLeft: 0,
-  // },
+  marginBottom: '$xs',
   '& svg': {
-    transform: 'scale(120%)',
-    marginRight: '$xs',
+    transform: 'scale(166%)',
+    marginRight: '$s',
   },
 });
 
