@@ -74,7 +74,7 @@ export default function ContactForm() {
             minLength: 2,
             pattern: {
               value: /[A-Za-z]{2}/,
-              message: 'Vul hier je naam in ajb.',
+              message: 'Vul hier je naam in ajb',
             },
           })}
         />
@@ -93,13 +93,13 @@ export default function ContactForm() {
             required: true,
             pattern: {
               value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              message: 'Vul hier je emailadres in ajb.',
+              message: 'Vul hier je emailadres in ajb',
             },
           })}
         />
         <LabelContainer>
           {errors.message ? (
-            <ErrorMessage>Vul hier je bericht in ajb.</ErrorMessage>
+            <ErrorMessage>Vul hier je bericht in ajb</ErrorMessage>
           ) : (
             <Label for="message">Bericht</Label>
           )}
