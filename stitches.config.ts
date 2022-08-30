@@ -56,7 +56,7 @@ export const { styled, css, getCssText, globalCss, theme } = createStitches({
     },
     lineHeights: {
       body: '1.4',
-      heading: '0.9',
+      heading: '1.2',
     },
     space: {
       xxs: '4px',

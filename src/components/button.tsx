@@ -13,6 +13,9 @@ const Button = styled(Link, {
     size: {
       small: {
         fontSize: '$s',
+        '@m': {
+          fontSize: '$bodySmall',
+        },
         paddingX: '$xs',
         marginX: '$s',
       },

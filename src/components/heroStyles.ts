@@ -38,7 +38,7 @@ export const PaddingContainer = styled('div', {
 export const TextLogo = styled('h1', {
   textAlign: 'center',
   fontFamily: 'Ostrich Sans',
-  lineHeight: '$heading',
+  lineHeight: 1,
   color: '$coral',
   fontSize: 'clamp(30px,16vw, 74px)',
   // lineHeight: '56px',
@@ -56,12 +56,10 @@ export const LogoContainer = styled('div', {
 });
 
 export const heroImageStyles = css({
-  width: 'clamp(154px, 38%, 400px)',
-  height: 'clamp(154px, 38%, 400px)',
+  width: 'clamp(190px, 54%, 300px)',
   marginX: 'auto',
   '@l': {
-    height: '46%',
-    width: '46%',
+    width: '48%',
     transform: 'translateX(32px)',
   },
   zIndex: 1,
@@ -70,7 +68,8 @@ export const heroImageStyles = css({
 
 export const svgStyles = css({
   display: 'none',
-  transform: 'translateX(-50px)',
+  scale: 1.02,
+  transform: 'translateX(-2.5vw)',
   '@l': {
     display: 'initial',
   },

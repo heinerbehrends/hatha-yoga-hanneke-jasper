@@ -16,7 +16,7 @@ export const HomePageHeading = styled(Heading, {
 export const SubHeading = styled('h2', {
   color: '$blueDark',
   fontFamily: 'asap',
-  fontSize: 'min(42px,14vw)',
+  fontSize: 'clamp(36px,1vw, 1px)',
   textAlign: 'center',
   lineHeight: '$heading',
   paddingX: '$m',

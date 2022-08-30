@@ -46,7 +46,6 @@ export const SuccessMessage = styled('span', {
 const Error = styled('span', {
   lineHeight: 0,
   marginLeft: '$s',
-  marginTop: '$xxs',
   color: '$coral',
 });
 
@@ -61,8 +60,6 @@ export function ErrorMessage({ children }: errorMessageProps) {
 const LabelStyled = styled('label', {
   display: 'inline',
   marginLeft: '$s',
-  marginTop: '$s',
-  marginBottom: '$xxs',
 });
 
 type labelProps = {

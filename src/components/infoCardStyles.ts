@@ -114,6 +114,7 @@ export const SmallerHeading = styled('h3', {
   '& svg': {
     transform: 'scale(166%)',
     marginRight: '$s',
+    marginLeft: '$xs',
   },
 });
 
