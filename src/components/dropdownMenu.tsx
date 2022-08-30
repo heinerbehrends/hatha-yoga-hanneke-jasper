@@ -26,7 +26,9 @@ export default function DropdownMenu({ items }: { items: DropdownMenuItem[] }) {
   return (
     <DropdownPrimitives.Root>
       <Trigger hide={{ '@xl': true }}>
-        Lessen <ChevronDownIcon />
+        <NavItem slug="#">
+          Lessen <ChevronDownIcon />
+        </NavItem>
       </Trigger>
       <DropdownPrimitives.Content style={{ paddingRight: '8px' }}>
         {items.map((item, index) => (
