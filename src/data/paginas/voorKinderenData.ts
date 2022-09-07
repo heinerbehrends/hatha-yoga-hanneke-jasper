@@ -34,4 +34,4 @@ export const voorKinderenData: LessonNode = {
     `,
 };
 
-export const makeVoorKindern = makeLessonData(voorKinderenData);
+export const makeVoorKinderen = makeLessonData(voorKinderenData);

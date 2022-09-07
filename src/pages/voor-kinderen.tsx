@@ -1,20 +1,24 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import { makeContactData } from '../data/contactData';
-import { makeLessonPageData } from '../data/lessonData';
-import { voorKinderenData } from '../data/paginas/voorKinderenData';
+import { makeVoorKinderen } from '../data/paginas/voorKinderenData';
 import { makeTestimonialData } from '../data/testimonialsData';
 import LessonLayout from '../layouts/lessonLayout';
 import { ImageNode } from '../utils';
 
 export default function LessenVoorKinderen({ data: pictures }: ImageQuery) {
   const { heiner, lessenfoto } = pictures;
-  const wpLes = makeLessonPageData(voorKinderenData, lessenfoto);
+  const wpLes = makeVoorKinderen({ heiner, lesson: lessenfoto });
   const wpAanbeveling = { aanbeveling: makeTestimonialData(heiner) };
   const wpPage = {
     contactgegevens: makeContactData(),
   };
-  return <LessonLayout data={{ wpLes, wpAanbeveling, wpPage }}></LessonLayout>;
+  console.log(wpLes);
+  return (
+    <LessonLayout
+      data={{ wpLes: wpLes.data.wpLes, wpAanbeveling, wpPage }}
+    ></LessonLayout>
+  );
 }
 
 type ImageQuery = {
@@ -31,7 +35,7 @@ export const query = graphql`
         gatsbyImageData(width: 90)
       }
     }
-    lessenfoto: file(relativePath: { eq: "Lessenfoto2.jpg" }) {
+    lessenfoto: file(relativePath: { eq: "Kinderyoga.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 1360)
       }

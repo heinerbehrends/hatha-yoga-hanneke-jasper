@@ -21,7 +21,7 @@ export const LessenContactContainer = styled('div', {
 });
 
 const imageStyles = css({
-  marginTop: '$s',
+  marginY: '$s',
   '@l': { marginTop: '$l' },
 });
 
