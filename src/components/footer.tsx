@@ -62,7 +62,7 @@ export default function Footer({ about, contact }: FooterProps) {
         </FooterContact>
         <FooterBio>
           <BioContainer>
-            <div style={{ width: '66%' }}>
+            <div style={{ width: '75%' }}>
               <SmallerHeading>Over mij</SmallerHeading>
               <FooterParagraph
                 dangerouslySetInnerHTML={{ __html: about.excerpt }}
