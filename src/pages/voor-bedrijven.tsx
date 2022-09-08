@@ -18,7 +18,7 @@ export default function LessenVoorBedrijven({ data: pictures }: ImageQuery) {
 }
 
 type ImageQuery = {
-  data: { F; testimonial: ImageNode; lessenfoto: ImageNode };
+  data: { testimonial: ImageNode; lessenfoto: ImageNode };
 };
 
 export const query = graphql`
