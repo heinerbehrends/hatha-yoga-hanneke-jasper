@@ -22,6 +22,8 @@ export const LessenContactContainer = styled('div', {
 
 const imageStyles = css({
   marginY: '$s',
+  borderRadius: '$s',
+  border: '1px solid $blueDark',
   '@l': { marginTop: '$l' },
 });
 
@@ -65,8 +67,7 @@ export type LessonPageData = {
 
 export default function LessonLayout({
   data: { wpLes, wpAanbeveling, wpPage },
-}: // pageContext,
-LessonPageData) {
+}: LessonPageData) {
   const contactData = wpPage.contactgegevens;
   return (
     <Layout background={true} border={true}>
