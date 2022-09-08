@@ -15,10 +15,9 @@ const PageContainer = styled('main', {
   flexDirection: 'column',
   alignContent: 'center',
   backgroundColor: 'white',
+
   '@l': {
     backgroundColor: '$background',
-  },
-  '@xl': {
     paddingX: '$s',
   },
   variants: {
