@@ -15,6 +15,7 @@ export const FooterContainer = styled('section', {
   paddingX: '$l',
   display: 'grid',
   maxWidth: '960px',
+  marginX: 'auto',
   '@l': {
     gridTemplateColumns: 'repeat(auto-fill, minmax(36ch, 1fr))',
   },

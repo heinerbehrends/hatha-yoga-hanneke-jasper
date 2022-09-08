@@ -13,7 +13,7 @@ export default function LessenVoorKinderen({ data: pictures }: ImageQuery) {
   const wpPage = {
     contactgegevens: makeContactData(),
   };
-  console.log(wpLes);
+
   return (
     <LessonLayout
       data={{ wpLes: wpLes.data.wpLes, wpAanbeveling, wpPage }}

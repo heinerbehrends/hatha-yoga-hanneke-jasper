@@ -18,7 +18,7 @@ export default function NavItem({
       className={className}
       to={`/${slug}`}
       activeStyle={{
-        textDecoration: 'underline',
+        fontWeight: 'bold',
       }}
       size={{ '@initial': 'small', '@l': 'big' }}
       hideUnderExtraLarge={hideUnderExtraLarge}
