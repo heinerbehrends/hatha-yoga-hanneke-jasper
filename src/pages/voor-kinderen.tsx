@@ -7,9 +7,9 @@ import LessonLayout from '../layouts/lessonLayout';
 import { ImageNode } from '../utils';
 
 export default function LessenVoorKinderen({ data: pictures }: ImageQuery) {
-  const { heiner, lessenfoto } = pictures;
-  const wpLes = makeVoorKinderen({ heiner, lesson: lessenfoto });
-  const wpAanbeveling = { aanbeveling: makeTestimonialData(heiner) };
+  const { testimonial, lessenfoto } = pictures;
+  const wpLes = makeVoorKinderen({ testimonial, lesson: lessenfoto });
+  const wpAanbeveling = { aanbeveling: makeTestimonialData(testimonial) };
   const wpPage = {
     contactgegevens: makeContactData(),
   };
@@ -23,14 +23,14 @@ export default function LessenVoorKinderen({ data: pictures }: ImageQuery) {
 
 type ImageQuery = {
   data: {
-    heiner: ImageNode;
+    testimonial: ImageNode;
     lessenfoto: ImageNode;
   };
 };
 
 export const query = graphql`
   query voorKinderenQuery {
-    heiner: file(relativePath: { eq: "Heiner.jpg" }) {
+    testimonial: file(relativePath: { eq: "Heiner.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 90)
       }

@@ -8,9 +8,9 @@ import LessonLayout from '../layouts/lessonLayout';
 import { ImageNode } from '../utils';
 
 export default function LessenVoorBedrijven({ data: pictures }: ImageQuery) {
-  const { heiner, lessenfoto } = pictures;
+  const { testimonial, lessenfoto } = pictures;
   const wpLes = makeLessonPageData(voorBedrijvenData, lessenfoto);
-  const wpAanbeveling = { aanbeveling: makeTestimonialData(heiner) };
+  const wpAanbeveling = { aanbeveling: makeTestimonialData(testimonial) };
   const wpPage = {
     contactgegevens: makeContactData(),
   };
@@ -18,15 +18,12 @@ export default function LessenVoorBedrijven({ data: pictures }: ImageQuery) {
 }
 
 type ImageQuery = {
-  data: {
-    heiner: ImageNode;
-    lessenfoto: ImageNode;
-  };
+  data: { F; testimonial: ImageNode; lessenfoto: ImageNode };
 };
 
 export const query = graphql`
   query voorBedrijvenQuery {
-    heiner: file(relativePath: { eq: "Heiner.jpg" }) {
+    testimonial: file(relativePath: { eq: "Heiner.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 90)
       }

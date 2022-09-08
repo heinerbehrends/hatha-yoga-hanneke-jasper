@@ -8,9 +8,9 @@ import LessonLayout from '../layouts/lessonLayout';
 import { ImageNode } from '../utils';
 
 export default function IndividueleLessen({ data: pictures }: ImageQuery) {
-  const { heiner, lessenfoto } = pictures;
+  const { testimonial, lessenfoto } = pictures;
   const wpLes = makeLessonPageData(individueleLessenData, lessenfoto);
-  const wpAanbeveling = { aanbeveling: makeTestimonialData(heiner) };
+  const wpAanbeveling = { aanbeveling: makeTestimonialData(testimonial) };
   const wpPage = {
     contactgegevens: makeContactData(),
   };
@@ -19,14 +19,14 @@ export default function IndividueleLessen({ data: pictures }: ImageQuery) {
 
 type ImageQuery = {
   data: {
-    heiner: ImageNode;
+    testimonial: ImageNode;
     lessenfoto: ImageNode;
   };
 };
 
 export const query = graphql`
   query individueleLessenQuery {
-    heiner: file(relativePath: { eq: "Heiner.jpg" }) {
+    testimonial: file(relativePath: { eq: "Heiner.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 90)
       }

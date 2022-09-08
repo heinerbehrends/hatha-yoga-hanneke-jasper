@@ -14,7 +14,7 @@ export type HomeImages = {
     torsion: ImageNode;
   };
   aanbevelingen: {
-    heiner: ImageNode;
+    testimonial: ImageNode;
   };
 };
 
@@ -89,7 +89,7 @@ export function makeHomeData(images: HomeImages): HomePageProps {
           {
             id: '',
             aanbeveling: {
-              ...makeTestimonialData(images.aanbevelingen.heiner),
+              ...makeTestimonialData(images.aanbevelingen.testimonial),
             },
           },
         ],

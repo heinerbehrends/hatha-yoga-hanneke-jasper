@@ -28,7 +28,7 @@ export function makeLessonPageData(
 }
 
 type LessonImages = {
-  heiner: ImageNode;
+  testimonial: ImageNode;
   lesson: ImageNode;
 };
 
@@ -42,7 +42,7 @@ export function makeLessonData(
         contactgegevens: makeContactData(),
       },
       wpAanbeveling: {
-        aanbeveling: makeTestimonialData(lessonImages.heiner),
+        aanbeveling: makeTestimonialData(lessonImages.testimonial),
       },
     },
   });

@@ -27,7 +27,7 @@ export default function Home({ data }: ImageQuery) {
       torsion: data.torsion,
     },
     aanbevelingen: {
-      heiner: data.heiner,
+      testimonial: data.testimonial,
     },
   };
   const homeData = makeHomeData(images);
@@ -106,7 +106,7 @@ export const query = graphql`
         gatsbyImageData(width: 300)
       }
     }
-    heiner: file(relativePath: { eq: "Heiner.jpg" }) {
+    testimonial: file(relativePath: { eq: "Heiner.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 90)
       }
@@ -119,6 +119,6 @@ type ImageQuery = {
     held: ImageNode;
     plow: ImageNode;
     torsion: ImageNode;
-    heiner: ImageNode;
+    testimonial: ImageNode;
   };
 };
