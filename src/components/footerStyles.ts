@@ -12,16 +12,15 @@ export const FooterStyled = styled('footer', {
 });
 
 export const FooterContainer = styled('section', {
+  paddingX: '$l',
   display: 'grid',
-  gridGap: '$s',
   maxWidth: '960px',
-  marginX: 'auto',
   '@l': {
     gridTemplateColumns: 'repeat(auto-fill, minmax(36ch, 1fr))',
   },
 });
 
-export const FooterBio = styled('article', { paddingX: '$m' });
+export const FooterBio = styled('article', {});
 
 export const FooterContact = styled('address', {
   paddingX: '$m',
@@ -38,7 +37,6 @@ export const ContactItem = styled('a', {
   '& svg': {
     marginRight: '$xs',
   },
-  '@s': {},
   '@l': {
     paddingLeft: 0,
   },
@@ -62,5 +60,4 @@ export const FooterParagraph = styled('p', {
 
 export const BioContainer = styled('div', {
   display: 'flex',
-  // width: 'fit-content',
 });
