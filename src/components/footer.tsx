@@ -12,7 +12,6 @@ import {
   FooterContainer,
   FooterContact,
   ContactItem,
-  FooterBio,
   BioContainer,
   FooterParagraph,
   footerImageStyles,
@@ -60,7 +59,7 @@ export default function Footer({ about, contact }: FooterProps) {
             KVK-nummer: {contact.kvkNummer}
           </ContactItem>
         </FooterContact>
-        <FooterBio>
+        <article>
           <BioContainer>
             <div style={{ width: '75%' }}>
               <SmallerHeading>Over mij</SmallerHeading>
@@ -74,7 +73,7 @@ export default function Footer({ about, contact }: FooterProps) {
               className={footerImageStyles()}
             />
           </BioContainer>
-        </FooterBio>
+        </article>
       </FooterContainer>
     </FooterStyled>
   );

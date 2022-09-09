@@ -21,8 +21,6 @@ export const FooterContainer = styled('section', {
   },
 });
 
-export const FooterBio = styled('article', {});
-
 export const FooterContact = styled('address', {
   paddingX: '$m',
 });
