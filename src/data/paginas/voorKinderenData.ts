@@ -14,23 +14,29 @@ export const voorKinderenData: LessonNode = {
     ontspannende oefeningen worden afgewisseld.
   `,
   content: /* html */ `
-    Ik geef yogales op maat en behoefte. dat doe ik in de vorm van cursussen, 
-    individuele begeleiding, workshops, in groepen met een speciale vraag en/of 
-    behoefte en voor bedrijven.
+    <h3>Ontspanning voor lichaam en geest </h3>
+    Ik geef groepslessen op scholen en aan kinderen individueel. In de huidige 
+    samenleving zijn veel prikkels voor kinderen om te verwerken. Yoga kan 
+    helpen bij het verwerken van de veelheid aan prikkels, extern zowel 
+    intern. 
     <br>
-    Mijn wens is om mensen in aanraking te brengen met het rustgevende, 
-    vitaliserende en helende effect van yoga en dit voor iedereen, die dat 
-    wenst, toegankelijk te maken.
-    In het yogalesgeven voel ik me helemaal op mijn plek.
-    Zo heb ik yoga gegeven aan jongeren in de crisisopvang, aan mensen met 
-    een fysieke beperking tot aan yoga achter het bureau. De cursist heeft 
-    aan mij een betrokken yogadocent met veel gevoel voor de eigenheid van 
-    ieder individu.
-    Aan de vierjarige opleiding van Saswitha voor Yoga en Wijsbegeerte te 
-    Bilthoven, heb ik mijn opleiding gevolgd.
-    Naast het lesgeven in Hatha Yoga zoek ik altijd naar verdieping in mijn 
-    eigen yogabeoefening, kennis en vaardigheden zoals ademoefeneningen 
-    (pranayama), meditatie, filosofie, chakrapsychologie.
+    Yoga voor kinderen biedt ontspanning, rust, zelfvertrouwen, creativiteit, 
+    uit het hoofd kunnen komen en in het lijf.
+    In de groepsles yoga voor kinderen bewegen we met plezier en verbeelding. 
+    Het kind leert zichzelf beter kennen. <br>Door het bewegen en allerlei houdingen 
+    aan te nemen ontdekken ze wie ze zijn en wat ze ervaren. 
+    Er is bestaat een yogahouding voor van alles wat een kind ervaren kan: 
+    Blijheid kan worden gevierd, boosheid/frustratie kan worden ontladen, moed 
+    en kracht wordt gezocht in houdingen zoals de Held. 
+    <br> 
+    In de yogalessen wordt fantasie en creativiteit aangesproken. Zelfvertrouwen 
+    wordt gestimuleerd doordat het kind zichzelf kan zijn en mag voelen wat er
+    is. Het gaat nooit over 'moeten' in de lessen (behalve de afspraken om een 
+    geconcentreerde en veilige sfeer te creëren). <br>
+    In de les kunnen de kinderen naast oefeningen die ik aanbied, zelf een 
+    kaartje met een oefening uitkiezen. Zo is er ruimte voor individuele 
+    behoefte. Het mooie hiervan is dat we ook oefenen om aandacht voor elkaar 
+    te hebben en elkaar ruimte te geven.
     `,
 };
 

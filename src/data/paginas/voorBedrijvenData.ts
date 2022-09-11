@@ -9,28 +9,27 @@ export const voorBedrijvenData: LessonNode = {
     menuTekst: 'Voor bedrijven',
   },
   excerpt: /* html */ `
-    In de yogales worden ongeveer twaalf oefeningen gedaan. De hele wervelkolom 
-    wordt in alle richtingen in beweging gebracht. Dynamische, statische en 
-    ontspannende oefeningen worden afgewisseld.
+    Het beoefenen van yoga heeft een bewezen positieve invloed op de 
+    productiviteit van werknemers: het vermindert stress, verbetert de focus 
+    en helpt bij fysieke klachten. 
   `,
   content: /* html */ `
-    Ik geef yogales op maat en behoefte. dat doe ik in de vorm van cursussen, 
-    individuele begeleiding, workshops, in groepen met een speciale vraag en/of 
-    behoefte en voor bedrijven.
+    <h3>Voordelen van yoga op de werkvloer op een rij.</h3>
+    <ul>
+      <li>Minder stress</li>
+      <li>Minder fysieke klachten</li>
+      <li>Minder ziekteverzuim</li>
+      <li>Meer vitaliteit</li>
+      <li>Meer creativiteit</li>
+      <li>Betere concentratie en focus</li>
+      <li>Betere onderlinge sfeer</li>
+      <li>Hogere productiviteit</li>
+      <li>Effectiever werken</li>
+    </ul>
     <br>
-    Mijn wens is om mensen in aanraking te brengen met het rustgevende, 
-    vitaliserende en helende effect van yoga en dit voor iedereen, die dat 
-    wenst, toegankelijk te maken.
-    In het yogalesgeven voel ik me helemaal op mijn plek.
-    Zo heb ik yoga gegeven aan jongeren in de crisisopvang, aan mensen met 
-    een fysieke beperking tot aan yoga achter het bureau. De cursist heeft 
-    aan mij een betrokken yogadocent met veel gevoel voor de eigenheid van 
-    ieder individu.
-    Aan de vierjarige opleiding van Saswitha voor Yoga en Wijsbegeerte te 
-    Bilthoven, heb ik mijn opleiding gevolgd.
-    Naast het lesgeven in Hatha Yoga zoek ik altijd naar verdieping in mijn 
-    eigen yogabeoefening, kennis en vaardigheden zoals ademoefeneningen 
-    (pranayama), meditatie, filosofie, chakrapsychologie.
+    Door haar ruime ervaring weet ik hoe ik yoga op een laagdrempelige 
+    manier toegankelijk kan maken voor iedereen. En hoe je yoga kunt integreren 
+    in een werkdag. 
     `,
 };
 

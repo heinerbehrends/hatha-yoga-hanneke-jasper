@@ -77,6 +77,16 @@ const globalStyles = globalCss({
       marginBottom: '$l',
       textAlign: 'center',
     },
+    h3: {
+      fontSize: '$l',
+      fontWeight: 500,
+      marginBottom: '$xs',
+      '& svg': {
+        transform: 'scale(166%)',
+        marginRight: '$s',
+        marginLeft: '$xs',
+      },
+    },
   },
 });
 

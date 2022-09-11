@@ -27,45 +27,41 @@ export function makeOverMijData(image: ImageNode): OverMijData {
       wpPage: {
         title: 'Over mij',
         content: /* html */ `
-          <h2>Yogales op maat</h2>
-          Ik geef yogales op maat en naar behoefte en dat doe ik in verschillende vormen, zoals:
+          <h3>Yogales op maat</h3>
+          Ik geef vanaf 2009 yogales op maat en behoefte, dat doe ik in de
+          vorm van cursussen, individuele begeleiding, workshops, in groepen
+          met een speciale vraag en/of behoefte en voor bedrijven. <br>
+          Mijn wens is om mensen in aanraking te brengen met het rustgevende, 
+          vitaliserende en helende effect van yoga en dit voor iedereen 
+          toegankelijk te maken.
+          Zo heb ik yoga gegeven aan jongeren in de crisisopvang, kinderen, 
+          aan mensen met een fysieke beperking tot aan yoga achter het bureau.
+          Ik voel me helemaal op mijn plek als ik yogales geef. <br>
+          Het maakt me gelukkig als mensen zich meer kunnen ontspanning en 
+          zichzelf vinden. Met betrokkenheid geef ik les waarbij ik afstem op 
+          jou. <br>
+          Aan de vierjarige opleiding van Saswitha voor Yoga en Wijsbegeerte te 
+          Bilthoven, heb ik mijn opleiding gevolgd.
+          Naast het lesgeven in hatha yoga zoek ik altijd naar verdieping in mijn 
+          eigen yogabeoefening, kennis en vaardigheden zoals ademoefeneningen 
+          (pranayama), meditatie, filosofie, chakrapsychologie.
+          Naast het diploma aan Saswitha heb ik de volgende certificaten 
+          in de volgende bevoegdheden: <br> <br>
           <ul>
-            <li>cursussen</li>
-            <li>individuele begeleiding</li>
-            <li>workshops</li>
-            <li>in groepen met een speciale vraag</li>
-            <li>voor bedrijven.</li>
-          </ul>
-          <br>
-          <p>Mijn wens is om mensen in aanraking te brengen met het rustgevende, 
-          vitaliserende en helende effect van yoga door dit voor iedereen 
-          toegankelijk te maken. Zo heb ik yoga gegeven aan jongeren in de 
-          crisisopvang, aan mensen met een fysieke beperking tot aan yoga 
-          achter het bureau. In het geven van yogalessen voel ik me helemaal 
-          op mijn plek.</p>
-          <h2>Verdieping</h2>
-          <p>De cursist heeft aan mij een betrokken yogadocent met veel gevoel 
-          voor de eigenheid van ieder individu. Aan de vierjarige opleiding 
-          van Saswitha voor Yoga en Wijsbegeerte te Bilthoven heb ik mijn 
-          opleiding gevolgd.<br>
-          Naast het lesgeven in Hatha Yoga zoek ik altijd naar verdieping in 
-          mijn kennis en vaardigheden. Zo ben ik heb kennis opgedaan in 
-          ademoefeneningen (pranayama), meditatie, filosofie en 
-          chakrapsychologie. Naast het diploma aan Saswitha heb ik 
-          certificaten in de volgende bevoegdheden:</p>
-          <ul>
-            <li>Yoga &amp; Meditatie</li>
-            <li>Adem &amp; Ademtherapie</li>
-            <li>Aryuvedische Massage</li>
-            <li>Yoga voor doelgroepen</li>
-            <li>Anatomie &amp; Fysiologie</li>
-          </ul>
-          <br>
-          <p>Eerder was ik eerstegraads docent beeldende kunst en gaf o.a les
-          op kunstacademie Minerva en middelbare scholen. Daarnaast was ik een
-          periode werkzaam als beeldend kunstenaar. Ook heb ik ervaring als
-          pedagogisch begeleider in de kinderdagopvang en geef ik yogales aan
-          kinderen.</p>`,
+            <li>Yoga & Meditatie </li>
+            <li>Adem & Ademtherapie </li>
+            <li>Aryuvedische massage</li>
+            <li>Yoga voor verschillende doelgroepen</li>
+            <li>Anatomie en fysiologie</li>
+          <ul/>
+          <br> 
+          Eerder was ik eerste graads docent beeldende kunst en gaf o.a op 
+          freelance basis les op kunstacademie Minerva en middelbare scholen 
+          en was ik een periode werkzaam als beeldend kunstenaar. Ook heb ik 
+          ervaring als pedagogisch begeleider in de kinderdagopvang en geef 
+          ik yogales aan kinderen. <br> En ben ik moeder van Celine die nu 
+          7 jaar is.
+`,
         slug: 'over-mij',
         featuredImage: {
           node: {
