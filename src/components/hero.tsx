@@ -17,7 +17,8 @@ export default function Hero() {
     <>
       <LogoContainer>
         <TextLogo>
-          de yogapraktijk <br /> groningen
+          hatha yoga <br />
+          groningen
         </TextLogo>
       </LogoContainer>
       <HeroContainer size={{ '@initial': 'mobile', '@l': 'bigScreen' }}>

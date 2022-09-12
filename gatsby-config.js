@@ -4,15 +4,15 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://www.yogapraktijkgroningen.nl',
-    title: 'Yogapraktijk Groningen',
+    siteUrl: 'https://www.hathayogagroningen.nl',
+    title: 'Hatha Yoga Groningen',
   },
   plugins: [
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Yogapraktijk Groningen`,
-        short_name: `Yogapraktijk`,
+        name: `Hatha Yoga Groningen`,
+        short_name: `HYG`,
         start_url: `/`,
         background_color: `white`,
         theme_color: `#538696`,
@@ -28,7 +28,7 @@ module.exports = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /images/, // See below to configure properly
+          include: /images/,
         },
       },
     },
