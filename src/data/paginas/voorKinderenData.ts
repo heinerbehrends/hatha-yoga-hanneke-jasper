@@ -15,10 +15,6 @@ export const voorKinderenData: LessonNode = {
   `,
   content: /* html */ `
     <h3>Ontspanning voor lichaam en geest </h3>
-    Ik geef groepslessen op scholen en aan kinderen individueel. In de huidige 
-    samenleving zijn veel prikkels voor kinderen om te verwerken. Yoga kan 
-    helpen bij het verwerken van de veelheid aan prikkels, extern zowel 
-    intern. 
     <br>
     Yoga voor kinderen biedt ontspanning, rust, zelfvertrouwen, creativiteit, 
     uit het hoofd kunnen komen en in het lijf.

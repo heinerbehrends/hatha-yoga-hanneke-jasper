@@ -9,7 +9,7 @@ import { voorKinderenData } from './voorKinderenData';
 
 export type HomeImages = {
   houdingen: {
-    held: ImageNode;
+    dog: ImageNode;
     plow: ImageNode;
     torsion: ImageNode;
   };
@@ -44,7 +44,7 @@ export function makeHomeData(images: HomeImages): HomePageProps {
                 De adem is de dragende kracht in elke beweging.
                 Door concentratie op de adem ontstaat een meditatieve aandacht die leidt
                 tot verstilling.`,
-              afbeelding: images.houdingen.held,
+              afbeelding: images.houdingen.dog,
             },
             {
               titel: 'Hatha yoga is vitaliserend',

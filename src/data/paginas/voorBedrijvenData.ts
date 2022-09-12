@@ -2,7 +2,7 @@ import { LessonNode } from '../../homePageProps';
 import { makeLessonData } from '../lessonData';
 
 export const voorBedrijvenData: LessonNode = {
-  slug: 'lessen-voor-bedrijven',
+  slug: 'voor-bedrijven',
   title: 'Lessen voor bedrijven',
   extraVelden: {
     buttonTekst: 'Boek nu je gratis consult',
@@ -14,6 +14,9 @@ export const voorBedrijvenData: LessonNode = {
     en helpt bij fysieke klachten. 
   `,
   content: /* html */ `
+    Het beoefenen van yoga heeft een bewezen positieve invloed op de 
+    productiviteit van werknemers: het vermindert stress, verbetert de focus 
+    en helpt bij fysieke klachten.
     <h3>Voordelen van yoga op de werkvloer op een rij.</h3>
     <ul>
       <li>Minder stress</li>

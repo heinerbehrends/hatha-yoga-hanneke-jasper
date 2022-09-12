@@ -22,7 +22,7 @@ import { IGatsbyImageData } from 'gatsby-plugin-image';
 export default function Home({ data }: ImageQuery) {
   const images: HomeImages = {
     houdingen: {
-      held: data.held,
+      dog: data.dog,
       plow: data.plow,
       torsion: data.torsion,
     },
@@ -91,7 +91,7 @@ export default function Home({ data }: ImageQuery) {
 
 export const query = graphql`
   query PicsQuery {
-    held: file(relativePath: { eq: "Held.png" }) {
+    dog: file(relativePath: { eq: "Dog.png" }) {
       childImageSharp {
         gatsbyImageData(width: 300)
       }
@@ -116,7 +116,7 @@ export const query = graphql`
 
 type ImageQuery = {
   data: {
-    held: ImageNode;
+    dog: ImageNode;
     plow: ImageNode;
     torsion: ImageNode;
     testimonial: ImageNode;
