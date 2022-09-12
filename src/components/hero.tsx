@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import DYPG from '../images/DYPG.svg';
+import HYG from '../images/HYG.svg';
 
 import {
   HeroContainer,
@@ -30,7 +30,7 @@ export default function Hero() {
               placeholder="none"
               width={309}
             />
-            <DYPG className={svgStyles()} />
+            <HYG className={svgStyles()} />
           </PaddingContainer>
         </ImageContainer>
       </HeroContainer>
