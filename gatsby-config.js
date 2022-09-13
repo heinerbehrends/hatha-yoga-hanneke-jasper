@@ -6,6 +6,8 @@ module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.hathayogagroningen.nl',
     title: 'Hatha Yoga Groningen',
+    description:
+      'Hatha Yogalessen in Groningen door gediplomeerd docent Hanneke Jasper',
   },
   plugins: [
     {
