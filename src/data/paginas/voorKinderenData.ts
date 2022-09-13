@@ -5,7 +5,7 @@ export const voorKinderenData: LessonNode = {
   slug: 'lessen-voor-kinderen',
   title: 'Lessen voor kinderen',
   extraVelden: {
-    buttonTekst: 'Boek nu je gratis adviesgesprek',
+    buttonTekst: 'Neem contact met me op',
     menuTekst: 'Voor kinderen',
   },
   excerpt: /* html */ `
