@@ -49,6 +49,12 @@ const globalStyles = globalCss({
   },
   '*': {
     fontFamily: '$default',
+    '@supports (font-variation-settings: normal)': {
+      fontFamily: 'AsapVariable',
+    },
+  },
+  em: {
+    fontStyle: 'italic',
   },
   // For images to not be able to exceed their container
   img: {
@@ -76,6 +82,7 @@ const globalStyles = globalCss({
       marginTop: '$l',
       marginBottom: '$l',
       textAlign: 'center',
+      lineHeight: '$heading',
     },
     h3: {
       fontSize: '$l',
