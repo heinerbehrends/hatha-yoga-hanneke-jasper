@@ -68,8 +68,7 @@ export const heroImageStyles = css({
 
 export const svgStyles = css({
   display: 'none',
-  scale: 1.02,
-  transform: 'translateX(-2.5vw)',
+  transform: 'translateX(-4vw)',
   '@l': {
     display: 'initial',
   },
