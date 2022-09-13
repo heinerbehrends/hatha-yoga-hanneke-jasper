@@ -9,10 +9,10 @@ export const individueleLessenData: LessonNode = {
     menuTekst: 'Individuele lessen',
   },
   excerpt: /* html */ `
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-    commodo consequat.
+    Voor wie het prettiger vindt om individueel les te krijgen is dat in 
+    overleg mogelijk bij jou thuis, in de Dojo-ruimte van het Eiland van 
+    Groningen of bij mij thuis. In de individuele lessen kan ik de les helemaal
+    op jouw behoefte en of klachten afstemmen. 
   `,
   content: /* html */ `
     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
