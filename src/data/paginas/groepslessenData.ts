@@ -14,57 +14,56 @@ export const groepslessenData: LessonNode = {
     ontspannende oefeningen worden afgewisseld.
   `,
   content: /* html */ `
-    <h2>Yoga met respect voor je eigen grenzen</h2>
-    De lessen zijn niet prestatiegericht, je doet de yoga met respect voor je
-    eigen grenzen en binnen je mogelijkheden. Dat maakt dat de yogalessen voor
-    iedereen zijn. In de beoefening staat de adem centraal. Door tijdens de
-    oefeningen juist te leren ademen, kan energie door het hele lichaam gaan
-    stromen. In de yogahoudingen kom je je eigen grenzen tegen. Met de adem
-    kun je als het ware door deze grenzen heen ademen, vastgezette spanningen
-    kun je hierdoor loslaten. Je masseert het lichaam als het ware van
-    binnenuit met je adem. Dit geeft ruimte, ontspanning en vitaliteit. De
-    yogahoudingen worden in de les structureel opgebouwd: eerst bewust
-    worden/ervaren van contact met de ondergrond en hoe het lichaam voelt,
-    dan wordt de houding dynamisch uitgevoerd om vervolgens een tijd statisch
-    in de houding door te ademen. Na een tijd in de houding te zijn geweest
-    is er tijd voor navoelen; een moment verschil te ervaren tussen de
-    ervaring van het lichaam voor de oefening en na de oefening tussen
-    links en rechts. Deze opbouw in het beoefenen geeft een ontmoeting met
-    jezelf. Het kan je laten ervaren dat het lichaam reageert op het denken
-    en de manier van ademen. Dit bewustzijnsproces zorgt ervoor dat je kunt
-    loslaten wat je niet meer nodig is zodat je meer in verbinding komt met
-    je innerlijk en de stilte in jezelf. Door in contact te blijven met de
-    beweging, de houding en de adem in de oefening wordt het bewustzijn één
-    met de beweging, het lichaam en de adem. Dit samenvallen van
-    bewustzijn-adem-lichaam kan zorgen voor een gevoel van harmonie in jezelf
-    en acceptatie van waar je nu bent zonder meer te hoeven/moeten dan wat er
-    is. De yogalessen die ik geef zijn in de traditie van de vier-jarige
-    Saswitha Opleiding voor Yoga en Wijsbegeerte te Bilthoven. Saswitha yoga
-    is een vorm van hatha yoga die uitgaat van de eenheid van lichaam en
-    bewustzijn, waarbij de adem de verbinding vormt. De adem wordt gebruikt
-     als middel om in jezelf die verbinding te ervaren. De adem is de dragende
-     kracht in elke beweging. Door concentratie op de adem ontstaat een
-      meditatieve aandacht die leidt tot verstilling.
-      <h5>PRAKTISCH</h5>
-      <ul>
-        <li>Graag vóór het tijdstip waarop de les begint
-          aanwezig zijn zodat je rustig je plekje kunt vinden en je je eventueel
-          kunt omkleden.</li>
-        <li>Breng een lang badlaken of een doek mee voor op de mat. Er zijn 
-          dekentjes en kussens aanwezig voor in de ontspanning.</li>
-        <li>Tijdens de les draag je kleding waarin je je gemakkelijk kunt bewegen.</li>
-        <li>Voor de les liever niet eten als dat niet lukt dan een lichte maaltijd.
-        Tijdens de les hoeft er niet gedronken te worden. Het is goed om te
-        drinken na de beoefening.</li>
-        <li>De yoga wordt vrijwillig en op eigen risico beoefend. Raadpleeg bij
-        twijfel een arts.</li>
-        <li>Beoefen yoga vanuit de mogelijkheden van jouw lichaam, rekening
-        houdend met eventuele blokkades en/of blessures. Respecteer de
-        grenzen van je lichaam.</li>
-        <li>Licht de docent altijd in over lichamelijke klachten die van
-        invloed zijn op het volgen van de les.</li>
-      </ul>
-    `,
+<article>
+  <h2>Yoga met respect voor je eigen grenzen</h2>
+
+  De lessen en cursussen zijn niet prestatiegericht, je doet de Yoga met respect 
+  voor je eigen grenzen en binnen je mogelijkheden. Dat maakt dat de Yogalessen 
+  voor iedereen zijn, dit geldt ook in de gevorderden en verdiepingslessen.
+  <br><br>
+  <h3>Yoga Basis</h3>
+  <em>12 lessen, 1 uur per les</em>
+  <p>De basis in de basiscursus is dat je leert dat je binnen je mogelijkheden yoga 
+  beoefent: dat je bewust wordt dat het niet gaat om hoe lenig je bent en dat het 
+  niet gaat om een prestatie leveren. Je wordt in de lessen uitgenodigd om in 
+  vertrouwen en vriendelijkheid je grenzen te onderzoeken en te mogen ervaren 
+  dat dit je bij diepe ontspanning kan brengen.</p>
+  <p>Er is een opbouw in de Basis cursus.In de eerste Yogalessen van de cursus 
+  besteed ik veel aandacht aan de buikadem en de adem in het bekken. 
+  Rond ongeveer de vijfde les in de cursus wordt de Zonnegroet aangeleerd 
+  (een reeks houdingen) die je na het leren altijd zelfstandig kunt blijven 
+  beoefenen mocht je behoefte voelen om Yoga meer te integreren in je dagelijkse 
+  leven. Daarna volgen er ook omgekeerde houdingen en enkele ademtechnieken.</p>
+
+  <p>Deze cursus is geschikt voor als je adem hoog zit of als je net met yoga begint. 
+  De cursus is goed voor cursisten die het prettig vinden om deze reeks te 
+  herhalen; de verdieping kan net zo goed in herhaling liggen.
+  Na de Basiscursus kun je doorstromen naar de Gevorderden of de Verdieping of 
+  er voor kiezen om de cursus opnieuw te doen.</p>
+  <br>
+  <h3>Gevorderden cursus</h3>
+  <em>12 lessen, 1 uur en 15 minuten per les</em>
+  <br>
+  <p>De gevorderden yogalessen borduren voort op de laatste lessen van de Basis 
+  Yogacursus. De les duurt een uur en een kwartier. Doordat de cursist gewend 
+  is aan de houdingen, in contact is met de adem en de concentratie, worden 
+  houdingen bijvoorbeeld wat langer aangehouden en worden er complexere 
+  houdingen aangenomen. Iedereen met Yoga-ervaring of die de basiscursus 
+  hebben gedaan zijn welkom in de Gevorderden Hatha Yogales.</p>
+  <br>
+  <h3>Verdieping Hatha Yoga</h3>
+  <em>Verdieping 12 lessen, anderhalf uur per les</em>
+  <p>De yoga verdiepingslessen van anderhalf uur zorgen voor verdieping in de 
+  yogabeoefening en de yoga ervaring. In deze yogalessen komen ook meer aan Yoga 
+  gerelateerde gebieden aan bod zoals pranayama en meditatie. Deze yogalessen 
+  bieden tevens de mogelijkheid om yogahoudingen langer aan te houden en 
+  intensiever te oefenen. Je kunt na de basiscursus doorstromen als je het 
+  prettig vindt om anderhalf uur met Yoga bezig te zijn. </p>
+  <br>
+  <h3>Pranayama en meditatie</h3>
+  <em>6 lessen, anderhalf uur per les.</em>
+</article>
+  `,
 };
 
 export const makeGroepslessen = makeLessonData(groepslessenData);
