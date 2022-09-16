@@ -27,7 +27,7 @@ export function makeHomeData(images: HomeImages): HomePageProps {
           kop: 'Welkom',
           introductie: /* html */ `
             Of je nieuw wilt beginnen of al ervaring hebt, of je ontspanning zoekt of energie, 
-            je bent van harte uitgenodigd. Ik biedt groepslessen en individuele lessen aan.
+            je bent van harte uitgenodigd. Ik bied groepslessen en individuele lessen aan.
             <br>Daarnaast ontwikkel ik ook speciale lessen voor bedrijven, om bijvoorbeeld aan
             een betere postuur en concentratie te werken en lessen voor scholieren, die
             helpen het welzijn van de kinderen en de rust in klas te vergroten.`,
