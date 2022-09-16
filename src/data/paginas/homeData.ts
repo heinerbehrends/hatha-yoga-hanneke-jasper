@@ -26,10 +26,10 @@ export function makeHomeData(images: HomeImages): HomePageProps {
         introductie: {
           kop: 'Welkom',
           introductie: /* html */ `
-            Of je nieuw wilt beginnen of al ervaring hebt, of je ontspanning zoekt of energie, 
+            Of je nu al ervaring hebt of nog nooit yoga hebt gedaan, of je ontspanning zoekt of energie, 
             je bent van harte uitgenodigd. Ik bied groepslessen en individuele lessen aan.
             <br>Daarnaast ontwikkel ik ook speciale lessen voor bedrijven, om bijvoorbeeld aan
-            een betere postuur en concentratie te werken en lessen voor scholieren, die
+            een betere houding en concentratie te werken en lessen voor scholieren, die
             helpen het welzijn van de kinderen en de rust in klas te vergroten.`,
         },
         overHathaYoga: {
@@ -71,7 +71,7 @@ export function makeHomeData(images: HomeImages): HomePageProps {
         },
         seo: {
           omschrijving: /* html */ `
-            Yogalessen in Groningen door de gecertificeerde docente Hanneke Jasper. 
+            Yogalessen in Groningen door de gediplomeerde docente Hanneke Jasper. 
             Toegankelijke lessen met aandacht voor ieder cursist.`,
         },
         contactgegevens: makeContactData(),
