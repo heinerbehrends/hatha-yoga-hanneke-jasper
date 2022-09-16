@@ -18,7 +18,7 @@ export const individueleLessenData: LessonNode = {
     Voor wie het prettiger vindt om individueel les te krijgen is dat in 
     overleg mogelijk bij jou thuis, in de Dojo-ruimte van het Eiland van 
     Groningen of bij mij thuis. In de individuele lessen kan ik de les helemaal
-    op jouw behoefte en of klachten afstemmen. 
+    op jouw behoefte en/of klachten afstemmen. 
     `,
 };
 
