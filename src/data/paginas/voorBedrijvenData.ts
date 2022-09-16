@@ -30,7 +30,7 @@ export const voorBedrijvenData: LessonNode = {
       <li>Effectiever werken</li>
     </ul>
     <br>
-    Door haar ruime ervaring weet ik hoe ik yoga op een laagdrempelige 
+    Door mijn ruime ervaring in het geven van yogalessen (ook voor achter het bureau) weet ik hoe ik yoga op een laagdrempelige 
     manier toegankelijk kan maken voor iedereen. En hoe je yoga kunt integreren 
     in een werkdag. 
     `,
