@@ -9,9 +9,11 @@ export const voorKinderenData: LessonNode = {
     menuTekst: 'Voor kinderen',
   },
   excerpt: /* html */ `
-    In de yogales worden ongeveer twaalf oefeningen gedaan. De hele wervelkolom 
-    wordt in alle richtingen in beweging gebracht. Dynamische, statische en 
-    ontspannende oefeningen worden afgewisseld.
+    Yoga voor kinderen biedt ontspanning, rust, zelfvertrouwen, creativiteit, 
+    uit het hoofd kunnen komen en in het lijf.
+    In de groepsles yoga voor kinderen bewegen we met plezier en verbeelding. 
+    Het kind leert zichzelf beter kennen. <br>Door het bewegen en allerlei houdingen 
+    aan te nemen ontdekken ze wie ze zijn en wat ze ervaren. 
   `,
   content: /* html */ `
     <h3>Ontspanning voor lichaam en geest </h3>

@@ -17,7 +17,7 @@ export function makeTestimonialData(testimonialImage: ImageNode): Testimonial {
   return {
     aanbevolenDoor: 'Heiner',
     aanbevelingTekst:
-      'Door Hannkes lessen heb ik zowel meer rust alsook meer energie gekregen.',
+      'Door Hannekes lessen heb ik zowel meer rust alsook meer energie gekregen.',
     foto: testimonialImage,
   };
 }

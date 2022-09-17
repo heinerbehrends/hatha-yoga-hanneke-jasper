@@ -41,7 +41,7 @@ export function makeOverMijData(image: ImageNode): OverMijData {
           zichzelf vinden. Met betrokkenheid geef ik les waarbij ik afstem op 
           jou. <br>
           Aan de vierjarige opleiding van Saswitha voor Yoga en Wijsbegeerte te 
-          Bilthoven, heb ik mijn opleiding gevolgd.
+          Bilthoven, heb ik mijn opleiding gevolgd en mijn diploma behaald.
           Naast het lesgeven in hatha yoga zoek ik altijd naar verdieping in mijn 
           eigen yogabeoefening, kennis en vaardigheden zoals ademoefeneningen 
           (pranayama), meditatie, filosofie, chakrapsychologie.

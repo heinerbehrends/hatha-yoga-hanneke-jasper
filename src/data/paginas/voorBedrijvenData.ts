@@ -9,6 +9,7 @@ export const voorBedrijvenData: LessonNode = {
     menuTekst: 'Voor bedrijven',
   },
   excerpt: /* html */ `
+  Als u als werkgever echt wilt investeren in uw werknemers dan is yoga een veelzijdig antwoord. Vooral als uw werknemers veel zittend werken is het noodzakelijk.
     Het beoefenen van yoga heeft een bewezen positieve invloed op de 
     productiviteit van werknemers: het vermindert stress, verbetert de focus 
     en helpt bij fysieke klachten. 
@@ -30,9 +31,10 @@ export const voorBedrijvenData: LessonNode = {
       <li>Effectiever werken</li>
     </ul>
     <br>
-    Door haar ruime ervaring weet ik hoe ik yoga op een laagdrempelige 
+    Door mijn ruime ervaring in het geven van yogalessen (ook voor achter het bureau) weet ik hoe ik yoga op een laagdrempelige 
     manier toegankelijk kan maken voor iedereen. En hoe je yoga kunt integreren 
-    in een werkdag. 
+    in een werkdag.
+    De yogalessen kunnen gedaan worden in de werkkleding die de werknemers dragen, achter het bureau. Als er op het kantoor ruimte is dan kan er ook een volledige yogales gegeven worden, bijvoorbeeld voor de lunch.
     `,
 };
 
