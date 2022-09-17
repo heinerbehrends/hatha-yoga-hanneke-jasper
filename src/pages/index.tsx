@@ -39,7 +39,7 @@ export default function Home({ data }: ImageQuery) {
   return (
     <Layout slot={<Hero />}>
       <Helmet>
-        <title>{introductionData.kop}</title>
+        <title>Hatha Yoga Groningen</title>
         <meta
           name="description"
           content={homeData.data.wpPage.seo.omschrijving}
