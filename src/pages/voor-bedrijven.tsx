@@ -28,7 +28,7 @@ export const query = graphql`
         gatsbyImageData(width: 90)
       }
     }
-    lessenfoto: file(relativePath: { eq: "Lessenfoto.jpg" }) {
+    lessenfoto: file(relativePath: { eq: "Bedrijfsyoga.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 1360)
       }
