@@ -6,10 +6,6 @@ type Testimonial = {
   foto?: ImageNode;
 };
 
-type Nodes<T> = {
-  nodes: T[];
-};
-
 export function makeTestimonialData(testimonialImage: ImageNode): Testimonial {
   if (!testimonialImage) {
     throw new Error('testimonialImage is required');
