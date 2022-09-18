@@ -10,6 +10,7 @@ import {
   Adress,
   ContactCardWrapper,
   ContactCardInner,
+  HideAboveMobile,
 } from './contactStyles';
 import { SmallerHeading } from './infoCardStyles';
 
@@ -30,11 +31,16 @@ export default function ContactCards(props: ContactCardsProps) {
               <PaperPlaneIcon /> WhatsApp
             </SmallerHeading>
             Ik ben op WhatsApp! Je kunt me een bericht sturen naar{' '}
-            {props.telefoonnummer} of maak gebruik van onderstaande button.
+            {props.telefoonnummer}{' '}
+            <HideAboveMobile>
+              {' '}
+              of maak gebruik van onderstaande button.
+            </HideAboveMobile>
             <Button
               as="a"
               href={`https://api.whatsapp.com/send?phone=+316${nummerNaarDeZes}`}
               size="big"
+              hide="aboveMobile"
               color="green"
             >
               Stuur nu een appje
@@ -53,6 +59,7 @@ export default function ContactCards(props: ContactCardsProps) {
               href={`tel:+316${nummerNaarDeZes}`}
               size="big"
               color="green"
+              hide="aboveMobile"
             >
               Bel nu
             </Button>

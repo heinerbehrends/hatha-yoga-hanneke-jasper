@@ -10,6 +10,13 @@ const Button = styled(Link, {
     border: '2px dotted $coral',
   },
   variants: {
+    hide: {
+      aboveMobile: {
+        '@m': {
+          display: 'none !important',
+        },
+      },
+    },
     size: {
       small: {
         fontSize: '$s',

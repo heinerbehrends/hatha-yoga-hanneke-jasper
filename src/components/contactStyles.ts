@@ -48,3 +48,9 @@ export const Adress = styled('address', {
     marginTop: '$s',
   },
 });
+
+export const HideAboveMobile = styled('span', {
+  '@m': {
+    display: 'hidden',
+  },
+});
