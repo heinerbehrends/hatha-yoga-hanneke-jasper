@@ -1,4 +1,5 @@
 import { ImageNode } from '../utils';
+import { makeContactData } from './contactData';
 
 export type FooterData = {
   overMij: {
@@ -30,12 +31,7 @@ export function makeFooterData(image: ImageNode): FooterData {
       },
     },
     contact: {
-      contactgegevens: {
-        emailadres: 'hanneke.jasper@gmail.com',
-        adres: 'Emmastraat 15 g 206 - 9722EW Groningen',
-        telefoonnummer: '06-44834632',
-        kvkNummer: '75888300',
-      },
+      contactgegevens: makeContactData(),
     },
   };
 }
