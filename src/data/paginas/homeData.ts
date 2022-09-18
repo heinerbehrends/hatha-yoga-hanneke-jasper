@@ -24,7 +24,7 @@ export function makeHomeData(images: HomeImages): HomePageProps {
       wpPage: {
         title: 'Hatha Yoga Hanneke Jasper',
         introductie: {
-          kop: 'Welkom',
+          kop: 'Yogalessen voor iedereen',
           introductie: /* html */ `
             Of je nu al ervaring hebt of nog nooit yoga hebt gedaan, of je ontspanning zoekt of energie, 
             je bent van harte uitgenodigd. Ik bied groepslessen en individuele lessen aan.
