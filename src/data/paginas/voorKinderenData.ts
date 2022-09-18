@@ -2,7 +2,7 @@ import { LessonNode } from '../../homePageProps';
 import { makeLessonData } from '../lessonData';
 
 export const voorKinderenData: LessonNode = {
-  slug: 'lessen-voor-kinderen',
+  slug: 'voor-kinderen',
   title: 'Lessen voor kinderen',
   extraVelden: {
     buttonTekst: 'Neem contact met me op',
@@ -17,7 +17,6 @@ export const voorKinderenData: LessonNode = {
   `,
   content: /* html */ `
     <h3>Ontspanning voor lichaam en geest </h3>
-    <br>
     Yoga voor kinderen biedt ontspanning, rust, zelfvertrouwen, creativiteit, 
     uit het hoofd kunnen komen en in het lijf.
     In de groepsles yoga voor kinderen bewegen we met plezier en verbeelding. 
