@@ -2,7 +2,7 @@ import { styled } from '../../stitches.config';
 
 export const Heading = styled('h1', {
   fontFamily: 'Ostrich Sans',
-  fontSize: 'clamp(30px,16vw, 74px)',
+  fontSize: 'clamp(30px,14vw, 64px)',
   lineHeight: '0.9',
   textAlign: 'center',
   marginTop: '$xxl-resp',
