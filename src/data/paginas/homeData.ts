@@ -6,6 +6,7 @@ import { groepslessenData } from './groepslessenData';
 import { individueleLessenData } from './individueleLessenData';
 import { voorBedrijvenData } from './voorBedrijvenData';
 import { voorKinderenData } from './voorKinderenData';
+import { voorSeniorenData } from './voorSeniorenData';
 
 export type HomeImages = {
   houdingen: {
@@ -82,6 +83,7 @@ export function makeHomeData(images: HomeImages): HomePageProps {
           individueleLessenData,
           voorKinderenData,
           voorBedrijvenData,
+          voorSeniorenData,
         ],
       },
       allWpAanbeveling: {
