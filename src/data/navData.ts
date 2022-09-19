@@ -31,6 +31,11 @@ export const navData = {
         slug: 'voor-bedrijven',
         extraVelden: { menuTekst: 'Voor bedrijven' },
       },
+      {
+        title: 'Lessen voor senioren',
+        slug: 'voor-senioren',
+        extraVelden: { menuTekst: 'Voor senioren' },
+      },
     ],
   },
 };
