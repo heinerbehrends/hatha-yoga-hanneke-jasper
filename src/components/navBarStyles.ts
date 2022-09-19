@@ -5,8 +5,8 @@ export const NavContainer = styled('nav', {
   display: 'flex',
   height: '60px',
   alignItems: 'center',
-  justifyContent: 'space-around',
-  maxWidth: '960px',
+  justifyContent: 'space-between',
+  maxWidth: '1152px',
   marginX: 'auto',
 });
 
@@ -41,6 +41,7 @@ export const navBarItemStyles = css({
   },
   '&:hover': {
     color: '$blueDark',
+    border: '2px dotted $coral',
     backgroundColor: '$background',
   },
   '&:active': {
@@ -57,7 +58,6 @@ export const navBarItemStyles = css({
     size: {
       small: {
         paddingX: '$xxs',
-        // fontSize: '$s',
       },
       big: {
         paddingX: '$xs',
