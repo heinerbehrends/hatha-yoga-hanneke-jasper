@@ -3,8 +3,10 @@ import { css, styled } from '../../stitches.config';
 export const FooterStyled = styled('footer', {
   backgroundColor: '$blueDark',
   color: '$white',
-  paddingY: '$xxl',
-  paddingX: '$m',
+  '@l': {
+    paddingY: '$xxl',
+    paddingX: '$m',
+  },
   '@s': {
     paddingY: '$3xl',
     paddingX: 0,
@@ -12,17 +14,22 @@ export const FooterStyled = styled('footer', {
 });
 
 export const FooterContainer = styled('section', {
-  paddingX: '$l',
+  paddingX: '$m',
+  paddingY: '$xl',
   display: 'grid',
   maxWidth: '960px',
   marginX: 'auto',
   '@l': {
+    paddingX: '$l',
     gridTemplateColumns: 'repeat(auto-fill, minmax(36ch, 1fr))',
   },
 });
 
 export const FooterContact = styled('address', {
-  paddingX: '$m',
+  marginBottom: '$xl',
+  '@l': {
+    margin: 0,
+  },
 });
 
 export const ContactItem = styled('a', {
