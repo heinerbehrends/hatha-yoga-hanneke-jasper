@@ -12,7 +12,7 @@ export default function handler(
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   const msg = {
     to: 'hanneke.jasper@gmail.com',
-    from: 'heinerbehrends@hotmail.com',
+    from: 'hanneke.jasper@gmail.com',
     subject: `A new message from ${req.body.name} arrived`,
     html: `Emailadres: ${req.body.email} <br /> Message: ${req.body.message}`,
   };
