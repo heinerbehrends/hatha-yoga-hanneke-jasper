@@ -4,7 +4,6 @@ export const Contact = styled('div', {
   // alignSelf: 'center',
   display: 'grid',
   gridGap: '$s',
-  '@s': {},
   '@l': {
     gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
     marginTop: '$xl',
@@ -51,6 +50,6 @@ export const Adress = styled('address', {
 
 export const HideAboveMobile = styled('span', {
   '@m': {
-    display: 'hidden',
+    display: 'none',
   },
 });

@@ -33,7 +33,6 @@ export default function ContactCards(props: ContactCardsProps) {
             Ik ben op WhatsApp! Je kunt me een bericht sturen naar{' '}
             {props.telefoonnummer}{' '}
             <HideAboveMobile>
-              {' '}
               of maak gebruik van onderstaande button.
             </HideAboveMobile>
             <Button
