@@ -13,8 +13,8 @@ export default function handler(
   const msg = {
     to: 'hanneke.jasper@gmail.com',
     from: 'hanneke.jasper@gmail.com',
-    subject: `A new message from ${req.body.name} arrived`,
-    html: `Emailadres: ${req.body.email} <br /> Message: ${req.body.message}`,
+    subject: `Je hebt een nieuw bericht van ${req.body.name}`,
+    html: `Emailadres van de afzender: ${req.body.email} <br /> <p>${req.body.message}</p>`,
   };
   sgMail
     .send(msg)
