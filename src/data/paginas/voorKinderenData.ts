@@ -12,17 +12,18 @@ export const voorKinderenData: LessonNode = {
     Yoga voor kinderen biedt ontspanning, rust, zelfvertrouwen, creativiteit, 
     uit het hoofd kunnen komen en in het lijf.
     In de groepsles yoga voor kinderen bewegen we met plezier en verbeelding. 
-    Het kind leert zichzelf beter kennen. <br>Door het bewegen en allerlei houdingen 
-    aan te nemen ontdekken ze wie ze zijn en wat ze ervaren. 
+    <br>Het kind leert zichzelf beter kennen door yoga. Door het bewegen en allerlei houdingen 
+    aan te nemen ontdekken ze wie ze zijn en wat ze ervaren. <br>
   `,
   content: /* html */ `
     <h3>Ontspanning voor lichaam en geest </h3>
     Yoga voor kinderen biedt ontspanning, rust, zelfvertrouwen, creativiteit, 
     uit het hoofd kunnen komen en in het lijf.
     In de groepsles yoga voor kinderen bewegen we met plezier en verbeelding. 
-    Het kind leert zichzelf beter kennen. <br>Door het bewegen en allerlei houdingen 
-    aan te nemen ontdekken ze wie ze zijn en wat ze ervaren. 
-    Er is bestaat een yogahouding voor van alles wat een kind ervaren kan: 
+    Het kind leert zichzelf beter kennen door yoga <br>. Door het bewegen en allerlei houdingen 
+    aan te nemen ontdekken ze wie ze zijn en wat ze ervaren. <br>
+    
+    <br>Er is bestaat een yogahouding voor van alles wat een kind ervaren kan: 
     Blijheid kan worden gevierd, boosheid/frustratie kan worden ontladen, moed 
     en kracht wordt gezocht in houdingen zoals de Held. 
     <br> 
@@ -32,7 +33,7 @@ export const voorKinderenData: LessonNode = {
     geconcentreerde en veilige sfeer te creëren). <br>
     In de les kunnen de kinderen naast oefeningen die ik aanbied, zelf een 
     kaartje met een oefening uitkiezen. Zo is er ruimte voor individuele 
-    behoefte. Het mooie hiervan is dat we ook oefenen om aandacht voor elkaar 
+    behoefte. Het mooie hiervan is dat we ook nog oefenen om aandacht voor elkaar 
     te hebben en elkaar ruimte te geven.
     `,
 };
