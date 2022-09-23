@@ -45,11 +45,11 @@ export const groepslessenData: LessonNode = {
   <em>12 lessen, 1 uur en 15 minuten per les</em>
   <br>
   <p>De gevorderden yogalessen borduren voort op de laatste lessen van de Basis 
-  Yogacursus. De les duurt een uur en een kwartier. Doordat de cursist gewend 
-  is aan de houdingen, in contact is met de adem en de concentratie, worden 
-  houdingen bijvoorbeeld wat langer aangehouden en worden er complexere 
-  houdingen aangenomen. Iedereen met Yoga-ervaring of die de basiscursus 
-  hebben gedaan zijn welkom in de Gevorderden Hatha Yogales.</p>
+  Yogacursus. De les duurt een uur en een kwartier. 
+  <br> In de gevorderdenles ben je inmiddels vertrouwd met de ervaring dat je oefent binnen je eigen mogelijkheden en je jouw grenzen respecteert.<br>
+  <br>Doordat de cursist gewend is aan de houdingen, in contact met de adem en concentratie, kunnen 
+  houdingen wat langer worden aangehouden en worden. Iedereen met Yoga-ervaring of die de basiscursus 
+  heeft gedaan, is welkom in de Gevorderden Hatha Yogales.</p>
   <br>
   <h3>Verdieping Hatha Yoga</h3>
   <em>Verdieping 12 lessen, anderhalf uur per les</em>
@@ -60,8 +60,7 @@ export const groepslessenData: LessonNode = {
   intensiever te oefenen. Je kunt na de basiscursus doorstromen als je het 
   prettig vindt om anderhalf uur met Yoga bezig te zijn. </p>
   <br>
-  <h3>Pranayama en meditatie</h3>
-  <em>6 lessen, anderhalf uur per les.</em>
+ 
 </article>
   `,
 };
