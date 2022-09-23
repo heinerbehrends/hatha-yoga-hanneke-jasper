@@ -31,11 +31,9 @@ export function makeOverMijData(image: ImageNode): OverMijData {
           vitaliserende en helende effect van yoga en dit voor iedereen 
           toegankelijk te maken.</h3>
           
-          <br>Mijn wens is om mensen in aanraking te brengen met het rustgevende, 
-          vitaliserende en helende effect van yoga en dit voor iedereen 
-          toegankelijk te maken.<br>
-       
-         <br> Vanaf 2009 geef ik yogales op maat en behoefte, dat doe ik in de
+   
+      
+        <br> Vanaf 2009 geef ik yogales op maat en behoefte, dat doe ik in de
           vorm van cursussen, individuele begeleiding, workshops, in groepen
           met een speciale vraag en/of behoefte en voor bedrijven. <br>
           
