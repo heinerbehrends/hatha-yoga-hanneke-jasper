@@ -27,19 +27,22 @@ export function makeOverMijData(image: ImageNode): OverMijData {
       wpPage: {
         title: 'Over mij',
         content: /* html */ `
-          <h3>Yogales op maat</h3>
-          Ik geef vanaf 2009 yogales op maat en behoefte, dat doe ik in de
-          vorm van cursussen, individuele begeleiding, workshops, in groepen
-          met een speciale vraag en/of behoefte en voor bedrijven. <br>
+          <h3></h3>
           Mijn wens is om mensen in aanraking te brengen met het rustgevende, 
           vitaliserende en helende effect van yoga en dit voor iedereen 
           toegankelijk te maken.
-          Zo heb ik yoga gegeven aan jongeren in de crisisopvang, kinderen, 
-          aan mensen met een fysieke beperking tot aan yoga achter het bureau.
+       
+          Vanaf 2009 geef ik yogales op maat en behoefte, dat doe ik in de
+          vorm van cursussen, individuele begeleiding, workshops, in groepen
+          met een speciale vraag en/of behoefte en voor bedrijven. <br>
           Ik voel me helemaal op mijn plek als ik yogales geef. <br>
           Het maakt me gelukkig als mensen zich meer kunnen ontspanning en 
           zichzelf vinden. Met betrokkenheid geef ik les waarbij ik afstem op 
           jou. <br>
+          
+          Zo heb ik yoga gegeven aan jongeren in de crisisopvang, kinderen, 
+          aan mensen met een fysieke beperking tot aan yoga achter het bureau.
+        
           Aan de vierjarige opleiding van Saswitha voor Yoga en Wijsbegeerte te 
           Bilthoven, heb ik mijn opleiding gevolgd en mijn diploma behaald.
           Naast het lesgeven in hatha yoga zoek ik altijd naar verdieping in mijn 
