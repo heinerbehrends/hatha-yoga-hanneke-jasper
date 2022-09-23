@@ -27,27 +27,32 @@ export function makeOverMijData(image: ImageNode): OverMijData {
       wpPage: {
         title: 'Over mij',
         content: /* html */ `
-          <h3></h3>
-          Mijn wens is om mensen in aanraking te brengen met het rustgevende, 
+          <h3> Mijn wens is om mensen in aanraking te brengen met het rustgevende, 
           vitaliserende en helende effect van yoga en dit voor iedereen 
-          toegankelijk te maken.
+          toegankelijk te maken.</h3>
+          
+          <br>Mijn wens is om mensen in aanraking te brengen met het rustgevende, 
+          vitaliserende en helende effect van yoga en dit voor iedereen 
+          toegankelijk te maken.<br>
        
-          Vanaf 2009 geef ik yogales op maat en behoefte, dat doe ik in de
+         <br> Vanaf 2009 geef ik yogales op maat en behoefte, dat doe ik in de
           vorm van cursussen, individuele begeleiding, workshops, in groepen
           met een speciale vraag en/of behoefte en voor bedrijven. <br>
-          Ik voel me helemaal op mijn plek als ik yogales geef. <br>
+          
+          <br>Ik voel me helemaal op mijn plek als ik yogales geef. <br>
           Het maakt me gelukkig als mensen zich meer kunnen ontspanning en 
           zichzelf vinden. Met betrokkenheid geef ik les waarbij ik afstem op 
           jou. <br>
           
-          Zo heb ik yoga gegeven aan jongeren in de crisisopvang, kinderen, 
-          aan mensen met een fysieke beperking tot aan yoga achter het bureau.
+         
+        <br>Zo heb ik yoga gegeven aan jongeren in de crisisopvang, kinderen, 
+          aan mensen met een fysieke beperking tot aan yoga achter het bureau.<br>
         
-          Aan de vierjarige opleiding van Saswitha voor Yoga en Wijsbegeerte te 
+          <br>Aan de vierjarige opleiding van Saswitha voor Yoga en Wijsbegeerte te 
           Bilthoven, heb ik mijn opleiding gevolgd en mijn diploma behaald.
           Naast het lesgeven in hatha yoga zoek ik altijd naar verdieping in mijn 
           eigen yogabeoefening, kennis en vaardigheden zoals ademoefeneningen 
-          (pranayama), meditatie, filosofie, chakrapsychologie.
+          (pranayama), meditatie, filosofie, chakrapsychologie.<br>
           Naast het diploma aan Saswitha heb ik de volgende certificaten 
           in de volgende bevoegdheden: <br> <br>
           <ul>
