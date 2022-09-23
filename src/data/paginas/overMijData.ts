@@ -5,8 +5,10 @@ export type OverMijData = {
   data: {
     wpPage: {
       title: string;
+      excerpt: string;
       content: string;
       slug: string;
+      extraVelden: any;
       featuredImage: {
         node: {
           altText: string;
@@ -26,6 +28,8 @@ export function makeOverMijData(image: ImageNode): OverMijData {
     data: {
       wpPage: {
         title: 'Over mij',
+        excerpt: '',
+        extraVelden: [],
         content: /* html */ `
           <h3>Yogales op maat</h3>
           Ik geef vanaf 2009 yogales op maat en behoefte, dat doe ik in de
