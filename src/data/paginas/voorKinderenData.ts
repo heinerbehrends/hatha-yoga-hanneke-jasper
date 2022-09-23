@@ -12,15 +12,15 @@ export const voorKinderenData: LessonNode = {
     Yoga voor kinderen biedt ontspanning, rust, zelfvertrouwen en creativiteit.
     Het geeft kinderen mogelijkheid om uit het hoofd kunnen komen en in het lijf.
     <br>In de yogales voor kinderen bewegen we met plezier en verbeelding.<br>
-    <br>Het kind leert zichzelf beter kennen door yoga. Door het bewegen en allerlei houdingen 
-    aan te nemen ontdekken ze wie ze zijn en wat ze ervaren. <br>
+    <br>Het kind kan zichzelf beter leren kennen door yoga. Door het bewegen en goed door te ademen in allerlei houdingen 
+    kunnen ze ontdekken wie ze zijn en wat ze ervaren. <br>
   `,
   content: /* html */ `
     <h3>Ontspanning voor lichaam en geest </h3>
     <br>Yoga voor kinderen biedt ontspanning, rust, zelfvertrouwen en creativiteit. 
     Kinderyoga geeft de mogelijkheid om uit het hoofd kunnen komen en in het lijf.<br)
     
-    <br>Het kind kan zichzelf beter leren kennen door yoga. Door het bewegen en allerlei houdingen 
+     <br>Het kind kan zichzelf beter leren kennen door yoga. Door het bewegen en allerlei houdingen 
     aan te nemen ontdekken ze wie ze zijn en wat ze ervaren. <br>
     <br>In de yogales voor kinderen bewegen we met plezier en verbeelding.<br>
 
