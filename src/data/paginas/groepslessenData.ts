@@ -28,7 +28,7 @@ export const groepslessenData: LessonNode = {
   niet gaat om een prestatie leveren. Je wordt in de lessen uitgenodigd om in 
   vertrouwen en vriendelijkheid je grenzen te onderzoeken en te mogen ervaren 
   dat dit je bij diepe ontspanning kan brengen.</p>
-  <p>Er is een opbouw in de Basis cursus.In de eerste Yogalessen van de cursus 
+  <p>Er is een opbouw in de Basis cursus. In de eerste Yogalessen van de cursus 
   besteed ik veel aandacht aan de buikadem en de adem in het bekken. 
   Rond ongeveer de vijfde les in de cursus wordt de Zonnegroet aangeleerd 
   (een reeks houdingen) die je na het leren altijd zelfstandig kunt blijven 
