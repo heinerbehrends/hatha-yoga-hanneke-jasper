@@ -10,15 +10,15 @@ export const voorSeniorenData: LessonNode = {
   },
   excerpt: /* html */ `
     Op iedere leeftijd kan yoga een goede ondersteuning voor lichaam en geest 
-    zijn. Doordat yoga niet prestatiegericht is, is het uitermate geschikt voor 
+    zijn. Omdat mijn yogalessen niet prestatiegericht zijn, zijn ze uitermate geschikt voor 
     ouderen. In de les wordt er enkel binnen de grenzen geoefend wat 
     overbelasting voorkomt. Ieder mens kan yoga beoefenen zolang hij/zij ademt, 
     ook als er fysieke beperkingen zijn. Dat is het prachtige van yoga!
   `,
   content: /* html */ `
     <h3>Ontspanning voor lichaam en geest </h3>
-    <p>De yogalessen voor ouderen worden op een rustiger tempo gegeven. De adem, 
-    het rustig en diep ademen, staan centraal. De beweging en de houding volgen 
+    <p>Mijn yogalessen voor ouderen worden op een rustiger tempo gegeven. De adem, 
+    het rustig en diep ademen, staan centraal; beweging en de houding volgen 
     de adem. Ook wordt er gewerkt aan souplesse en spierkracht tijdens de lessen en is er ruimte 
     en tijd om je lichaam goed te voelen en kan het uiteindelijk zorgen voor volkomen 
     rust/vrede in jezelf ervaren. </p>
