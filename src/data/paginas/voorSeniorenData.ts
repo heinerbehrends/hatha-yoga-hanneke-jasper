@@ -22,14 +22,14 @@ export const voorSeniorenData: LessonNode = {
     de adem. Ook wordt er gewerkt aan souplesse en spierkracht tijdens de lessen en is er ruimte 
     en tijd om je lichaam goed te voelen en kan het uiteindelijk zorgen voor volkomen 
     rust/vrede in jezelf ervaren. </p>
-    <p>De aangeboden oefeningen zijn rustig, niet te zwaar en/of te lang. Alle 
-    gewrichten worden bewogen zonder dat er gewicht op het gewricht staat.
-    Zonodig kan er een stoel gebruikt worden of geoefend worden in de 
-    rolstoel. Voor iedere deelnemer is persoonlijke aandacht zodat de yogahouding met zoveel mogelijk kan worden te ervaren.</p>
-    <p>In de les komt meditatie aan bod en milde ademoefeningen die kunnen zorgen voor ontspanning en verstilling.
-    Yoga voor ouderen kan verzachtend en helend werken. Yoga brengt lichaam en 
+    <br>De aangeboden oefeningen zijn rustig, niet te zwaar en/of te lang. Alle 
+    gewrichten worden bewogen zonder dat er gewicht op het gewricht staat.<br>
+    <br>Zonodig kan er een stoel gebruikt worden of geoefend worden in de 
+    rolstoel. Voor iedere deelnemer is persoonlijke aandacht zodat de yogahouding met zoveel mogelijk kan worden te ervaren.<br>
+    <br>In de les komt meditatie aan bod en milde ademoefeningen die kunnen zorgen voor ontspanning en innerlijke rust.<br>
+    <br>Yoga voor ouderen kan verzachtend en helend werken. Yoga brengt lichaam en 
     geest in balans; het geeft fysiek en mentaal ontspanning, lichaam en geest 
-    kunnen soepeler worden door de beoefening.
+    kunnen soepeler worden door de beoefening.<br>
     </p>
     `,
 };
