@@ -17,15 +17,16 @@ export const voorSeniorenData: LessonNode = {
   `,
   content: /* html */ `
     <h3>Ontspanning voor lichaam en geest </h3>
-    <p>Mijn yogalessen voor ouderen worden op een rustiger tempo gegeven. De adem, 
-    het rustig en diep ademen, staan centraal; beweging en de houding volgen 
-    de adem. Ook wordt er gewerkt aan souplesse en spierkracht tijdens de lessen en is er ruimte 
-    en tijd om je lichaam goed te voelen en kan het uiteindelijk zorgen voor volkomen 
-    rust/vrede in jezelf ervaren. </p>
+    <p>Mijn yogalessen voor ouderen worden op een rustiger tempo gegeven.<p>
+    <br> De adem, het rustig en diep ademen, staat centraal; de beweging volgt 
+    de adem. En de houding wordt door de adem gedragen <br>
+    <br> Er is ruimte om je lichaam goed te kunnen voelen en je geest waar te nemen. Uiteindelijk kan de adem in combinatie met beweging en concentratie zorgen voor volkomen 
+    rust/vrede in jezelf.<br>
+    Ook wordt er gewerkt aan souplesse en spierkracht tijdens de lessen.  </p>
     <br>De aangeboden oefeningen zijn rustig, niet te zwaar en/of te lang. Alle 
     gewrichten worden bewogen zonder dat er gewicht op het gewricht staat.<br>
     <br>Zonodig kan er een stoel gebruikt worden of geoefend worden in de 
-    rolstoel. Voor iedere deelnemer is persoonlijke aandacht zodat de yogahouding met zoveel mogelijk kan worden te ervaren.<br>
+    rolstoel. Voor iedere deelnemer is persoonlijke aandacht zodat de yogahouding comfortabel kan zijn.<br>
     <br>In de les komt meditatie aan bod en milde ademoefeningen die kunnen zorgen voor ontspanning en innerlijke rust.<br>
     <br>Yoga voor ouderen kan verzachtend en helend werken. Yoga brengt lichaam en 
     geest in balans; het geeft fysiek en mentaal ontspanning, lichaam en geest 
