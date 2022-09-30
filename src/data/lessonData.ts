@@ -1,5 +1,5 @@
 import { IGatsbyImageData } from 'gatsby-plugin-image';
-import { LessonNode } from '../pages/homePageProps';
+import { LessonNode } from '../homePageProps';
 import { LessonPageData } from '../layouts/lessonLayout';
 import { ImageNode } from '../utils';
 import { makeContactData } from './contactData';

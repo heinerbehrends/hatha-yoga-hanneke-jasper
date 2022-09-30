@@ -1,6 +1,6 @@
 import { IGatsbyImageData } from 'gatsby-plugin-image';
 import { LessenCard } from './components/LessenCard';
-import { LessonNode } from './pages/homePageProps';
+import { LessonNode } from './homePageProps';
 
 export type ImageNode = {
   childImageSharp: {

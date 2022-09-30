@@ -1,4 +1,4 @@
-import { LessonNode } from '../../pages/homePageProps';
+import { LessonNode } from '../../homePageProps';
 import { makeLessonData } from '../lessonData';
 
 export const voorBedrijvenData: LessonNode = {

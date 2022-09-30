@@ -1,4 +1,4 @@
-import HomePageProps from '../../pages/homePageProps';
+import HomePageProps from '../../homePageProps';
 import { ImageNode } from '../../utils';
 import { makeContactData } from '../contactData';
 import { makeTestimonialData } from '../testimonialsData';

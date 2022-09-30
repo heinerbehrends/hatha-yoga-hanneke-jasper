@@ -1,4 +1,4 @@
-import { ImageNode } from '../utils';
+import { ImageNode } from './utils';
 
 export type LessonNode = {
   title: string;

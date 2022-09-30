@@ -18,6 +18,7 @@ import ContactCards from '../components/ContactCards';
 import { Contact } from '../components/contactStyles';
 import { HomeImages, makeHomeData } from '../data/paginas/homeData';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
+import { InfoCardsContainer } from '../components/infoCardStyles';
 
 export default function Home({ data }: ImageQuery) {
   const images: HomeImages = {
@@ -53,15 +54,17 @@ export default function Home({ data }: ImageQuery) {
       <SubHeading as="h2">
         {homeData.data.wpPage.overHathaYoga.infoKop}
       </SubHeading>
-      {infoCardsData.map((info, index) => (
-        <InfoCard
-          key={info.titel}
-          color={index}
-          html={info.inhoud}
-          title={info.titel}
-          image={getLocalImage(info.afbeelding) as IGatsbyImageData}
-        />
-      ))}
+      <InfoCardsContainer>
+        {infoCardsData.map((info, index) => (
+          <InfoCard
+            key={info.titel}
+            color={index}
+            html={info.inhoud}
+            title={info.titel}
+            image={getLocalImage(info.afbeelding) as IGatsbyImageData}
+          />
+        ))}
+      </InfoCardsContainer>
       <SubHeading as="h2">Lesvormen</SubHeading>
       <LessenCards lessenCards={getLessonsData(lessonNodes)} />
       {testimonialNodes.map(
