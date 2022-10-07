@@ -6,7 +6,7 @@ import {
   EnvelopeClosedIcon,
   HomeIcon,
   PaperPlaneIcon,
-} from '@modulz/radix-icons';
+} from '@radix-ui/react-icons';
 import {
   FooterStyled,
   FooterContainer,

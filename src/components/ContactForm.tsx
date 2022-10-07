@@ -1,4 +1,4 @@
-import { CheckIcon } from '@modulz/radix-icons';
+import { CheckIcon } from '@radix-ui/react-icons';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import {

@@ -2,7 +2,7 @@ import {
   ChatBubbleIcon,
   EnvelopeClosedIcon,
   PaperPlaneIcon,
-} from '@modulz/radix-icons';
+} from '@radix-ui/react-icons';
 import React from 'react';
 import Button from './button';
 import {

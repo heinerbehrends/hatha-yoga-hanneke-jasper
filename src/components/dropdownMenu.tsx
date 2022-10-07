@@ -1,6 +1,6 @@
 import React from 'react';
 import * as DropdownPrimitives from '@radix-ui/react-dropdown-menu';
-import { ChevronDownIcon } from '@modulz/radix-icons';
+import { ChevronDownIcon } from '@radix-ui/react-icons';
 import { Link } from 'gatsby';
 import { styled } from '../../stitches.config';
 import { navBarItemStyles } from './navBarStyles';
