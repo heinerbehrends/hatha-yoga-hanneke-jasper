@@ -1,5 +1,11 @@
 import { styled } from '../../stitches.config';
 
+export const InfoCardsContainer = styled('article', {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '$xl',
+});
+
 export const InfoCardContainer = styled('section', {
   display: 'flex',
   marginX: 'auto',
@@ -11,7 +17,7 @@ export const InfoCardContainer = styled('section', {
     size: {
       bigScreen: {
         overflow: 'hidden',
-        marginTop: '$xl',
+        marginTop: 0,
       },
       smallScreen: {
         marginTop: '$l',
