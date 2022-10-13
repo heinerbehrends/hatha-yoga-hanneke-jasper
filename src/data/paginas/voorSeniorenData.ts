@@ -19,7 +19,7 @@ export const voorSeniorenData: LessonNode = {
     <h3>Ontspanning voor lichaam en geest </h3>
     <p>Mijn yogalessen voor ouderen worden op een rustiger tempo gegeven.<p>
     <br> De adem, het rustig en diep ademen, staat centraal; de beweging volgt 
-    de adem. En de houding wordt door de adem gedragen <br>
+    de adem. En de houding wordt door de adem gedragen. <br>
     <br> Er is ruimte om je lichaam goed te kunnen voelen en je geest waar te nemen. Uiteindelijk kan de adem in combinatie met beweging en concentratie zorgen voor volkomen 
     rust/vrede in jezelf.<br>
     Ook wordt er gewerkt aan souplesse en spierkracht tijdens de lessen.  </p>
