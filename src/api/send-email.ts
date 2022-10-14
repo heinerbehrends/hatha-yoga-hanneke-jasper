@@ -11,7 +11,7 @@ export default function handler(
   const sgMail = require('@sendgrid/mail');
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   const msg = {
-    to: 'hanneke.jasper@gmail.com',
+    to: 'heiner.s.behrends@gmail.com',
     from: 'heinerbehrends@hotmail.com',
     subject: `Je hebt een nieuw bericht van ${req.body.name}`,
     html: `Emailadres van de afzender: ${req.body.email} <br /> <p>${req.body.message}</p>`,
