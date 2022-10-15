@@ -9,7 +9,9 @@ export default function handler(
   res: GatsbyFunctionResponse
 ) {
   const sgMail = require('@sendgrid/mail');
+
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
   const msg = {
     to: 'heiner.s.behrends@gmail.com',
     from: 'heinerbehrends@hotmail.com',
