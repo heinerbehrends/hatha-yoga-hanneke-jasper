@@ -35,10 +35,9 @@ async function onSubmit(data: FormValues) {
     })
     .then((response) => {
       if (response.status !== 200) {
-        response.json().then((data) => {
-          console.log(data.response.body.errors[0].message);
-          throw new Error(data.response.body.errors[0].message);
-        });
+        throw new Error(
+          'Er was een probleem met het verzenden van je bericht.'
+        );
       }
     });
 }
