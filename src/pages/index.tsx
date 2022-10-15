@@ -96,22 +96,22 @@ export const query = graphql`
   query PicsQuery {
     dog: file(relativePath: { eq: "Dog.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 300)
+        gatsbyImageData(width: 300, placeholder: BLURRED)
       }
     }
     plow: file(relativePath: { eq: "Plow.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 300)
+        gatsbyImageData(width: 300, placeholder: BLURRED)
       }
     }
     torsion: file(relativePath: { eq: "Torsion.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 300)
+        gatsbyImageData(width: 300, placeholder: BLURRED)
       }
     }
     testimonial: file(relativePath: { eq: "Heiner.jpg" }) {
       childImageSharp {
-        gatsbyImageData(width: 90)
+        gatsbyImageData(width: 90, placeholder: BLURRED)
       }
     }
   }
