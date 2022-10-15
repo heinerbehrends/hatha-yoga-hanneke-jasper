@@ -1,4 +1,4 @@
-import { CheckIcon, Cross2Icon } from '@radix-ui/react-icons';
+import { CheckCircledIcon, CrossCircledIcon } from '@radix-ui/react-icons';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import {
@@ -132,13 +132,13 @@ export default function ContactForm() {
           value={createButtonText(isSubmitting, isSubmitSuccessful, error)}
         />
         {isSubmitSuccessful && (
-          <StatusMessage status="success">
-            <CheckIcon width="25" height="25" /> Uw bericht is verzonden.
+          <StatusMessage role="status" status="success">
+            <CheckCircledIcon width="25" height="25" /> Uw bericht is verzonden.
           </StatusMessage>
         )}
         {error && (
-          <StatusMessage status="error">
-            <Cross2Icon width="25" height="25" /> Er is iets misgegaan.
+          <StatusMessage role="status" status="error">
+            <CrossCircledIcon width="25" height="25" /> Er is iets misgegaan.
           </StatusMessage>
         )}
       </FormContainer>
