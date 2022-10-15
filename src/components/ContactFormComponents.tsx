@@ -40,8 +40,9 @@ export const SubmitButton = styled(InputStyled, {
 
 export const StatusMessage = styled('span', {
   display: 'flex',
+  gap: '$xs',
   alignItems: 'center',
-  marginLeft: '$xs',
+  marginLeft: '$s',
   marginTop: '$xs',
   variants: {
     status: {
