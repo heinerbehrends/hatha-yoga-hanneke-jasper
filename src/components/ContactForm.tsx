@@ -33,13 +33,20 @@ async function onSubmit(data: FormValues) {
       },
       body: JSON.stringify(data),
     })
-    .then((response) => {
-      if (response.status !== 200) {
-        throw new Error(
-          'Er was een probleem met het verzenden van je bericht.'
-        );
+    .then((response) => response.json())
+    .then((data) => {
+      if (data?.response?.body?.errors?.length) {
+        console.log('response data', data);
+        throw new Error(data.response.body.errors[0].message);
       }
     });
+  // {
+  // if (response.status !== 200) {
+  //   throw new Error(
+  //     'Er was een probleem met het verzenden van je bericht.'
+  //   );
+  // }
+  // });
 }
 
 export default function ContactForm() {
@@ -62,6 +69,7 @@ export default function ContactForm() {
             setError(null);
           })
           .catch((error) => {
+            console.error(error);
             setError(error);
           })
       }
