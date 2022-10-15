@@ -16,15 +16,15 @@ export default function handler(
     subject: `Je hebt een nieuw bericht van ${req.body.name}`,
     html: `Emailadres van de afzender: ${req.body.email} <br /> <p>${req.body.message}</p>`,
   };
+
   sgMail
     .send(msg)
     .then(() => {
-      console.log('Email sent');
+      res.status(200).json({ message: 'Het bericht is succesvol verzonden' });
     })
     .catch((error: any) => {
       if (isError(error)) {
-        console.error(error);
+        res.status(500).json(error);
       }
     });
-  res.status(200).json({ message: 'Message was sent succesfully' });
 }

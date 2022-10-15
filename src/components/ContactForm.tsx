@@ -1,5 +1,5 @@
-import { CheckIcon } from '@radix-ui/react-icons';
-import React from 'react';
+import { CheckIcon, Cross2Icon } from '@radix-ui/react-icons';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import {
   Label,
@@ -7,51 +7,63 @@ import {
   InputStyled,
   FormContainer,
   SubmitButton,
-  SuccessMessage,
+  StatusMessage,
   LabelContainer,
   Form,
 } from './ContactFormComponents';
 
+function createButtonText(
+  isSubmitting: boolean,
+  isSubmitSuccessful: boolean,
+  error: Error | null
+) {
+  if (isSubmitting) return 'Wordt verzonden...';
+  if (isSubmitSuccessful) return 'Verzonden!';
+  if (error) return 'Probeer opnieuw >';
+  return 'Verzend >';
+}
+type FormValues = { name: string; email: string; message: string };
+
+async function onSubmit(data: FormValues) {
+  await window
+    .fetch(`api/send-email`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+    .then((response) => {
+      if (response.status !== 200) {
+        throw new Error(
+          'Er was een probleem met het verzenden van je bericht.'
+        );
+      }
+    });
+}
+
 export default function ContactForm() {
   const {
     register,
-    formState: { errors, isSubmitSuccessful },
+    formState: { errors, isSubmitSuccessful, isSubmitting },
     handleSubmit,
   } = useForm<FormValues>({
     mode: 'onBlur',
     shouldFocusError: true,
   });
-  type FormValues = { name: string; email: string; message: string };
-  async function onSubmit(data: FormValues) {
-    await window
-      .fetch(`api/send-email`, {
-        method: 'POST',
-        headers: {
-          'content-type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      })
-      .then((response) => {
-        if (response.status !== 200) {
-          throw new Error(
-            'Er was een probleem met het verzenden van je bericht.'
-          );
-        }
-      });
-  }
-  function onError() {
-    console.log('error');
-  }
+  const [error, setError] = useState<Error | null>(null);
+
   return (
     <Form
       method="POST"
       onSubmit={(event) =>
-        handleSubmit(
-          onSubmit,
-          onError
-        )(event).catch((error) => {
-          console.log(error);
-        })
+        handleSubmit(onSubmit)(event)
+          .then((__) => {
+            setError(null);
+          })
+          .catch((error) => {
+            setError(error);
+          })
       }
       encType="application/x-www-form-urlencoded"
       name="contact-form"
@@ -115,16 +127,20 @@ export default function ContactForm() {
           placeholder="Je vraag of bericht..."
           rows={6}
         />
-
         <SubmitButton
           type="submit"
-          value={`${isSubmitSuccessful ? 'Verstuurd!' : 'Verstuur >'}`}
+          value={createButtonText(isSubmitting, isSubmitSuccessful, error)}
         />
-        {isSubmitSuccessful ? (
-          <SuccessMessage>
-            <CheckIcon /> U bericht is verzonden.
-          </SuccessMessage>
-        ) : null}
+        {isSubmitSuccessful && (
+          <StatusMessage status="success">
+            <CheckIcon width="25" height="25" /> Uw bericht is verzonden.
+          </StatusMessage>
+        )}
+        {error && (
+          <StatusMessage status="error">
+            <Cross2Icon width="25" height="25" /> Er is iets misgegaan.
+          </StatusMessage>
+        )}
       </FormContainer>
     </Form>
   );

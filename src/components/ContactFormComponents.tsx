@@ -25,6 +25,7 @@ export const SubmitButton = styled(InputStyled, {
   fontWeight: 'bold',
   textAlign: 'center',
   marginTop: '$m',
+  cursor: 'pointer',
   transitionProperty: 'transform',
   transitionDuration: '0.25s',
   '&:focus': {
@@ -37,10 +38,21 @@ export const SubmitButton = styled(InputStyled, {
   },
 });
 
-export const SuccessMessage = styled('span', {
-  color: '$green',
+export const StatusMessage = styled('span', {
+  display: 'flex',
+  alignItems: 'center',
   marginLeft: '$xs',
-  marginTop: '$s',
+  marginTop: '$xs',
+  variants: {
+    status: {
+      success: {
+        color: '$green',
+      },
+      error: {
+        color: '$coral',
+      },
+    },
+  },
 });
 
 const Error = styled('span', {
