@@ -10,7 +10,7 @@ export default function handler(
 ) {
   const sgMail = require('@sendgrid/mail');
 
-  sgMail.setApiKey(process.env.SENDGRID_API_KE);
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
   const msg = {
     to: 'heiner.s.behrends@gmail.com',
