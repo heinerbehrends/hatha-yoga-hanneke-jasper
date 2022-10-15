@@ -30,6 +30,7 @@ export default function Hero() {
               src="../images/dahlia.png"
               placeholder="none"
               width={309}
+              loading="eager"
             />
             <HYG className={svgStyles()} />
           </PaddingContainer>
