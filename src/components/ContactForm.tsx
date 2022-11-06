@@ -62,6 +62,7 @@ export default function ContactForm() {
 
   return (
     <Form
+      data-netlify={true}
       method="POST"
       onSubmit={(event) =>
         handleSubmit(onSubmit)(event)
