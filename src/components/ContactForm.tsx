@@ -128,7 +128,7 @@ export default function ContactForm() {
           <InputStyled
             as="textarea"
             id="message"
-            form="contact"
+            form="contact-form"
             {...register('message', {
               required: true,
               minLength: 6,
