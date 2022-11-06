@@ -8,7 +8,7 @@ import {
   FormContainer,
   SubmitButton,
   StatusMessage,
-  LabelContainer,
+  InputContainer,
   Form,
 } from './ContactFormComponents';
 
@@ -100,43 +100,43 @@ export default function ContactForm() {
             },
           })}
         />
-        <LabelContainer>
+        <InputContainer>
           {errors.email ? (
             <ErrorMessage>Vul hier je emailadres in ajb</ErrorMessage>
           ) : (
             <Label for="email">E-mail</Label>
           )}
-        </LabelContainer>
-        <InputStyled
-          type="email"
-          id="email"
-          placeholder="E-mail adres"
-          {...register('email', {
-            required: true,
-            pattern: {
-              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              message: 'Vul hier je emailadres in ajb',
-            },
-          })}
-        />
-        <LabelContainer>
+          <InputStyled
+            type="email"
+            id="email"
+            placeholder="E-mail adres"
+            {...register('email', {
+              required: true,
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: 'Vul hier je emailadres in ajb',
+              },
+            })}
+          />
+        </InputContainer>
+        <InputContainer>
           {errors.message ? (
             <ErrorMessage>Vul hier je bericht in ajb</ErrorMessage>
           ) : (
             <Label for="message">Bericht</Label>
           )}
-        </LabelContainer>
-        <InputStyled
-          as="textarea"
-          id="message"
-          form="contact"
-          {...register('message', {
-            required: true,
-            minLength: 6,
-          })}
-          placeholder="Je vraag of bericht..."
-          rows={6}
-        />
+          <InputStyled
+            as="textarea"
+            id="message"
+            form="contact"
+            {...register('message', {
+              required: true,
+              minLength: 6,
+            })}
+            placeholder="Je vraag of bericht..."
+            rows={6}
+          />
+        </InputContainer>
         <SubmitButton
           type="submit"
           value={createButtonText(isSubmitting, isSubmitSuccessful, error)}

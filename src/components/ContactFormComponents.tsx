@@ -113,6 +113,8 @@ export const Form = styled('form', {
   '@l': { borderBottom: 'none' },
 });
 
-export const LabelContainer = styled('div', {
+export const InputContainer = styled('div', {
   marginTop: '$l',
+  display: 'flex',
+  flexDirection: 'column',
 });
