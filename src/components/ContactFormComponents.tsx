@@ -57,9 +57,9 @@ export const StatusMessage = styled('span', {
 });
 
 const Error = styled('span', {
-  lineHeight: 0,
   marginLeft: '$s',
   color: '$coral',
+  marginBottom: 's',
 });
 
 type errorMessageProps = {
