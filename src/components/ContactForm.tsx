@@ -78,6 +78,7 @@ export default function ContactForm() {
       name="contact-form"
       id="contact"
     >
+      <input type="hidden" name="form-name" value="contact-form" />
       <FormContainer>
         <div>
           {errors.name ? (
