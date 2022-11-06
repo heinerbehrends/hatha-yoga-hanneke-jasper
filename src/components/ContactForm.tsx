@@ -64,16 +64,16 @@ export default function ContactForm() {
     <Form
       data-netlify={true}
       method="POST"
-      onSubmit={(event) =>
-        handleSubmit(onSubmit)(event)
-          .then((__) => {
-            setError(null);
-          })
-          .catch((error) => {
-            console.error(error);
-            setError(error);
-          })
-      }
+      // onSubmit={(event) =>
+      //   handleSubmit(onSubmit)(event)
+      //     .then((__) => {
+      //       setError(null);
+      //     })
+      //     .catch((error) => {
+      //       console.error(error);
+      //       setError(error);
+      //     })
+      // }
       encType="application/x-www-form-urlencoded"
       name="contact-form"
       id="contact"
