@@ -84,7 +84,7 @@ export default function ContactForm() {
           {errors.name ? (
             <ErrorMessage>Vul hier je naam in ajb</ErrorMessage>
           ) : (
-            <Label for="email">Naam</Label>
+            <Label for="name">Naam</Label>
           )}
         </div>
         <InputStyled
