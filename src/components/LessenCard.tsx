@@ -28,7 +28,7 @@ export default function LessenCards({ lessenCards }: LessenCardProps) {
             ></Paragraph>
             <LeesMeerLink to={lessenCard.link}>Lees meer</LeesMeerLink>
           </div>
-          <Button size="big" color="greenTint" to="/contact">
+          <Button size="big" color="greenTint" to="#contact">
             {lessenCard.cta}
           </Button>
         </LessenContainer>
