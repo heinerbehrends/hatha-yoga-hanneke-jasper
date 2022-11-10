@@ -40,6 +40,15 @@ export const ContactItem = styled('a', {
   '&:hover': {
     textDecoration: 'underline',
   },
+  '&:focus': {
+    textDecoration: 'underline',
+    border: '2px dotted $greenLight',
+    marginLeft: '-16px',
+    paddingLeft: '16px',
+    borderRadius: '$xs',
+    marginRight: '$l',
+    boxSizing: 'border-box',
+  },
   '& svg': {
     marginRight: '$xs',
   },
