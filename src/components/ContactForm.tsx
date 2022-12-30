@@ -54,6 +54,7 @@ export default function ContactForm() {
   return (
     <Form
       data-netlify={true}
+      action="/dank-je"
       method="POST"
       onSubmit={handleSubmit}
       encType="application/x-www-form-urlencoded"
