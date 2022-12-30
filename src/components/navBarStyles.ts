@@ -5,9 +5,15 @@ export const NavContainer = styled('nav', {
   display: 'flex',
   height: '60px',
   alignItems: 'center',
-  justifyContent: 'space-between',
   maxWidth: '1152px',
   marginX: 'auto',
+  justifyContent: 'space-between',
+  '@l': {
+    justifyContent: 'space-around',
+  },
+  '@xl': {
+    justifyContent: 'space-between',
+  },
 });
 
 export const NavBarContainer = styled('div', {
