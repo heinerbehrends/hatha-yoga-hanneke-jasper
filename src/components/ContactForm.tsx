@@ -22,32 +22,23 @@ function createButtonText(
   if (error) return 'Probeer opnieuw >';
   return 'Verzend >';
 }
-type FormValues = { name: string; email: string; message: string };
 
-async function onSubmit(data: FormValues) {
-  await window
-    .fetch(`api/send-email`, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    })
-    .then((response) => response.json())
-    .then((data) => {
-      if (data?.response?.body?.errors?.length) {
-        console.log('response data', data);
-        throw new Error(data.response.body.errors[0].message);
-      }
-    });
-  // {
-  // if (response.status !== 200) {
-  //   throw new Error(
-  //     'Er was een probleem met het verzenden van je bericht.'
-  //   );
-  // }
-  // });
-}
+const handleSubmit = (event) => {
+  event.preventDefault();
+
+  const myForm = event.target;
+  const formData = new FormData(myForm);
+
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => console.log('Form successfully submitted'))
+    .catch((error) => alert(error));
+};
+
+type FormValues = { name: string; email: string; message: string };
 
 export default function ContactForm() {
   const {
@@ -64,16 +55,7 @@ export default function ContactForm() {
     <Form
       data-netlify={true}
       method="POST"
-      // onSubmit={(event) =>
-      //   handleSubmit(onSubmit)(event)
-      //     .then((__) => {
-      //       setError(null);
-      //     })
-      //     .catch((error) => {
-      //       console.error(error);
-      //       setError(error);
-      //     })
-      // }
+      onSubmit={handleSubmit}
       encType="application/x-www-form-urlencoded"
       name="contact-form"
       id="contact"
