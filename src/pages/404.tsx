@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 import { Heading, SubHeading } from '../components/indexStyles';
 
 // markup
-const NotFoundPage = () => {
+function NotFoundPage() {
   return (
     <>
       <Heading>Oeps</Heading>
@@ -11,6 +11,6 @@ const NotFoundPage = () => {
       <Link to="/">Wil je terug naar de homepage?</Link>
     </>
   );
-};
+}
 
 export default NotFoundPage;
