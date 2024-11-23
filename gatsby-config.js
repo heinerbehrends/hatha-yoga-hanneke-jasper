@@ -34,14 +34,6 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        workboxConfig: {
-          globPatterns: ['**/src/images/*'],
-        },
-      },
-    },
     'gatsby-plugin-gatsby-cloud',
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
