@@ -1,35 +1,34 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import { graphql, useStaticQuery } from 'gatsby';
-import { styled } from '../../stitches.config';
-import Footer from './footer';
-import NavBar from './navBar';
-import { getLocalImage } from '../utils';
-import { makeFooterData } from '../data/footerData';
-import { globalStyles } from '../globalCSS';
+import React from "react";
+import Helmet from "react-helmet";
+import { graphql, useStaticQuery } from "gatsby";
+import { styled } from "../../stitches.config";
+import Footer from "./footer";
+import { getLocalImage } from "../utils";
+import { makeFooterData } from "../data/footerData";
+import { globalStyles } from "../globalCSS";
 
-const PageContainer = styled('main', {
-  maxWidth: '960px',
-  marginX: 'auto',
-  paddingBottom: '$3xl',
-  display: 'flex',
-  flexDirection: 'column',
-  alignContent: 'center',
-  backgroundColor: 'white',
+const PageContainer = styled("main", {
+  maxWidth: "960px",
+  marginX: "auto",
+  paddingBottom: "$3xl",
+  display: "flex",
+  flexDirection: "column",
+  alignContent: "center",
+  backgroundColor: "white",
 
-  '@l': {
-    backgroundColor: '$background',
+  "@l": {
+    backgroundColor: "$background",
   },
   variants: {
     background: {
       true: {
-        backgroundColor: '$white',
+        backgroundColor: "$white",
       },
     },
     border: {
       true: {
-        borderRight: '2px solid $blue',
-        borderLeft: '2px solid $green',
+        borderRight: "2px solid $blue",
+        borderLeft: "2px solid $green",
       },
     },
   },
@@ -61,7 +60,6 @@ export default function Layout({ children, slot, border }: LayoutProps) {
       <Helmet>
         <meta property="og:image" content="localhost:8000/og-image.png" />
       </Helmet>
-      <NavBar />
       {slot}
       <PageContainer border={border}>{children}</PageContainer>
       <Footer

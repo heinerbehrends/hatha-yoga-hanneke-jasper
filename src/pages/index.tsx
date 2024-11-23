@@ -1,24 +1,24 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Helmet from 'react-helmet';
-import Layout from '../components/layout';
+import React from "react";
+import { graphql } from "gatsby";
+import Helmet from "react-helmet";
+import Layout from "../components/layout";
 import {
   HomePageHeading,
   TextBox,
   SubHeading,
   Heading,
-} from '../components/indexStyles';
-import Hero from '../components/hero';
-import InfoCard from '../components/InfoCard';
-import LessenCards from '../components/LessenCard';
-import { getLocalImage, getLessonsData, ImageNode } from '../utils';
-import Testimonial from '../components/testimonial';
-import ContactForm from '../components/ContactForm';
-import ContactCards from '../components/ContactCards';
-import { Contact } from '../components/contactStyles';
-import { HomeImages, makeHomeData } from '../data/paginas/homeData';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
-import { InfoCardsContainer } from '../components/infoCardStyles';
+} from "../components/indexStyles";
+import Hero from "../components/hero";
+import InfoCard from "../components/InfoCard";
+import LessenCards from "../components/LessenCard";
+import { getLocalImage, getLessonsData, ImageNode } from "../utils";
+import Testimonial from "../components/testimonial";
+import ContactForm from "../components/ContactForm";
+import ContactCards from "../components/ContactCards";
+import { Contact } from "../components/contactStyles";
+import { HomeImages, makeHomeData } from "../data/paginas/homeData";
+import { IGatsbyImageData } from "gatsby-plugin-image";
+import { InfoCardsContainer } from "../components/infoCardStyles";
 
 export default function Home({ data }: ImageQuery) {
   const images: HomeImages = {
@@ -65,7 +65,6 @@ export default function Home({ data }: ImageQuery) {
           />
         ))}
       </InfoCardsContainer>
-      <SubHeading as="h2">Lesvormen</SubHeading>
       <LessenCards lessenCards={getLessonsData(lessonNodes)} />
       {testimonialNodes.map(
         ({ id, aanbeveling: { aanbevelingTekst, foto, aanbevolenDoor } }) => (

@@ -1,17 +1,23 @@
-import { LessonNode } from '../../homePageProps';
-import { makeLessonData } from '../lessonData';
+import { LessonNode } from "../../homePageProps";
+import { makeLessonData } from "../lessonData";
 
 export const groepslessenData: LessonNode = {
-  slug: 'groepslessen',
-  title: 'Groepslessen',
+  slug: "groepslessen",
+  title: "Groepslessen in het ORKZ",
   extraVelden: {
-    buttonTekst: 'Boek nu je gratis proefles',
-    menuTekst: 'Groepslessen',
+    buttonTekst: "Boek nu je gratis proefles",
+    menuTekst: "Groepslessen",
   },
   excerpt: /* html */ `
-    In de yogales worden ongeveer twaalf oefeningen gedaan. De hele wervelkolom 
+    <p>De lessen vinden plaats op vrijdag ochtend in het ORKZ, Emmastraat 15 in Helpman. 
+    De les start om 8.45 uur, de tweede les om 10.10 uur.</p>
+    <p> In de yogales worden ongeveer twaalf oefeningen gedaan. De hele wervelkolom 
     wordt in alle richtingen in beweging gebracht. Dynamische, statische en 
-    ontspannende oefeningen worden afgewisseld.
+    ontspannende oefeningen worden afgewisseld. </p>
+    <p>De lessen zijn niet prestatiegericht, je doet de Yoga met respect voor je eigen 
+    grenzen en binnen je mogelijkheden. Dat maakt dat de Yogalessen voor iedereen zijn. 
+    Je wordt in de lessen uitgenodigd om in vertrouwen en vriendelijkheid je grenzen te 
+    onderzoeken en te mogen ervaren dat dit je bij diepe ontspanning kan brengen.</p>
   `,
   content: /* html */ `
 <article>
