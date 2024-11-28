@@ -9,7 +9,7 @@ export const groepslessenData: LessonNode = {
     menuTekst: "Groepslessen",
   },
   excerpt: /* html */ `
-    <p>De lessen vinden plaats op vrijdag ochtend in het ORKZ, Emmastraat 15 in Helpman. 
+    <p>De lessen vinden plaats op vrijdagochtend in het ORKZ, Emmastraat 15 in Helpman. 
     De les start om 8.45 uur, de tweede les om 10.10 uur.</p>
     <p> In de yogales worden ongeveer twaalf oefeningen gedaan. De hele wervelkolom 
     wordt in alle richtingen in beweging gebracht. Dynamische, statische en 
